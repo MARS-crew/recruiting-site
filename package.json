@@ -1,0 +1,9 @@
+{
+  "name": "mars-recruiting",
+  "version": "1.0.0",
+  "description": "마스외전 5기 모집 사이트",
+  "main": "index.js",
+  "repository": "https://github.com/MARS-crew/recruiting-site.git",
+  "author": "pinomaker-hoo <inhoo23@naver.com>",
+  "license": "MIT"
+}
