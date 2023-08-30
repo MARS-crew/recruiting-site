@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/MARS-crew/recruiting-site.git",
   "author": "pinomaker-hoo <inhoo23@naver.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
 }
