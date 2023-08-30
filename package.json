@@ -7,6 +7,8 @@
   "author": "pinomaker-hoo <inhoo23@naver.com>",
   "license": "MIT",
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
     "typescript": "^5.2.2"
   }
 }
