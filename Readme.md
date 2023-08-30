@@ -14,3 +14,9 @@ npm install -g yarn
 3. yarn
 4. yarn dev
 ```
+
+### Using
+
+```
+HTML5, CSS3, SCSS, Typescript
+```
