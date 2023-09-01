@@ -20,3 +20,15 @@ npm install -g yarn
 ```
 HTML5, CSS3, SCSS, Typescript
 ```
+
+### Build
+
+```
+Babel, Gulp, SWC
+```
+
+### Deploy
+
+```
+Docker, Docker compose, Nginx, Github Action
+```
