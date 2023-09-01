@@ -1,1 +1,53 @@
+name: Run Docker Compose
 
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  DOCKER_BUILD_PUSH:
+    runs-on: ubuntu-latest
+    needs: BUILD_TEST
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Log in to Docker Hub
+        run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Docker Build
+        run: docker build --no-cache --rm -f Dockerfile -t pinomaker/mars-recruiting:latest .
+
+      - name: Docker Hub Push
+        run: docker push pinomaker/mars-recruiting:latest
+
+  SET_SSH:
+    runs-on: ubuntu-latest
+    needs: DOCKER_BUILD_PUSH
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Initialize Known Hosts
+        run: |
+          mkdir -p ~/.ssh
+          touch ~/.ssh/known_hosts
+          ssh-keyscan ${{ secrets.EC2_HOST_DEV }} >> ~/.ssh/known_hosts
+
+      - name: Set Permissions for Private Key
+        run: |
+          echo "${{ secrets.DEPLOY_SSH_KEY }}" > $HOME/key.pem
+          chmod 400 $HOME/key.pem
+
+      - name: Copy files to EC2 instance
+        run: |
+          scp -i $HOME/key.pem ./docker-compose.yml ubuntu@${{ secrets.EC2_HOST_DEV }}:/home/ubuntu/recruiting
+          scp -i $HOME/key.pem ./Dockerfile ubuntu@${{ secrets.EC2_HOST_DEV }}:/home/ubuntu/recruiting
+          scp -i $HOME/key.pem ./.dockerignore ubuntu@${{ secrets.EC2_HOST_DEV }}:/home/ubuntu/recruiting
+
+      - name: Run Docker Compose
+        env:
+          SSH_PEM_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+        run: |
+          ssh -i $HOME/key.pem -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST_DEV }} "cd /home/ubuntu/recruiting && DOCKER_CLI_EXPERIMENTAL=enabled docker-compose up -d"
