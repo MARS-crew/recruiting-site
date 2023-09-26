@@ -1,9 +1,25 @@
-body {
-  height: 100vh;
-  margin: 0;
-  background-color: #000000;
+// 모바일 버전 스타일
+@media (max-width: 767px) {
+  body {
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+  }
+
+  .content {
+    height: 100%;
+  }
 }
 
-.content {
-  height: 100%;
+// PC 버전 스타일
+@media (min-width: 1024px) {
+  body {
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+  }
+
+  .content {
+    height: 100%;
+  }
 }
