@@ -1,44 +1,41 @@
+'use strict'
+
 const gulp = require('gulp')
+const watch = require('gulp-watch')
+const cached = require('gulp-cached')
+
 const sass = require('gulp-sass')(require('sass'))
-const babel = require('gulp-babel')
-const swc = require('gulp-swc')
-const concat = require('gulp-concat')
-const ts = require('gulp-typescript')
+const postcss = require('gulp-postcss')
+const autoprefixer = require('autoprefixer')
 
-const tsProject = ts.createProject('tsconfig.json')
+const SCSS_SOURCE = 'src/style/**/*.scss'
+const SCSS_COMPILED_DEST = 'src/style/css'
 
-gulp.task('compile-scss', function () {
+gulp.task('sass:watch', function () {
+  watch(SCSS_SOURCE, gulp.series(['sass', 'postcss']))
+})
+
+// Compile sass into CSS & auto-inject into browsers
+function compileSCSS() {
   return gulp
-    .src('src/style/**/*.scss')
-    .pipe(sass())
-    .pipe(gulp.dest('build/style'))
-})
+    .src(SCSS_SOURCE)
+    .pipe(cached('cached-css')) // only compile changed files
+    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(gulp.dest(SCSS_COMPILED_DEST))
+  // .pipe(browserSync.stream());
+}
+gulp.task('sass', compileSCSS)
 
-gulp.task('compile-ts', function () {
-  return tsProject.src().pipe(tsProject()).pipe(gulp.dest('build'))
-})
-
-gulp.task('compile-js', function () {
+// Transform css & auto-inject into browsers
+function transformCSS() {
+  const plugins = [autoprefixer({})]
   return gulp
-    .src('src/**/*.js')
-    .pipe(babel())
-    .pipe(swc())
-    .pipe(concat('bundle.js'))
-    .pipe(gulp.dest('build'))
-})
-
-gulp.task('copy-html', function () {
-  return gulp.src('src/**/*.html').pipe(gulp.dest('build'))
-})
-
-gulp.task('watch', function () {
-  gulp.watch('src/style/**/*.scss', gulp.series('compile-scss'))
-  gulp.watch('src/**/*.ts', gulp.series('compile-ts'))
-  gulp.watch('src/**/*.js', gulp.series('compile-js'))
-  gulp.watch('src/**/*.html', gulp.series('copy-html'))
-})
-
-gulp.task(
-  'default',
-  gulp.series('compile-scss', 'compile-ts', 'compile-js', 'copy-html', 'watch'),
-)
+    .src(SCSS_COMPILED_DEST + '/**/*.css')
+    .pipe(cached('cached-postcss')) // only compile changed files
+    .pipe(postcss(plugins, {}))
+    .pipe(gulp.dest(SCSS_COMPILED_DEST))
+  // .pipe(browserSync.stream())
+}
+gulp.task('postcss', transformCSS)
+gulp.task('compile-style', gulp.series(['sass', 'postcss']))
+gulp.task('default', gulp.series(['compile-style', 'sass:watch']))
