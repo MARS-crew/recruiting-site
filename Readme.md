@@ -6,6 +6,15 @@
 npm install -g yarn
 ```
 
+### Part
+
+```
+end + home ->  나강민
+form -> 김채린
+introduce -> 서규민
+middle -> 김예린
+```
+
 ### RUN
 
 ```
