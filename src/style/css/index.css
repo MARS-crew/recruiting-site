@@ -1,3 +1,30 @@
-h1 {
-  color: red;
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: #000000;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+}
+
+#header {
+  width: 100%;
+  height: 300px;
+}
+#header #logo {
+  width: 100px;
+  height: 100px;
+}
+
+#content {
+  width: 100%;
+}
+
+#footer {
+  width: 100%;
+}
+#footer #img {
+  width: 100%;
 }
