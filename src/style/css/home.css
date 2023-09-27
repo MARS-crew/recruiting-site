@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* 모바일 버전 스타일 */
 @media (max-width: 767px) {
   body {
     height: 100vh;
@@ -7,7 +9,66 @@
   .content {
     height: 100%;
   }
+  .footer_copyright {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 20;
+    left: 20;
+    right: 10;
+  }
+  .logo {
+    max-width: 50px; /* 로고의 최대 너비 조정 */
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  nav li {
+    margin-right: 25px;
+  }
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #00f;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 화면 높이의 100%를 차지하도록 설정하여 화면 정 가운데에 위치합니다. */
+  }
+  .main-introduction {
+    text-align: center;
+  }
+  .main-introduction-first-one,
+  .main-introduction-first-two {
+    margin-bottom: 20px; /* 두 개의 요소 사이에 여백을 줍니다. */
+  }
+  h3 {
+    color: #fff; /* 흰색 글씨 설정 */
+    font-size: 18px;
+    margin: 0; /* 기본 마진 제거 */
+  }
 }
+/* PC 버전 스타일 */
 @media (min-width: 1024px) {
   body {
     height: 100vh;
@@ -16,5 +77,64 @@
   }
   .content {
     height: 100%;
+  }
+  .footer_copyright {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 20;
+    left: 30;
+    right: 30;
+  }
+  .logo {
+    max-width: 50px; /* 로고의 최대 너비 조정 */
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  nav li {
+    margin-right: 60px;
+  }
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #00f;
+  }
+  /* SCSS */
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 화면 높이의 100%를 차지하도록 설정하여 화면 정 가운데에 위치합니다. */
+  }
+  .main-introduction {
+    text-align: center;
+  }
+  .main-introduction-first-one,
+  .main-introduction-first-two {
+    margin-bottom: 20px; /* 두 개의 요소 사이에 여백을 줍니다. */
+  }
+  h3 {
+    color: #fff; /* 흰색 글씨 설정 */
+    font-size: 24px;
+    margin: 0; /* 기본 마진 제거 */
   }
 }
