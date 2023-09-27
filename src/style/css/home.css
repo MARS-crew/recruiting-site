@@ -23,12 +23,14 @@
     align-items: center;
     justify-content: space-between;
     position: absolute;
-    top: 20;
-    left: 20;
-    right: 10;
+    top: 20px;
+    /* 상단 여백 조절 */
+    left: 20px;
+    right: 10px;
   }
   .logo {
-    max-width: 50px; /* 로고의 최대 너비 조정 */
+    max-width: 50px;
+    /* 로고의 최대 너비 조정 */
   }
   nav ul {
     list-style: none;
@@ -53,19 +55,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* 화면 높이의 100%를 차지하도록 설정하여 화면 정 가운데에 위치합니다. */
+    height: calc(70vh + 20px);
+    /* 3/2 지점에 위치하도록 조절 */
   }
   .main-introduction {
     text-align: center;
   }
   .main-introduction-first-one,
   .main-introduction-first-two {
-    margin-bottom: 20px; /* 두 개의 요소 사이에 여백을 줍니다. */
+    margin-bottom: 20px;
+    /* 두 개의 요소 사이에 여백을 줍니다. */
   }
   h3 {
-    color: #fff; /* 흰색 글씨 설정 */
+    color: #fff;
+    /* 흰색 글씨 설정 */
     font-size: 18px;
-    margin: 0; /* 기본 마진 제거 */
+    margin: 0;
+    /* 기본 마진 제거 */
   }
 }
 /* PC 버전 스타일 */
@@ -97,7 +103,8 @@
     right: 30;
   }
   .logo {
-    max-width: 50px; /* 로고의 최대 너비 조정 */
+    max-width: 50px;
+    /* 로고의 최대 너비 조정 */
   }
   nav ul {
     list-style: none;
@@ -123,18 +130,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* 화면 높이의 100%를 차지하도록 설정하여 화면 정 가운데에 위치합니다. */
+    height: 100vh;
+    /* 화면 높이의 100%를 차지하도록 설정하여 화면 정 가운데에 위치합니다. */
   }
   .main-introduction {
     text-align: center;
   }
   .main-introduction-first-one,
   .main-introduction-first-two {
-    margin-bottom: 20px; /* 두 개의 요소 사이에 여백을 줍니다. */
+    margin-bottom: 20px;
+    /* 두 개의 요소 사이에 여백을 줍니다. */
   }
   h3 {
-    color: #fff; /* 흰색 글씨 설정 */
+    color: #fff;
+    /* 흰색 글씨 설정 */
     font-size: 24px;
-    margin: 0; /* 기본 마진 제거 */
+    margin: 0;
+    /* 기본 마진 제거 */
   }
 }
