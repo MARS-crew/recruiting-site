@@ -8,9 +8,32 @@
 
   .content {
     height: 100%;
+
+    .section{
+      .main-title{
+        color:#ffffff;
+      }
+    }
   }
 }
 
+@media (max-width : 1023px) {
+  body {
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+  }
+
+  .content {
+    height: 100%;
+
+    .section{
+      .main-title{
+        color:#ffffff;
+      }
+    }
+  }
+}
 // PC 버전 스타일
 @media (min-width: 1024px) {
   body {
@@ -21,5 +44,11 @@
 
   .content {
     height: 100%;
+
+    .section{
+      .main-title{
+        color:#ffffff;
+      }
+    }
   }
 }
