@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media (max-width: 767px) {
   body {
     height: 100vh;
@@ -6,6 +7,12 @@
   }
   .content {
     height: 100%;
+  }
+  .one,
+  .two,
+  .three {
+    margin-bottom: 100px;
+    /* 간격 조절을 위한 마진 추가 */
   }
 }
 @media (min-width: 1024px) {
@@ -16,5 +23,16 @@
   }
   .content {
     height: 100%;
+  }
+  .one,
+  .two,
+  .three {
+    text-align: center;
+    margin-bottom: 200px;
+    /* 간격 조절을 위한 마진 추가 */
+  }
+  p,
+  h2 {
+    color: #fff;
   }
 }
