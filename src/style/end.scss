@@ -4,12 +4,10 @@
     height: 100vh;
     margin: 0;
     background-color: #000000;
-
   }
 
   .content {
     height: 100%;
-
   }
 
   .one,
@@ -26,26 +24,67 @@
     height: 100vh;
     margin: 0;
     background-color: #000000;
-
   }
 
   .content {
     height: 100%;
-
-
-  }
-
-  .one,
-  .two,
-  .three {
     text-align: center;
 
-    margin-bottom: 200px;
-    /* 간격 조절을 위한 마진 추가 */
   }
 
-  p,
-  h2,h1,li {
+
+  // .scrolling-text-container {
+  //   position: relative;
+  //   width: 100%;
+  //   /* 변경 가능한 너비 */
+  //   height: 1000px;
+  //   /* 변경 가능한 높이 */
+  //   overflow: hidden;
+
+
+  // }
+
+  // .scrolling-text {
+  //   position: absolute;
+  //   text-align: center;
+
+  //   left: 40%;
+  //   transform: translate(-50%, -50%);
+  //   animation: scrollText 100s linear infinite;
+  // }
+
+
+  // /* 스크롤링 텍스트 애니메이션을 활성화 */
+  // @keyframes scrollText {
+  //   0% {
+  //     transform: translateY(0);
+  //   }
+
+  //   100% {
+  //     transform: translateY(-100%);
+  //   }
+  // }
+
+  p {
     color: #fff;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    /* 간격 조절을 위한 스타일 추가 */
   }
+
+  h2 {
+    color: #fff;
+    font-size: 3rem;
+    margin: 20px 0;
+    /* 간격 조절을 위한 스타일 추가 */
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 6rem;
+    margin: 30px 0;
+    /* 간격 조절을 위한 스타일 추가 */
+  }
+
+
 }
