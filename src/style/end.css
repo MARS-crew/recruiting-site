@@ -1,0 +1,20 @@
+@media (max-width: 767px) {
+  body {
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+  }
+  .content {
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+  }
+  .content {
+    height: 100%;
+  }
+}/*# sourceMappingURL=end.css.map */
