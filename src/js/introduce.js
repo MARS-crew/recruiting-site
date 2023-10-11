@@ -79,3 +79,20 @@ gsap.fromTo(
     });
   });
   
+  //뒤로 가기
+  function goBack() {
+    titleText.style.display = 'block';
+    movingTextLeft.style.display = 'block';
+    movingTextCenter.style.display = 'block';
+    movingTextRight.style.display = 'block';
+    
+    // 각 섹션의 정보를 초기 상태로 돌림
+    introduceTextLeft.style.display = 'none';
+    introduceTextCenter.style.display = 'none';
+    introduceTextRight.style.display = 'none';
+  
+    // 각 텍스트를 초기 위치로 이동
+    gsap.to(movingTextLeft, { x: 450, y: 0, opacity: 1, duration: 3, ease: 'power2.out'});
+    gsap.to(movingTextCenter, { x: 650, y: 0, opacity: 1, duration: 3, ease: 'power2.out'});
+    gsap.to(movingTextRight, { x: 850, y: 0, opacity: 1, duration: 3, ease: 'power2.out'});
+  }
