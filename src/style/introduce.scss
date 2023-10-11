@@ -26,7 +26,7 @@
 
   .content {
     height: 25%;
-    h1 {
+    .title {
       text-align: center;
       color: #ffffff;
       font-size: 60px;
@@ -74,5 +74,46 @@
       }
     }
   }
-
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2개의 열 */
+    grid-template-rows: 1fr 1fr; /* 2개의 행 */
+    gap: 20px; /* 박스 간격 설정 */
+    .body-text-left {
+      height: 50%;
+      text-align: center;
+      h3 {
+      color: white;
+      font-size: 30px;
+      }
+      p {
+      color: white;
+      font-size: 15px;
+      }
+    } 
+  }
+  .body-text-center{
+    height: 50%;
+    text-align: center;
+      h3 {
+      color: white;
+      font-size: 30px;
+      }
+      p {
+      color: white;
+      font-size: 15px;
+      }
+  }
+  .body-text-right{
+    height: 50%;
+    text-align: center;
+      h3 {
+      color: white;
+      font-size: 30px;
+      }
+      p {
+      color: white;
+      font-size: 15px;
+      }
+  }
 }

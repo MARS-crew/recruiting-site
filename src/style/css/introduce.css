@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media (max-width: 767px) {
   body {
     height: 100vh;
@@ -22,7 +23,7 @@
   .content {
     height: 25%;
   }
-  .content h1 {
+  .content .title {
     text-align: center;
     color: #ffffff;
     font-size: 60px;
@@ -67,5 +68,47 @@
   }
   .animation-container .moving-text-right:hover {
     color: rgb(255, 184, 69);
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2개의 열 */
+    grid-template-rows: 1fr 1fr; /* 2개의 행 */
+    gap: 20px; /* 박스 간격 설정 */
+  }
+  .container .body-text-left {
+    height: 50%;
+    text-align: center;
+  }
+  .container .body-text-left h3 {
+    color: white;
+    font-size: 30px;
+  }
+  .container .body-text-left p {
+    color: white;
+    font-size: 15px;
+  }
+  .body-text-center {
+    height: 50%;
+    text-align: center;
+  }
+  .body-text-center h3 {
+    color: white;
+    font-size: 30px;
+  }
+  .body-text-center p {
+    color: white;
+    font-size: 15px;
+  }
+  .body-text-right {
+    height: 50%;
+    text-align: center;
+  }
+  .body-text-right h3 {
+    color: white;
+    font-size: 30px;
+  }
+  .body-text-right p {
+    color: white;
+    font-size: 15px;
   }
 }
