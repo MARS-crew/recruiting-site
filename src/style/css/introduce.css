@@ -30,6 +30,7 @@
   .animation-container {
     position: relative;
     height: 25%;
+    text-align: center;
   }
   .animation-container .moving-text-left {
     position: absolute;
@@ -40,6 +41,9 @@
     font-size: 50px;
     color: #a2a2a2;
   }
+  .animation-container .moving-text-left:hover {
+    color: rgb(108, 108, 216);
+  }
   .animation-container .moving-text-center {
     position: absolute;
     top: 50%;
@@ -49,6 +53,9 @@
     font-size: 50px;
     color: #a2a2a2;
   }
+  .animation-container .moving-text-center:hover {
+    color: rgb(240, 90, 90);
+  }
   .animation-container .moving-text-right {
     position: absolute;
     top: 50%;
@@ -57,5 +64,8 @@
     white-space: nowrap;
     font-size: 50px;
     color: #a2a2a2;
+  }
+  .animation-container .moving-text-right:hover {
+    color: rgb(255, 184, 69);
   }
 }
