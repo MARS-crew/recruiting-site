@@ -2,7 +2,7 @@
   body {
     height: 100vh;
     margin: 0;
-    background-image: url();
+    background-color: #000000;
   }
   .content {
     height: 100%;
@@ -16,8 +16,6 @@
     background-color: #000000;
   }
   .content {
-    background-image: url("../images/defaultBackground.png");
-    background-size: cover;
     height: 100%;
     color: #ffffff;
   }
@@ -60,4 +58,4 @@
     justify-content: center;
     font-size: 2em;
   }
-}
+}/*# sourceMappingURL=middle.css.map */
