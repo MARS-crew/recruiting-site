@@ -5,6 +5,7 @@
     margin: 0;
     background-color: #000000;
   }
+  
 
   .content {
     height: 100%;
@@ -22,6 +23,8 @@
     height: 100vh;
     margin: 0;
     background-color: #000000;
+    background-image: url("/Users/seogyumin/Desktop/recruiting-site/src/pages/images/space_backgroud.png");
+    background-size: cover;
   }
 
   .content {
@@ -34,27 +37,22 @@
   }
 
   .animation-container {
-    position :relative;
-    height: 25%;
+    height: 50%;
+    display: flex; 
+    align-items: center;
+    padding: 0 20px; 
     text-align: center;
+    justify-content: center;
     .moving-text-left {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-10%);
-      white-space: nowrap;
+      text-align: center;
       font-size: 50px;
       color: #a2a2a2;
+      padding-right: 0 20px;
       &:hover {
         color: rgb(108, 108, 216);
       }
     }
     .moving-text-center {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-10%);
-      white-space: nowrap;
       font-size: 50px;
       color: #a2a2a2;
       &:hover {
@@ -62,18 +60,15 @@
       }
     }
     .moving-text-right {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-10%);
-      white-space: nowrap;
       font-size: 50px;
       color: #a2a2a2;
+      padding-left: 0 20px;
       &:hover {
         color: rgb(255, 184, 69);
       }
     }
   }
+
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr; /* 2개의 열 */
@@ -115,5 +110,14 @@
       color: white;
       font-size: 15px;
       }
+  }
+
+  #mars {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
   }
 }
