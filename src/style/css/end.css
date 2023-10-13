@@ -7,19 +7,41 @@
   }
   .content {
     height: 100%;
+    text-align: center;
   }
-  .one,
-  .two,
-  .three {
-    margin-bottom: 100px;
-    /* 간격 조절을 위한 마진 추가 */
+  p {
+    color: #fff;
+    font-size: 0.8rem;
+    margin: 10px 0;
+    /* 간격 조절을 위한 스타일 추가 */
+  }
+  h2 {
+    color: #fff;
+    font-size: 1rem;
+    margin: 20px 0;
+    /* 간격 조절을 위한 스타일 추가 */
+  }
+  h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin: 30px 0;
+    /* 간격 조절을 위한 스타일 추가 */
+  }
+  .social-icons img {
+    width: 20px;
+    /* 이미지의 가로 너비를 원하는 크기로 조정합니다. */
+    height: 20px;
+    /* 이미지의 세로 높이도 동일한 크기로 조정합니다. */
+    margin-right: 10px;
+    margin-bottom: 20px;
+    /* 아이콘 간의 간격을 조절할 수 있습니다. */
   }
 }
 @media (min-width: 1024px) {
   body {
     height: 100vh;
-    margin: 0;
     background-color: #000000;
+    margin: 50px 0;
   }
   .content {
     height: 100%;
@@ -27,21 +49,30 @@
   }
   p {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 10px 0;
     /* 간격 조절을 위한 스타일 추가 */
   }
   h2 {
     color: #fff;
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 20px 0;
     /* 간격 조절을 위한 스타일 추가 */
   }
   h1 {
     color: #fff;
-    font-size: 6rem;
+    font-size: 4rem;
     margin: 30px 0;
     /* 간격 조절을 위한 스타일 추가 */
+  }
+  .social-icons img {
+    width: 30px;
+    /* 이미지의 가로 너비를 원하는 크기로 조정합니다. */
+    height: 30px;
+    /* 이미지의 세로 높이도 동일한 크기로 조정합니다. */
+    margin-right: 10px;
+    margin-bottom: 50px;
+    /* 아이콘 간의 간격을 조절할 수 있습니다. */
   }
   /*css로 자동 스크롤 코드*/
 }
