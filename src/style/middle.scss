@@ -3,11 +3,12 @@
   body {
     height: 100vh;
     margin: 0;
-    background-color: #000000;
+    background-image: url();
   }
 
   .content {
     height: 100%;
+    color:#ffffff
   }
 }
 
@@ -16,10 +17,53 @@
   body {
     height: 100vh;
     margin: 0;
-    background-color: #000000;
   }
 
   .content {
+    background: url('../../images/defaultBackground.png') no-repeat;
+    background-size: cover;
+    color:#ffffff;
+    #section0 {
+      width: 100%; 
+      height: 100%;
+      h1 {
+        margin : 0px;
+        font-size: 80px;
+      }
+      .flex {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .intro-box{
+          width: 310px;
+          height: 260;
+          h2 {font-size: 40px;}
+          .intro-box:nth-child(1) {
+            position: absolute;
+            left: 15px;
+            
+          }
+          .intro-box:nth-child(2) {margin-left: 775px;}
+          p {font-size: 20px;}
+        }
+      }
+///////////////////////////////////////////////// 
+      .section{
+        width: 100%;
+        height:100%;
+      }
+    }
+    #section1{
+      height: 100%;
+    }
+  
+  }
+  .section {
+    display : flex;
     height: 100%;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
   }
 }
