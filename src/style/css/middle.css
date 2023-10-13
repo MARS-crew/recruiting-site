@@ -13,12 +13,10 @@
   body {
     height: 100vh;
     margin: 0;
-    background-color: #000000;
   }
   .content {
-    background-image: url("../images/defaultBackground.png");
+    background: url("../../images/defaultBackground.png") no-repeat;
     background-size: cover;
-    height: 100%;
     color: #ffffff;
   }
   .content #section0 {
