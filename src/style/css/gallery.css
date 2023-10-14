@@ -114,9 +114,14 @@
     font-size: 5rem;
     text-align: center;
   }
+  .content .gallery .m-intro {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.4rem;
+  }
   .content .gallery .cards {
     position: absolute;
-    width: 23%;
+    width: 24%;
     height: 50%;
     top: 60%;
     left: 50%;
