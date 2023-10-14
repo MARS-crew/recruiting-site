@@ -2,6 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-latest.js"></script> 
     <title>마스외전 5기 모집 사이트</title>
     <link rel="stylesheet" href="../style/css/middle.css" />
     <link rel="shortcut icon" href="../images/logo.png" />
@@ -9,10 +10,10 @@
   <body>
     <div class="content">
       <div id="section0" class="section">
-        <div class="flex">
         <h1>우리는</h1>
-        <div class="intro-box 1">
-          <h2><strong>PROFESSOR</strong></h2>
+        <div class="flex">
+        <div class="intro-box box1">
+           <h2 class="propessor"><strong>PROFESSOR</strong></h2>
           <div>
           <p>
               우리 학교의 컴퓨터정보공학과 현직 교수님 두 분!
@@ -22,21 +23,47 @@
               가이딩해주시고 케어해주십니다.
           </p>
           </div>
-        </div>
-        <div class="intro-box 2">
-          <h2><strong>MEMBER</strong></h2>
-          <div>
-            <p>
-              우리 학교의 컴퓨터정보공학과 현직 교수님 두 분!
-              봄날의 햇살 이선혜 교수님과 
-              천사 같은 오영재 교수님의 
-              개발 경력 10년의 최강조합으로 마스외전 전체를 
-              가이딩해주시고 케어해주십니다.
-          </p>
+          <div class="popup popup-p">
+            <div class="dim-bg"></div>
+              <div class="pop-content">
+                <p>
+                  우리 학교의 컴퓨터정보공학과 현직 교수님 두 분! 봄날의 햇살 이선혜 교수님과 
+                  천사 같은 오영재 교수님의  개발 경력 10년의 최강조합으로 마스외전 전체를  가이딩해주시고 케어해주십니다.
+                </p>
+                <p class="close" onclick="">x</p>
+              </div>
           </div>
         </div>
-        <div class="intro-box 3">
-          <h2><strong>MASTER</strong></h2>
+        <div class="circle-wrap">
+          <div class="circle"><div class="insiede-circle"></div></div>
+        </div>
+        <div class="intro-box box2">
+          <h2 class="member"><strong>MEMBER</strong></h2>
+          <div>
+            <p>
+              동양미래대학교 컴퓨터공학부 졸업생들을 대상으로 현재
+              1기, 2기, 3기로 구성되어 있으며,  마스외전의 여러 활동을
+              진행하는 정식 멤버들 입니다. 
+              졸업 선후배 간의 돈독함을 느끼고 함께 성장해 나가는 
+              멤버들은 서로 소통하고 도우며 유대감을 쌓을 수 있습니다.
+          </p>
+          </div>
+          <div class="popup popup-m">
+            <div class="dim-bg"></div>
+              <div class="pop-content">
+                <p>
+                  동양미래대학교 컴퓨터공학부 졸업생들을 대상으로 현재
+                  1기, 2기, 3기로 구성되어 있으며,  마스외전의 여러 활동을
+                  진행하는 정식 멤버들 입니다. 
+                  졸업 선후배 간의 돈독함을 느끼고 함께 성장해 나가는 
+                  멤버들은 서로 소통하고 도우며 유대감을 쌓을 수 있습니다.
+                </p>
+                <p class="close" onclick="">x</p>
+              </div>
+          </div>
+        </div>
+        <div class="intro-box box3">
+          <h2 class="master"><strong>MASTER</strong></h2>
             <div>
             <p>
               개발, 기획, 영상 등 다양한 전문성을 지닌 4명의 실무 
@@ -46,9 +73,21 @@
               합니다.
             </p>
           </div>
+          <div class="popup popup-ma">
+            <div class="dim-bg"></div>
+              <div class="pop-content">
+                <p>
+                  개발, 기획, 영상 등 다양한 전문성을 지닌 4명의 실무 
+                  종사자분들이 바로 마스터입니다.
+                  풍부한 경험과 지식을 바탕으로 도움을 주실 조언자이자 
+                  멘토들이며, 외주 프로젝트의 경우 총괄을 맡아주시기도
+                  합니다.  </p>
+                <p class="close" onclick="">x</p>
+              </div>
+          </div>
         </div>
-        <div class="intro-box 4">
-          <h2><strong>SIDE MEMBER</strong></h2>
+        <div class="intro-box box4">
+          <h2 class="side"><strong>SIDE MEMBER</strong></h2>
           <div>
             <p>
               동양미래대학교 컴퓨터공학부 재학생 전학년을 대상으로, 
@@ -59,11 +98,27 @@
               프로젝트에서는 간접이 아닌 직접적 참여 가능)
             </p>
         </div>
+        <div class="popup popup-s">
+          <div class="dim-bg"></div>
+            <div class="pop-content">
+              <p>
+                동양미래대학교 컴퓨터공학부 재학생 전학년을 대상으로, 
+                정식멤버들의 진행 프로젝트와 회의를 지켜보고, 간접 
+                참여하여 풍부한 경험을 미리 쌓을 수 있는 혜택이 가득한 
+                깍두기들입니다.
+                (디자인 파트와 학교 교과과정이 겹치는 스택의 
+                프로젝트에서는 간접이 아닌 직접적 참여 가능)
+              </p>
+              <p class="close">x</p>
+            </div>
         </div>
         </div>
+        </div>
+        <img class="image" src="../images/marsImage.png" alt="">
       </div>
       <div id="section1" class="section">
         <h1>어디서</h1>
+        <img class="image" src="../images/marsImage.png" alt="">
         <div>
           <p><strong>매주 목요일 19시 역삼역에서</strong></p>
           <p>서울특별시 강남구 논현로85길 5-6 지하 1층</p>
@@ -71,6 +126,7 @@
       </div>
       <div id="section2" class="section">
         <h1>무엇을 할까?</h1>
+        <img class="image" src="../images/marsImage.png" alt="">
         <p>외주 개발을 통한 실무 경험과 개인 또는 팀을 구성하여 
           서비스를 기획부터 개발까지 완성하며 개인의 역량을 
           향상시킬 수 있으며, 학교에서는 학습하지 못하였던 
@@ -78,6 +134,39 @@
           </p>
       </div>
     </div>
+    <script>
+      $('.popup').css('display','none')
+      $('.propessor').click(function(){
+        $('.popup-p').fadeIn();
+      })
+      $('.member').click(function(){
+        $('.popup-m').fadeIn();
+      })
+      $('.master').click(function(){
+        $('.popup-ma').fadeIn();
+      })
+      $('.side').click(function(){
+        $('.popup-s').fadeIn();
+      })
+      $('.close').click(function(){
+        $('.popup').fadeOut();
+      })
+      $(function () {
+        imageDown();
+        function imageUp(){
+          $('.image').animate({
+            'bottom' : 30
+          }, 1000, null, imageDown);
+        }
+        function imageDown(){
+          $('.image').animate({
+            'bottom' : 20
+          }, 700, null, imageUp);
+        }
+      })
+      
+ 
+    </script>
     <script src="../js/middle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
   </body>

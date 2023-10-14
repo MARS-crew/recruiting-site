@@ -1,21 +1,165 @@
+@font-face {
+  font-family: "JSDongkang";
+  src: url("../../font/JSDongkang-Bold.ttf");
+}
+@font-face {
+  font-family: "JSDongkang-Reg";
+  src: url("../../font/JSDongkang-Regular.ttf");
+}
 @media (max-width: 767px) {
+  * {
+    font-family: "JSDongkang-Reg";
+  }
   body {
     height: 100vh;
     margin: 0;
-    background-color: #000000;
   }
   .content {
     height: 100%;
+  }
+  .content .gallery {
+    background: url("../../images/defaultBackground.png") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .content .gallery h1 {
+    margin-top: 20%;
+    color: #ffffff;
+    font-size: 2.3rem;
+    text-align: center;
+  }
+  .content .gallery .m-intro {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.4em;
+    padding: 5% 15% 8% 15%;
+  }
+  .content .gallery .cards {
+    position: absolute;
+    display: flex;
+    width: 60%;
+    height: 50%;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .content .gallery .cards li {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    line-height: 18rem;
+    font-family: sans-serif;
+    background: #dcdcdc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0.8rem;
+  }
+  .content .gallery .cards li h2 {
+    margin-top: -15%;
+    margin-bottom: 100%;
+    color: wheat;
+    text-align: center;
+  }
+  .content .gallery .cards li div {
+    line-height: 2rem;
+  }
+  .content .gallery .cards li div span {
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 0 20px 20px 0;
+    width: 75%;
+    height: 5%;
+    font-size: 1.8em;
+    text-align: center;
+    line-height: 2.5;
+    background-color: #ffffff;
+  }
+  .content .gallery .cards li div .cards li div p {
+    font-size: 3em;
+    color: white;
+  }
+  .content .actions {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 @media (min-width: 1024px) {
+  * {
+    font-family: "JSDongkang";
+  }
   body {
-    width: 100%;
-    height: 100vh;
+    background: #111;
+    min-height: 100vh;
+    padding: 0;
     margin: 0;
-    background-color: #000000;
   }
   .content {
     height: 100%;
+  }
+  .content .gallery {
+    background: url("../../images/defaultBackground.png") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .content .gallery h1 {
+    margin-top: 7%;
+    color: #ffffff;
+    font-size: 5rem;
+    text-align: center;
+  }
+  .content .gallery .cards {
+    position: absolute;
+    width: 23%;
+    height: 50%;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .content .gallery .cards li {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    background: #dcdcdc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0.8rem;
+  }
+  .content .gallery .cards li h2 {
+    margin-top: -50px;
+    margin-bottom: 400px;
+    color: wheat;
+    text-align: center;
+  }
+  .content .gallery .cards li .li-wrap div {
+    line-height: 2rem;
+  }
+  .content .gallery .cards li .li-wrap div span {
+    display: inline-block;
+    border-radius: 0 20px 20px 0;
+    width: 75%;
+    height: 5%;
+    font-size: 1.8em;
+    text-align: center;
+    line-height: 2.5;
+    background-color: #ffffff;
+  }
+  .content .gallery .cards li .li-wrap div .cards li div p {
+    font-size: 14px;
+    color: white;
+  }
+  .content .actions {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
