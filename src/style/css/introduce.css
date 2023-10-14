@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @media (max-width: 767px) {
   body {
     height: 100vh;
@@ -19,7 +18,7 @@
     height: 100vh;
     margin: 0;
     background-color: #000000;
-    background-image: url("/Users/seogyumin/Desktop/recruiting-site/src/pages/images/space_backgroud.png");
+    background-image: url("..pages/images/space_backgroud.png");
     background-size: cover;
   }
   .content {
@@ -28,81 +27,38 @@
   .content .title {
     text-align: center;
     color: #ffffff;
-    font-size: 60px;
+    font-size: 65px;
   }
   .animation-container {
-    height: 50%;
+    height: 20%;
+    width: 100%;
     display: flex;
-    align-items: center;
-    padding: 0 20px;
-    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     justify-content: center;
   }
   .animation-container .moving-text-left {
-    text-align: center;
-    font-size: 50px;
+    font-size: 45px;
     color: #a2a2a2;
-    padding-right: 0 20px;
   }
   .animation-container .moving-text-left:hover {
     color: rgb(108, 108, 216);
   }
   .animation-container .moving-text-center {
-    font-size: 50px;
+    font-size: 45px;
     color: #a2a2a2;
   }
   .animation-container .moving-text-center:hover {
     color: rgb(240, 90, 90);
   }
   .animation-container .moving-text-right {
-    font-size: 50px;
+    font-size: 45px;
     color: #a2a2a2;
-    padding-left: 0 20px;
   }
   .animation-container .moving-text-right:hover {
     color: rgb(255, 184, 69);
-  }
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2개의 열 */
-    grid-template-rows: 1fr 1fr; /* 2개의 행 */
-    gap: 20px; /* 박스 간격 설정 */
-  }
-  .container .body-text-left {
-    height: 50%;
-    text-align: center;
-  }
-  .container .body-text-left h3 {
-    color: white;
-    font-size: 30px;
-  }
-  .container .body-text-left p {
-    color: white;
-    font-size: 15px;
-  }
-  .body-text-center {
-    height: 50%;
-    text-align: center;
-  }
-  .body-text-center h3 {
-    color: white;
-    font-size: 30px;
-  }
-  .body-text-center p {
-    color: white;
-    font-size: 15px;
-  }
-  .body-text-right {
-    height: 50%;
-    text-align: center;
-  }
-  .body-text-right h3 {
-    color: white;
-    font-size: 30px;
-  }
-  .body-text-right p {
-    color: white;
-    font-size: 15px;
   }
   #mars {
     position: absolute;

@@ -23,7 +23,7 @@
     height: 100vh;
     margin: 0;
     background-color: #000000;
-    background-image: url("/Users/seogyumin/Desktop/recruiting-site/src/pages/images/space_backgroud.png");
+    background-image: url('..pages/images/space_backgroud.png');
     background-size: cover;
   }
 
@@ -32,86 +32,43 @@
     .title {
       text-align: center;
       color: #ffffff;
-      font-size: 60px;
+      font-size: 65px;
     }
   }
 
   .animation-container {
-    height: 50%;
-    display: flex; 
-    align-items: center;
-    padding: 0 20px; 
-    text-align: center;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     justify-content: center;
     .moving-text-left {
-      text-align: center;
-      font-size: 50px;
+      font-size: 45px;
       color: #a2a2a2;
-      padding-right: 0 20px;
       &:hover {
         color: rgb(108, 108, 216);
       }
     }
     .moving-text-center {
-      font-size: 50px;
+      font-size: 45px;
       color: #a2a2a2;
       &:hover {
         color: rgb(240, 90, 90);
       }
     }
     .moving-text-right {
-      font-size: 50px;
+      font-size: 45px;
       color: #a2a2a2;
-      padding-left: 0 20px;
       &:hover {
         color: rgb(255, 184, 69);
       }
     }
   }
 
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2개의 열 */
-    grid-template-rows: 1fr 1fr; /* 2개의 행 */
-    gap: 20px; /* 박스 간격 설정 */
-    .body-text-left {
-      height: 50%;
-      text-align: center;
-      h3 {
-      color: white;
-      font-size: 30px;
-      }
-      p {
-      color: white;
-      font-size: 15px;
-      }
-    } 
-  }
-  .body-text-center{
-    height: 50%;
-    text-align: center;
-      h3 {
-      color: white;
-      font-size: 30px;
-      }
-      p {
-      color: white;
-      font-size: 15px;
-      }
-  }
-  .body-text-right{
-    height: 50%;
-    text-align: center;
-      h3 {
-      color: white;
-      font-size: 30px;
-      }
-      p {
-      color: white;
-      font-size: 15px;
-      }
-  }
-
+  //행성 이미지
   #mars {
     position: absolute;
     top: 50%;
