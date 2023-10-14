@@ -83,12 +83,14 @@
           <div id="main_content" class="main_content">
             <div class="main-title">3. 지원기수를 선택해주세요.</div>
             <div class="main-form">
-              <label>
-                <input type="radio" name="classes" value="fivegi" />5기
-              </label>
-              <label>
-                <input type="radio" name="classes" value="kkagdugi" />깍두기
-              </label>
+              <div class="from-radio">
+                <label>
+                  <input type="radio" name="classes" value="fivegi" />5기
+                </label>
+                <label>
+                  <input type="radio" name="classes" value="kkagdugi" />깍두기
+                </label>
+              </div>
               <input type="button" value="확인" />
             </div>
           </div>
@@ -109,9 +111,13 @@
           <div id="main_content" class="main_content">
             <div class="main-title">4. 지원 분야를 선택해주세요.</div>
             <div class="main-form">
-              <input type="checkbox" />기획 <input type="checkbox" />디자인
-              <input type="checkbox" />퍼블리싱 <input type="checkbox" />백엔드
-              <input type="checkbox" />프론트엔드
+              <div class="form-checkbox">
+                <label><input type="checkbox" id="projectPlan" />기획</label>
+                <label><input type="checkbox" id="design" />디자인</label>
+                <label><input type="checkbox" id="publishing" />퍼블리싱</label>
+                <label><input type="checkbox" id="bakEnd" />백엔드</label>
+                <label><input type="checkbox" id="frontEnd" />프론트엔드</label>
+              </div>
               <input type="button" value="확인" />
             </div>
           </div>
