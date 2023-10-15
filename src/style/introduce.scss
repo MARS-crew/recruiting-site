@@ -9,22 +9,26 @@
   .back-button {
     display: none;
   }
+
+  .animation-container-PC{
+    display: none;
+  }
   
   .content {
     height: 25%;
-    h1 {
-      padding-top: 50px;
-      text-align: center; 
-      color: white;
+    .title {
+      padding-top: 90px;
+      text-align: center;
+      color: #ffffff;
       font-size: 40px;
     }
   }
 
   .big-circle {
-    width: 300px; /* 큰 원의 너비 */
-    height: 300px; /* 큰 원의 높이 */
-    border-radius: 50%; /* 원 모양을 위한 반지름 설정 */
-    border: 1px dashed #fff; /* 큰 원의 점선 스타일 */
+    width: 300px; 
+    height: 300px; 
+    border-radius: 50%; 
+    border: 0.3px dashed #fff; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,11 +37,46 @@
     top: 50%;
     transform: translate(-50%, -30%);
     .small-circle {
-      width: 200px; /* 작은 원의 너비 */
-      height: 200px; /* 작은 원의 높이 */
-      border-radius: 50%; /* 원 모양을 위한 반지름 설정 */
-      border: 1px dashed #fff; /* 작은 원의 점선 스타일 */
-      margin: auto; /* 가운데 정렬을 위해 margin을 auto로 설정 */
+      width: 200px; 
+      height: 200px; 
+      border-radius: 50%; 
+      border: 0.3px dashed #fff;
+      margin: auto; 
+    }
+  }
+
+  .animation-container-M {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    .moving-text-top {
+      font-size: 35px;
+      color: #fff;
+      transform: translate(-20%, 0%);
+      &:hover {
+        color: rgb(108, 108, 216);
+      }
+    }
+    .moving-text-middle {
+      font-size: 35px;
+      color: #fff;
+      transform: translate(140%, 120%);
+      &:hover {
+        color: rgb(240, 90, 90);
+      }
+    }
+    .moving-text-bottom {
+      font-size: 35px;
+      color: #fff;
+      transform: translate(-55%, 240%);
+      &:hover {
+        color: rgb(255, 184, 69);
+      }
     }
   }
 
@@ -61,6 +100,10 @@
     background-size: cover;
   }
 
+  .animation-container-M{
+    display: none;
+  }
+
   .content {
     height: 25%;
     .title {
@@ -70,7 +113,7 @@
     }
   }
 
-  .animation-container {
+  .animation-container-PC {
     height: 20%;
     width: 100%;
     display: flex;
