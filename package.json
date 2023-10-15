@@ -29,8 +29,5 @@
     "postcss": "^8.4.30",
     "prettier": "^3.0.3",
     "sass": "^1.66.1"
-  },
-  "dependencies": {
-    "yarn": "^1.22.19"
   }
 }
