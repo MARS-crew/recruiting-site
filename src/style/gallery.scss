@@ -40,17 +40,17 @@
       .cards {
           position: absolute;
           width: 50%;
-          height: 30%;
-          top: 45%;
+          height: 40%;
+          top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
       }
       
       .cards li {
           list-style: none;
-          width: 100%;
+          width: 110%;
           height: auto;
-          line-height: 18rem;
+          line-height: 20rem;
           font-family: sans-serif;
           background : #dcdcdc;
           position: absolute;
@@ -77,9 +77,10 @@
                 line-height: 2.5;
                 background-color: #ffffff;
               }
-              .cards li div p{
-                font-size: 3em;
-                color : white;
+               p{
+                font-size: 0.8em;
+                text-align: center;
+                font-weight: bold;
               }
             }
       }
@@ -164,15 +165,16 @@
                 display: inline-block;
                   border-radius: 0 20px 20px 0 ;
                   width: 75%;
-                  height: 5%;
+                  height: auto;
                   font-size: 1.6em;
                   text-align: center;
                   line-height: 2.5;
                   background-color: #ffffff;
                 }
-                .cards li div p{
-                  font-size: 14px;
-                  color : white;
+                p{
+                  font-size: 1em;
+                  text-align: center;
+                  font-weight: bold;
                 }
               }
             }
