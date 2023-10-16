@@ -1,20 +1,155 @@
 @media (max-width: 767px) {
+  @font-face {
+    font-family: "JSDongkang";
+    src: url("/Users/seogyumin/Desktop/recruiting-site/src/font/JSDongkang-Regular.ttf");
+  }
   body {
     height: 100vh;
     margin: 0;
     background-color: #000000;
+    font-family: "JSDongkang";
+    background-image: url("/Users/seogyumin/Desktop/recruiting-site/src/images/space_backgroud.png");
+    background-size: cover;
+  }
+  .back-button {
+    display: none;
+  }
+  .animation-container-PC {
+    display: none;
   }
   .content {
-    height: 100%;
+    height: 25%;
+  }
+  .content .title {
+    padding-top: 90px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 40px;
+  }
+  .big-circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 0.3px dashed #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -30%);
+  }
+  .big-circle .small-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 0.3px dashed #fff;
+    margin: auto;
+  }
+  .animation-container-M {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+  }
+  .animation-container-M .moving-text-top {
+    font-size: 35px;
+    color: #fff;
+    transform: translate(-20%, 0%);
+  }
+  .animation-container-M .moving-text-top:hover {
+    color: rgb(108, 108, 216);
+  }
+  .animation-container-M .moving-text-middle {
+    font-size: 35px;
+    color: #fff;
+    transform: translate(140%, 120%);
+  }
+  .animation-container-M .moving-text-middle:hover {
+    color: rgb(240, 90, 90);
+  }
+  .animation-container-M .moving-text-bottom {
+    font-size: 35px;
+    color: #fff;
+    transform: translate(-55%, 240%);
+  }
+  .animation-container-M .moving-text-bottom:hover {
+    color: rgb(255, 184, 69);
+  }
+  #mars {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
   }
 }
 @media (min-width: 1024px) {
+  @font-face {
+    font-family: "JSDongkang";
+    src: url("/Users/seogyumin/Desktop/recruiting-site/src/font/JSDongkang-Regular.ttf");
+  }
   body {
     height: 100vh;
     margin: 0;
     background-color: #000000;
+    background-image: url("/Users/seogyumin/Desktop/recruiting-site/src/images/space_backgroud.png");
+    background-size: cover;
+    font-family: "JSDongkang";
+  }
+  .animation-container-M {
+    display: none;
   }
   .content {
-    height: 100%;
+    height: 25%;
+  }
+  .content .title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 65px;
+  }
+  .animation-container-PC {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+  }
+  .animation-container-PC .moving-text-left {
+    font-size: 45px;
+    color: #a2a2a2;
+  }
+  .animation-container-PC .moving-text-left:hover {
+    color: rgb(108, 108, 216);
+  }
+  .animation-container-PC .moving-text-center {
+    font-size: 45px;
+    color: #a2a2a2;
+  }
+  .animation-container-PC .moving-text-center:hover {
+    color: rgb(240, 90, 90);
+  }
+  .animation-container-PC .moving-text-right {
+    font-size: 45px;
+    color: #a2a2a2;
+  }
+  .animation-container-PC .moving-text-right:hover {
+    color: rgb(255, 184, 69);
+  }
+  #mars {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
   }
 }
