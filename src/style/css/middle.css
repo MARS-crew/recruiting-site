@@ -20,7 +20,7 @@
   }
   .content #section0 .flex {
     display: flex;
-    padding-top: 40%;
+    padding-top: 30%;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -45,7 +45,7 @@
   }
   .content #section0 .circle-wrap {
     position: absolute;
-    top: 18%;
+    top: 24%;
     left: 19%;
   }
   .content #section0 .circle-wrap .circle {
@@ -168,7 +168,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .content #section0 .flex .intro-box {
-    width: 73%;
+    width: 74%;
     height: 320px;
   }
   .content #section0 .flex .intro-box h2 strong {
@@ -176,7 +176,7 @@
     font-size: 2rem;
   }
   .content #section0 .flex .intro-box p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     animation-duration: 2s;
     animation-name: slidein;
     animation-fill-mode: forward;
@@ -243,7 +243,7 @@
     font-size: 2em;
   }
   .content .section h1 {
-    padding-top: 8%;
+    padding-top: 5%;
     padding-bottom: 6%;
     margin: 0;
     font-size: 80px;
