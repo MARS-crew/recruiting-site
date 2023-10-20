@@ -1,13 +1,22 @@
 /* 모바일 버전 스타일 */
 @media (max-width: 767px) {
   body {
-    height: 100vh;
     margin: 0;
+    padding: 0;
+    overflow: hidden;
     background-color: #000000;
+    background-image: url('/Users/seogyumin/Desktop/recruiting-site/src/images/space_backgroud.png'); //바꿔주세요...
+    background-size: cover;
+    font-family: 'JSDongkang';
   }
 
-  .content {
-    height: 100%;
+  .section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
   }
 
   .footer_copyright {
@@ -97,17 +106,30 @@
   }
 }
 
-
 /* PC 버전 스타일 */
 @media (min-width: 1024px) {
-  body {
-    height: 100vh;
-    margin: 0;
-    background-color: #000000;
+  @font-face {
+    font-family: 'JSDongkang';
+    src: url('/Users/seogyumin/Desktop/recruiting-site/src/font/JSDongkang-Regular.ttf'); //바꿔주세요...
   }
 
-  .content {
-    height: 100%;
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+    background-image: url('/Users/seogyumin/Desktop/recruiting-site/src/images/space_backgroud.png'); //바꿔주세요...
+    background-size: cover;
+    font-family: 'JSDongkang';
+  }
+
+  .section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
   }
 
   .footer_copyright {
@@ -129,7 +151,6 @@
     top: 20;
     left: 30;
     right: 30;
-
   }
 
   .logo {
@@ -197,5 +218,4 @@
     margin: 0;
     /* 기본 마진 제거 */
   }
-
 }

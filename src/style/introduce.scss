@@ -1,169 +1,152 @@
+@font-face {
+  font-family: 'JSDongkang';
+  src: url('/Users/seogyumin/Desktop/recruiting-site/src/font/JSDongkang-Regular.ttf'); //바꿔주세요...
+}
+
 // 모바일 버전 스타일
 @media (max-width: 767px) {
-  @font-face {
-    font-family: 'JSDongkang';
-    src:url('/Users/seogyumin/Desktop/recruiting-site/src/font/JSDongkang-Regular.ttf')//바꿔주세요...
-  }
-  body {
-    height: 100vh;
-    margin: 0;
-    background-color: #000000;
-    font-family: 'JSDongkang';
-    background-image: url('/Users/seogyumin/Desktop/recruiting-site/src/images/space_backgroud.png');//바꿔주세요...
-    background-size: cover;
-  }
-
-  .back-button {
-    display: none;
-  }
-
-  .animation-container-PC{
-    display: none;
-  }
-  
-  .content {
-    height: 25%;
-    .title {
-      padding-top: 90px;
-      text-align: center;
-      color: #ffffff;
-      font-size: 40px;
+  .two {
+    .back-button {
+      display: none;
     }
-  }
 
-  .big-circle {
-    width: 300px; 
-    height: 300px; 
-    border-radius: 50%; 
-    border: 0.3px dashed #fff; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -30%);
-    .small-circle {
-      width: 200px; 
-      height: 200px; 
-      border-radius: 50%; 
+    .animation-container-PC {
+      display: none;
+    }
+
+    .content {
+      height: 25%;
+      .title {
+        padding-top: 90px;
+        text-align: center;
+        color: #ffffff;
+        font-size: 40px;
+      }
+    }
+
+    .big-circle {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
       border: 0.3px dashed #fff;
-      margin: auto; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 50%;
+      top: 150%;
+      transform: translate(-50%, -30%);
+      .small-circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 0.3px dashed #fff;
+        margin: auto;
+      }
     }
-  }
 
-  .animation-container-M {
-    height: 20%;
-    width: 100%;
-    display: flex;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    justify-content: center;
-    .moving-text-top {
-      font-size: 35px;
-      color: #fff;
-      transform: translate(-20%, 0%);
-      &:hover {
-        color: rgb(108, 108, 216);
+    .animation-container-M {
+      height: 20%;
+      width: 100%;
+      display: flex;
+      position: absolute;
+      left: 50%;
+      top: 150%;
+      transform: translate(-50%, -50%);
+      justify-content: center;
+      .moving-text-top {
+        font-size: 35px;
+        color: #fff;
+        transform: translate(-20%, 0%);
+        &:hover {
+          color: rgb(108, 108, 216);
+        }
+      }
+      .moving-text-middle {
+        font-size: 35px;
+        color: #fff;
+        transform: translate(140%, 120%);
+        &:hover {
+          color: rgb(240, 90, 90);
+        }
+      }
+      .moving-text-bottom {
+        font-size: 35px;
+        color: #fff;
+        transform: translate(-55%, 240%);
+        &:hover {
+          color: rgb(255, 184, 69);
+        }
       }
     }
-    .moving-text-middle {
-      font-size: 35px;
-      color: #fff;
-      transform: translate(140%, 120%);
-      &:hover {
-        color: rgb(240, 90, 90);
-      }
-    }
-    .moving-text-bottom {
-      font-size: 35px;
-      color: #fff;
-      transform: translate(-55%, 240%);
-      &:hover {
-        color: rgb(255, 184, 69);
-      }
-    }
-  }
 
-  #mars {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    height: 200px;
+    #mars {
+      position: absolute;
+      top: 200%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 200px;
+    }
   }
 }
 
 // PC 버전 스타일
 @media (min-width: 1024px) {
-  @font-face {
-    font-family: 'JSDongkang';
-    src:url('/Users/seogyumin/Desktop/recruiting-site/src/font/JSDongkang-Regular.ttf')//바꿔주세요...
-  }
-  body {
-    height: 100vh;
-    margin: 0;
-    background-color: #000000;
-    background-image: url('/Users/seogyumin/Desktop/recruiting-site/src/images/space_backgroud.png');//바꿔주세요...
-    background-size: cover;
-    font-family: 'JSDongkang';
-  }
-
-  .animation-container-M{
-    display: none;
-  }
-
-  .content {
-    height: 25%;
-    .title {
-      text-align: center;
-      color: #ffffff;
-      font-size: 65px;
+  .two {
+    .animation-container-M {
+      display: none;
     }
-  }
 
-  .animation-container-PC {
-    height: 20%;
-    width: 100%;
-    display: flex;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    justify-content: center;
-    .moving-text-left {
-      font-size: 45px;
-      color: #a2a2a2;
-      &:hover {
-        color: rgb(108, 108, 216);
+    .content {
+      display: flex;
+      .title {
+        color: #ffffff;
+        font-size: 120px;
+        margin-top: -300px;
       }
     }
-    .moving-text-center {
-      font-size: 45px;
-      color: #a2a2a2;
-      &:hover {
-        color: rgb(240, 90, 90);
-      }
-    }
-    .moving-text-right {
-      font-size: 45px;
-      color: #a2a2a2;
-      &:hover {
-        color: rgb(255, 184, 69);
-      }
-    }
-  }
 
-  //행성 이미지
-  #mars {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    height: 200px;
+    .animation-container-PC {
+      height: 20%;
+      width: 100%;
+      display: flex;
+      position: absolute;
+      left: 50%;
+      top: 150%;
+      transform: translate(-50%, -50%);
+      justify-content: center;
+      .moving-text-left {
+        font-size: 64px;
+        color: #a2a2a2;
+        &:hover {
+          color: rgb(108, 108, 216);
+        }
+      }
+      .moving-text-center {
+        font-size: 64px;
+        color: #a2a2a2;
+        &:hover {
+          color: rgb(240, 90, 90);
+        }
+      }
+      .moving-text-right {
+        font-size: 64px;
+        color: #a2a2a2;
+        &:hover {
+          color: rgb(255, 184, 69);
+        }
+      }
+    }
+
+    //행성 이미지
+    #mars {
+      position: absolute;
+      top: 150%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 200px;
+    }
   }
 }
