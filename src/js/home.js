@@ -1,5 +1,3 @@
-// home.js
-
 document.addEventListener('DOMContentLoaded', function () {
   // 1, 2, 3, 4 링크 요소 가져오기
   const link1 = document.getElementById('1')
@@ -30,4 +28,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // 원하는 .html 페이지 주소로 이동
     window.location.href = 'page4.html'
   })
+})
+
+const image = document.getElementById('as')
+
+gsap.to(image, {
+  rotation: 360,
+  duration: 180,
+  repeat: -1,
+  ease: 'linear',
 })

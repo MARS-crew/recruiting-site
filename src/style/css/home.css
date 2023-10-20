@@ -114,9 +114,8 @@
     align-items: center;
     font-size: 36px;
   }
-  .footer_copyright {
+  .one .footer_copyright {
     text-align: center;
-    background-color: #000;
     color: #fff;
     position: absolute;
     bottom: 0;
@@ -124,7 +123,7 @@
     padding: 10px 0;
     font-size: 1rem;
   }
-  .header-container {
+  .one .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -133,57 +132,51 @@
     left: 30;
     right: 30;
   }
-  .logo {
+  .one .logo {
     max-width: 50px;
-    /* 로고의 최대 너비 조정 */
   }
-  nav ul {
+  .one nav ul {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
   }
-  nav li {
+  .one nav li {
     margin-right: 60px;
   }
-  nav a {
+  .one nav a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
     font-size: 16px;
     transition: color 0.3s ease;
   }
-  nav a:hover {
+  .one nav a:hover {
     color: #00f;
   }
-  /* SCSS */
-  main {
+  .one .content {
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
-    /* 화면 높이의 100%를 차지하도록 설정하여 화면 정 가운데에 위치합니다. */
-  }
-  .main-introduction {
     text-align: center;
+    align-items: center;
   }
-  .main-introduction-first-one,
-  .main-introduction-first-two {
-    margin-bottom: 20px;
-    /* 두 개의 요소 사이에 여백을 줍니다. */
+  .one .content .main-introduction-first-one {
+    margin-bottom: 200px;
   }
-  h3 {
+  .one .content .main-introduction-first-one h3 {
     color: #fff;
-    /* 흰색 글씨 설정 */
-    font-size: 30px;
+    font-size: 32px;
     margin: 0;
-    /* 기본 마진 제거 */
+    margin-bottom: 30px;
   }
-  h1 {
+  .one .content .main-introduction-first-one h1 {
     color: #fff;
-    /* 흰색 글씨 설정 */
-    font-size: 40px;
+    font-size: 64px;
     margin: 0;
-    /* 기본 마진 제거 */
+  }
+  .one .content .image_box img {
+    position: absolute;
+    z-index: -1;
+    margin-left: -1900px;
   }
 }
