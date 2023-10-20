@@ -6,12 +6,14 @@
   "repository": "https://github.com/MARS-crew/recruiting-site.git",
   "author": "pinomaker-hoo <inhoo23@naver.com>",
   "license": "MIT",
+  "homepage": "https://mars-crew.github.io/recruiting-site/",
   "scripts": {
     "dev": "gulp",
     "format": "prettier --write \"src/**/*.{js}\"",
     "lint": "eslint \"src/**/*.{ts,js}\" --fix",
     "docker": "docker build --no-cache --rm -f Dockerfile -t pinomaker/mars-recruiting:latest .",
-    "docker-push": "docker push pinomaker/mars-recruiting:latest"
+    "docker-push": "docker push pinomaker/mars-recruiting:latest",
+    "deploy": "gh-pages -d src"
   },
   "devDependencies": {
     "@babel/core": "^7.22.11",
@@ -29,5 +31,8 @@
     "postcss": "^8.4.30",
     "prettier": "^3.0.3",
     "sass": "^1.66.1"
+  },
+  "dependencies": {
+    "gh-pages": "^6.0.0"
   }
 }
