@@ -5,7 +5,6 @@
     padding: 0;
     overflow: hidden;
     background-color: #000000;
-    background-size: cover;
     font-family: 'JSDongkang';
   }
 
@@ -15,7 +14,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 36px;
   }
 }
 
@@ -31,8 +29,6 @@
     padding: 0;
     overflow: hidden;
     background-color: #000000;
-    background-image: url('/Users/seogyumin/Desktop/recruiting-site/src/images/space_backgroud.png'); //바꿔주세요...
-    background-size: cover;
     font-family: 'JSDongkang';
   }
 
@@ -42,6 +38,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 36px;
   }
 }

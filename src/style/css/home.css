@@ -1,6 +1,9 @@
 @charset "UTF-8";
 /* 모바일 버전 스타일 */
 @media (max-width: 767px) {
+  .one {
+    height: 100vh;
+  }
   .one .footer_copyright {
     text-align: center;
     background-color: #000;
@@ -77,6 +80,9 @@
 }
 /* PC 버전 스타일 */
 @media (min-width: 1024px) {
+  .one {
+    height: 100vh;
+  }
   .one .footer_copyright {
     text-align: center;
     color: #fff;

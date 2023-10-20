@@ -4,7 +4,6 @@
     padding: 0;
     overflow: hidden;
     background-color: #000000;
-    background-size: cover;
     font-family: "JSDongkang";
   }
   .section {
@@ -13,7 +12,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 36px;
   }
 }
 @media (min-width: 1024px) {
@@ -26,8 +24,6 @@
     padding: 0;
     overflow: hidden;
     background-color: #000000;
-    background-image: url("/Users/seogyumin/Desktop/recruiting-site/src/images/space_backgroud.png");
-    background-size: cover;
     font-family: "JSDongkang";
   }
   .section {
@@ -36,6 +32,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 36px;
   }
 }
