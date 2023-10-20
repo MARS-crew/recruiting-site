@@ -1,51 +1,41 @@
 @media (max-width: 767px) {
   body {
-    height: 100vh;
     margin: 0;
+    padding: 0;
+    overflow: hidden;
     background-color: #000000;
+    background-size: cover;
+    font-family: "JSDongkang";
+  }
+  .section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
   }
 }
 @media (min-width: 1024px) {
+  @font-face {
+    font-family: "JSDongkang";
+    src: url("/Users/seogyumin/Desktop/recruiting-site/src/font/JSDongkang-Regular.ttf");
+  }
   body {
-    height: 100vh;
     margin: 0;
+    padding: 0;
+    overflow: hidden;
     background-color: #000000;
-  }
-  #header {
-    width: 100%;
-    height: 100px;
-    padding: 30px;
-  }
-  #header #logo {
-    width: 100px;
-    height: 100px;
-  }
-  .content {
-    height: 100%;
-  }
-  .content #section1 #title_box div {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  .content #section1 #title_box div h1 {
-    font-size: 96px;
-    color: white;
-  }
-  .content #section1 #title_box div h2 {
-    font-size: 60px;
-    color: white;
-  }
-  .content #section1 .section {
-    width: 100%;
-    height: 300px;
-    background-color: blue;
+    background-image: url("/Users/seogyumin/Desktop/recruiting-site/src/images/space_backgroud.png");
+    background-size: cover;
+    font-family: "JSDongkang";
   }
   .section {
-    height: 100%;
-    min-height: 100%;
-    align-items: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
     justify-content: center;
-    font-size: 2em;
+    align-items: center;
+    font-size: 36px;
   }
 }

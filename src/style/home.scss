@@ -1,24 +1,5 @@
 /* 모바일 버전 스타일 */
 @media (max-width: 767px) {
-  body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #000000;
-    background-image: url('/Users/seogyumin/Desktop/recruiting-site/src/images/space_backgroud.png'); //바꿔주세요...
-    background-size: cover;
-    font-family: 'JSDongkang';
-  }
-
-  .section {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 36px;
-  }
-
   .one {
     .footer_copyright {
       text-align: center;
@@ -113,30 +94,6 @@
 
 /* PC 버전 스타일 */
 @media (min-width: 1024px) {
-  @font-face {
-    font-family: 'JSDongkang';
-    src: url('/Users/seogyumin/Desktop/recruiting-site/src/font/JSDongkang-Regular.ttf'); //바꿔주세요...
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #000000;
-    background-image: url('/Users/seogyumin/Desktop/recruiting-site/src/images/space_backgroud.png'); //바꿔주세요...
-    background-size: cover;
-    font-family: 'JSDongkang';
-  }
-
-  .section {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 36px;
-  }
-
   .one {
     .footer_copyright {
       text-align: center;
