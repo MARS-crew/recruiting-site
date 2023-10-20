@@ -15,18 +15,16 @@ gulp.task('sass:watch', function () {
   watch(SCSS_SOURCE, gulp.series(['sass', 'postcss']))
 })
 
-// Compile sass into CSS & auto-inject into browsers
 function compileSCSS() {
   return gulp
     .src(SCSS_SOURCE)
-    .pipe(cached('cached-css')) // only compile changed files
+    .pipe(cached('cached-css'))
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(gulp.dest(SCSS_COMPILED_DEST))
   // .pipe(browserSync.stream());
 }
 gulp.task('sass', compileSCSS)
 
-// Transform css & auto-inject into browsers
 function transformCSS() {
   const plugins = [autoprefixer({})]
   return gulp
