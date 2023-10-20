@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const image = document.getElementById('as')
 
-gsap.to(image, {
+gsap.to('#mars', {
   rotation: 360,
   duration: 180,
   repeat: -1,
