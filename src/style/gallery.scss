@@ -58,12 +58,14 @@
         font-size: 48px;
         margin-bottom: -30px;
       }
-      h6 {
+      h4 {
+        margin-top: 48px;
         color: #ffffff;
         font-size: 24px;
       }
     }
     .gallery {
+      margin-top: 100px;
       height: 80%;
       overflow: hidden;
       .cards {
@@ -72,9 +74,45 @@
           list-style: none;
           height: 500px;
           width: 400px;
-          background-color: #9d7cce;
+          background-color: #fff;
           position: absolute;
+          opacity: 0.9;
           border-radius: 30px;
+          img {
+            border-radius: 30px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+          }
+          h3 {
+            position: absolute;
+            top: -80;
+            left: 35%;
+            color: #fff;
+          }
+          .marker_box {
+            width: 50%;
+            margin-top: 90%;
+            background-color: #d4a874;
+            height: 50px;
+            display: flex;
+            border-radius: 0px 10px 10px 0px;
+            padding-left: 24px;
+            h4 {
+              justify-content: center;
+              color: #fff;
+            }
+          }
+
+          h2 {
+            padding-left: 24px;
+
+            color: #fff;
+          }
         }
       }
       .actions {

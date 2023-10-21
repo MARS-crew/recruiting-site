@@ -52,11 +52,13 @@
     font-size: 48px;
     margin-bottom: -30px;
   }
-  .three .top h6 {
+  .three .top h4 {
+    margin-top: 48px;
     color: #ffffff;
     font-size: 24px;
   }
   .three .gallery {
+    margin-top: 100px;
     height: 80%;
     overflow: hidden;
   }
@@ -67,8 +69,43 @@
     list-style: none;
     height: 500px;
     width: 400px;
-    background-color: #9d7cce;
+    background-color: #fff;
     position: absolute;
+    opacity: 0.9;
     border-radius: 30px;
+  }
+  .three .gallery .cards li img {
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .three .gallery .cards li h3 {
+    position: absolute;
+    top: -80;
+    left: 35%;
+    color: #fff;
+  }
+  .three .gallery .cards li .marker_box {
+    width: 50%;
+    margin-top: 90%;
+    background-color: #d4a874;
+    height: 50px;
+    display: flex;
+    border-radius: 0px 10px 10px 0px;
+    padding-left: 24px;
+  }
+  .three .gallery .cards li .marker_box h4 {
+    justify-content: center;
+    color: #fff;
+  }
+  .three .gallery .cards li h2 {
+    padding-left: 24px;
+    color: #fff;
   }
 }
