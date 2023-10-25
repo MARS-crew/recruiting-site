@@ -1,5 +1,7 @@
 const sections = document.querySelectorAll('.section')
 const marsImg = document.querySelector('#mars')
+const lineBox = document.querySelector('.line_box')
+
 let currentSection = 0
 let isScrolling = false
 
@@ -46,6 +48,10 @@ const animateMars = () => {
     ease: 'linear',
   })
 }
+
+lineBox.addEventListener('click', () => {
+  scrollToSection(currentSection + 1)
+})
 
 window.addEventListener('wheel', (e) => {
   if (isScrolling) return
