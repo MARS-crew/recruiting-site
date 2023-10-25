@@ -107,7 +107,7 @@
         align-items: center;
         width: 90%;
 
-        input[type=text] {
+        input[type='text'] {
           bottom: 0;
           background: rgba(0, 0, 0, 0);
           width: 300px;
@@ -120,7 +120,7 @@
           outline: none;
         }
 
-        input[type=button] {
+        input[type='button'] {
           margin-top: 28px;
           font-size: 16px;
           width: 69px;
@@ -130,7 +130,7 @@
           border-radius: 10px;
         }
 
-        input[type="radio"] {
+        input[type='radio'] {
           margin: 0 6px 6px 0;
           vertical-align: middle;
           appearance: none;
@@ -141,16 +141,16 @@
           transition: border 0.3s ease-in-out;
         }
 
-        input[type="radio"]:checked {
+        input[type='radio']:checked {
           border: 1em solid rgb(255, 255, 255);
         }
 
-        input[type="radio"]:focus-visible {
+        input[type='radio']:focus-visible {
           outline-offset: max(2px, 0.1em);
           outline: max(2px, 0.1em) dotted tomato;
         }
 
-        input[type="checkbox"] {
+        input[type='checkbox'] {
           margin: 0 12px 8px 0;
           vertical-align: middle;
           appearance: none;
@@ -160,11 +160,11 @@
           transition: border 0.3s ease-in-out;
         }
 
-        input[type="checkbox"]:checked {
+        input[type='checkbox']:checked {
           border: 0.5em solid rgb(255, 255, 255);
         }
 
-        input[type="checkbox"]:focus-visible {
+        input[type='checkbox']:focus-visible {
           outline-offset: max(2px, 0.1em);
           outline: max(2px, 0.1em) dotted tomato;
         }
@@ -204,7 +204,6 @@
     }
   }
 }
-
 
 /// PC 버전 스타일
 @media (min-width: 1024px) {
@@ -318,7 +317,7 @@
         position: relative;
         margin-top: 86px;
 
-        input[type=text] {
+        input[type='text'] {
           position: absolute;
           bottom: 0;
           background: rgba(0, 0, 0, 0);
@@ -332,7 +331,7 @@
           outline: none;
         }
 
-        input[type=button] {
+        input[type='button'] {
           position: absolute;
           right: 0;
           bottom: 0;
@@ -343,7 +342,7 @@
           border-radius: 10px;
         }
 
-        input[type="radio"] {
+        input[type='radio'] {
           margin: 0 12px 8px 0;
           vertical-align: middle;
           appearance: none;
@@ -354,16 +353,16 @@
           transition: border 0.3s ease-in-out;
         }
 
-        input[type="radio"]:checked {
+        input[type='radio']:checked {
           border: 1em solid rgb(255, 255, 255);
         }
 
-        input[type="radio"]:focus-visible {
+        input[type='radio']:focus-visible {
           outline-offset: max(2px, 0.1em);
           outline: max(2px, 0.1em) dotted tomato;
         }
 
-        input[type="checkbox"] {
+        input[type='checkbox'] {
           margin: 0 12px 8px 0;
           vertical-align: middle;
           appearance: none;
@@ -373,11 +372,11 @@
           transition: border 0.3s ease-in-out;
         }
 
-        input[type="checkbox"]:checked {
+        input[type='checkbox']:checked {
           border: 1em solid rgb(255, 255, 255);
         }
 
-        input[type="checkbox"]:focus-visible {
+        input[type='checkbox']:focus-visible {
           outline-offset: max(2px, 0.1em);
           outline: max(2px, 0.1em) dotted tomato;
         }
@@ -393,48 +392,40 @@
           border-color: #fff;
           border-width: 0 0 2px;
           outline: none;
-              }
-
-
-          }
-
         }
-
-  }
-
-    .navigation {
-      width: 20%;
-      top: 25%;
-      position: fixed;
-      z-index: 1;
-      right: 0;
-  
-  
-      .nav-list {
-        li{
-          font-size: 20px;
-          margin-bottom: 30px;
-        
       }
-        li:hover{
-          color:rgb(255, 255, 255);
-          cursor: pointer;
-      } 
-  
     }
   }
-  .main_dump{
-    flex:1;
-  }
 
+  .navigation {
+    width: 20%;
+    top: 25%;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+
+    .nav-list {
+      li {
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+      li:hover {
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+      }
+    }
+  }
+  .main_dump {
+    flex: 1;
+  }
 }
 
-#moveMan{
-  pointer-events: none; 
+#moveMan {
+  pointer-events: none;
   position: fixed;
-  z-index: 1;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
 textarea {
