@@ -26,6 +26,18 @@ const animateRandomly = () => {
   })
 }
 
+/**
+ * 화성 애니메이션
+ */
+const animateMars = () => {
+  gsap.to('#mars', {
+    rotation: 360,
+    duration: 180,
+    repeat: -1,
+    ease: 'linear',
+  })
+}
+
 window.addEventListener('wheel', (e) => {
   if (isScrolling) return
 
@@ -45,4 +57,5 @@ window.addEventListener('wheel', (e) => {
 
 document.addEventListener('DOMContentLoaded', function () {
   animateRandomly()
+  animateMars()
 })

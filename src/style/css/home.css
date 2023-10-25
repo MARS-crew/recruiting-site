@@ -80,18 +80,6 @@
 }
 /* PC 버전 스타일 */
 @media (min-width: 1024px) {
-  .one {
-    height: 100vh;
-  }
-  .one .footer_copyright {
-    text-align: center;
-    color: #fff;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 10px 0;
-    font-size: 1rem;
-  }
   .one .header-container {
     display: flex;
     align-items: center;
@@ -101,34 +89,23 @@
     left: 30;
     right: 30;
   }
-  .one .header-container #header {
-    flex-direction: column;
-    display: flex;
-    position: fixed;
-    width: 100%;
-    align-items: center;
-    margin-top: 20px;
-  }
-  .one .header-container #header .logo {
-    max-width: 50px;
-  }
-  .one nav ul {
+  .one .header-container nav ul {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
   }
-  .one nav li {
+  .one .header-container nav li {
     margin-right: 60px;
   }
-  .one nav a {
+  .one .header-container nav a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
     font-size: 16px;
     transition: color 0.3s ease;
   }
-  .one nav a:hover {
+  .one .header-container nav a:hover {
     color: #00f;
   }
   .one .content {
@@ -160,5 +137,14 @@
   }
   .one .content .image_bottom_box {
     display: none;
+  }
+  .one .footer_copyright {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
   }
 }
