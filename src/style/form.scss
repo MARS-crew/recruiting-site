@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'JSDongkang';
+  src: url('../../font/JSDongkang-Bold.ttf');
+}
+@font-face {
+  font-family: 'JSDongkang-Reg';
+  src: url('../../font/JSDongkang-Regular.ttf');
+}
+
 // 모바일 버전 스타일
 @media (max-width: 767px) {
   @font-face {
@@ -207,15 +216,6 @@
 
 /// PC 버전 스타일
 @media (min-width: 1024px) {
-  @font-face {
-    font-family: 'JSDongkang';
-    src: url('../../font/JSDongkang-Bold.ttf');
-  }
-  @font-face {
-    font-family: 'JSDongkang-Reg';
-    src: url('../../font/JSDongkang-Regular.ttf');
-  }
-
   body {
     font-family: 'JSDongkang-Reg';
     width: 100%;

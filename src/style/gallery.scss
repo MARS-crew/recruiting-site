@@ -1,16 +1,7 @@
 // 모바일 버전 스타일
-@font-face {
-  font-family: 'JSDongkang';
-  src: url('../../font/JSDongkang-Bold.ttf');
-}
-@font-face {
-  font-family: 'JSDongkang-Reg';
-  src: url('../../font/JSDongkang-Regular.ttf');
-}
 
 @media (max-width: 767px) {
   .three {
-    height: 100vh;
     .box {
       .top {
         text-align: center;

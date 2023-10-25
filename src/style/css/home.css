@@ -134,6 +134,7 @@
     margin-left: -1800px;
     margin-top: -200px;
     width: 2800px;
+    transition: opacity 2s;
   }
   .one .content .image_bottom_box {
     display: none;

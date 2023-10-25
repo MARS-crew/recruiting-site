@@ -1,4 +1,5 @@
 const sections = document.querySelectorAll('.section')
+const marsImg = document.querySelector('#mars')
 let currentSection = 0
 let isScrolling = false
 
@@ -10,6 +11,14 @@ const scrollToSection = (index) => {
   if (index >= 0 && index < sections.length) {
     sections[index].scrollIntoView({ behavior: 'smooth' })
     currentSection = index
+
+    if (currentSection !== 0) {
+      marsImg.style.opacity = 0
+
+      return
+    }
+
+    marsImg.style.opacity = 1
   }
 }
 

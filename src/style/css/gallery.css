@@ -1,15 +1,4 @@
-@font-face {
-  font-family: "JSDongkang";
-  src: url("../../font/JSDongkang-Bold.ttf");
-}
-@font-face {
-  font-family: "JSDongkang-Reg";
-  src: url("../../font/JSDongkang-Regular.ttf");
-}
 @media (max-width: 767px) {
-  .three {
-    height: 100vh;
-  }
   .three .box .top {
     text-align: center;
     overflow: hidden;
