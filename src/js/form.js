@@ -140,13 +140,3 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   })
 })
-
-/**
- * A + B를 리턴하는 함수
- * @param {number} a
- * @param {number} b
- * @returns number
- */
-const add = (a, b) => {
-  return a + b
-}
