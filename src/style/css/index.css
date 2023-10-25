@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "JSDongkang";
+  src: url("../font/JSDongkang-Regular.ttf");
+}
 @media (max-width: 767px) {
   body {
     margin: 0;
@@ -15,10 +19,6 @@
   }
 }
 @media (min-width: 1024px) {
-  @font-face {
-    font-family: "JSDongkang";
-    src: url("/Users/seogyumin/Desktop/recruiting-site/src/font/JSDongkang-Regular.ttf");
-  }
   body {
     margin: 0;
     padding: 0;
