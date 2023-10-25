@@ -1,7 +1,3 @@
-@font-face {
-  font-family: "JSDongkang";
-  src: url("/Users/seogyumin/Desktop/recruiting-site/src/font/JSDongkang-Regular.ttf");
-}
 @media (max-width: 767px) {
   .two .back-button {
     display: none;
@@ -111,18 +107,18 @@
     font-size: 64px;
     color: #a2a2a2;
   }
-  .two .animation-container-M {
-    display: none;
-  }
-  .two .content {
+  .two .main .content {
     display: flex;
   }
-  .two .content .title {
+  .two .main .content .title {
     color: #ffffff;
     font-size: 120px;
     margin-top: -300px;
   }
-  .two .animation-container-PC {
+  .two .main .animation-container-M {
+    display: none;
+  }
+  .two .main .animation-container-PC {
     height: 20%;
     width: 100%;
     display: flex;
@@ -132,33 +128,25 @@
     transform: translate(-50%, -50%);
     justify-content: center;
   }
-  .two .animation-container-PC .moving-text-left {
+  .two .main .animation-container-PC .moving-text-left {
     font-size: 64px;
     color: #a2a2a2;
   }
-  .two .animation-container-PC .moving-text-left:hover {
+  .two .main .animation-container-PC .moving-text-left:hover {
     color: rgb(108, 108, 216);
   }
-  .two .animation-container-PC .moving-text-center {
+  .two .main .animation-container-PC .moving-text-center {
     font-size: 64px;
     color: #a2a2a2;
   }
-  .two .animation-container-PC .moving-text-center:hover {
+  .two .main .animation-container-PC .moving-text-center:hover {
     color: rgb(240, 90, 90);
   }
-  .two .animation-container-PC .moving-text-right {
+  .two .main .animation-container-PC .moving-text-right {
     font-size: 64px;
     color: #a2a2a2;
   }
-  .two .animation-container-PC .moving-text-right:hover {
+  .two .main .animation-container-PC .moving-text-right:hover {
     color: rgb(255, 184, 69);
-  }
-  .two #mars {
-    position: absolute;
-    top: 150%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    height: 200px;
   }
 }

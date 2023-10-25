@@ -5,21 +5,23 @@ const movingTextTop = document.querySelector('.moving-text-top')
 const movingTextMiddle = document.querySelector('.moving-text-middle')
 const movingTextBottom = document.querySelector('.moving-text-bottom')
 const titleText = document.querySelector('.title')
-const marsImage = document.getElementById('mars2')
+const marsImage = document.querySelector('#mars2')
 const isMobile = window.innerWidth <= 767
 
 const targetElementOne = document.querySelector('.move_we')
 const targetElementTwo = document.querySelector('.two-content')
 const targetElementThree = document.querySelector('.move_what')
 
-const changeColor = () => {
+let isMove = true
+
+const onComplete = () => {
   gsap.to(targetElementOne, { color: 'white', duration: 1 })
+  isMove = false
 }
 
 const observerOne = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      // "우리는" 초기 애니메이션
       gsap.fromTo(
         targetElementOne,
         { x: '500%', y: 0, opacity: 1 },
@@ -29,7 +31,7 @@ const observerOne = new IntersectionObserver((entries) => {
           opacity: 1,
           duration: 5,
           ease: 'power2.out',
-          onComplete: changeColor,
+          onComplete,
         },
       )
     }
@@ -83,41 +85,6 @@ observerOne.observe(targetElementOne)
 observerTwo.observe(targetElementTwo)
 observerThree.observe(targetElementThree)
 
-if (!isMobile) {
-  function changeTitleText(a) {
-    if (a == 0) {
-      titleText.innerText = '마스외전으로 놀러와!'
-    } else if (a == 1) {
-      titleText.innerText = '우리는'
-    } else if (a == 2) {
-      titleText.innerText = '어디서'
-    } else if (a == 3) {
-      titleText.innerText = '무엇을 할까'
-    }
-  }
-
-  function clickDisplay() {
-    movingTextLeft.style.display = 'none'
-    movingTextCenter.style.display = 'none'
-    movingTextRight.style.display = 'none'
-  }
-
-  //화성 이동 애니메이션
-  gsap.to(marsImage, {
-    y: '200px',
-    duration: 2,
-    delay: 2,
-  })
-
-  //뒤로 가기
-  function goBack() {
-    changeTitleText(0)
-    movingTextLeft.style.display = 'block'
-    movingTextCenter.style.display = 'block'
-    movingTextRight.style.display = 'block'
-  }
-}
-
 if (isMobile) {
   //1번째 애니메이션 '우리는'
   gsap.to(movingTextTop, {
@@ -165,41 +132,41 @@ if (isMobile) {
   gsap.to(movingTextTop, {
     x: '125%',
     y: '-40%',
-    duration: 2, // 애니메이션 기간 (초)
-    ease: 'power1.inOut', // 이징 함수
+    duration: 2,
+    ease: 'power1.inOut',
     delay: 2.5,
   })
 
   gsap.to(movingTextMiddle, {
     x: '25%',
-    y: '30%', // y축으로 이동할 거리
-    duration: 2, // 애니메이션 기간 (초)
-    ease: 'power1.inOut', // 이징 함수
+    y: '30%',
+    duration: 2,
+    ease: 'power1.inOut',
     delay: 2.5,
   })
 
   gsap.to(movingTextBottom, {
-    x: '-60%', // x축으로 이동할 거리
-    y: '100%', // y축으로 이동할 거리
+    x: '-60%',
+    y: '100%',
     bezier: {
-      type: 'soft', // 곡선 타입 선택 (soft, rough, etc.)
+      type: 'soft',
       values: [
-        { x: '-20%', y: '0%' }, // 시작 지점
-        { x: '100%', y: '-25%' }, // 중간 지점
-        { x: '130%', y: '-50%' }, // 끝 지점
+        { x: '-20%', y: '0%' },
+        { x: '100%', y: '-25%' },
+        { x: '130%', y: '-50%' },
       ],
     },
-    duration: 2, // 애니메이션 기간 (초)
-    ease: 'power1.inOut', // 이징 함수
+    duration: 2,
+    ease: 'power1.inOut',
     delay: 2.5,
   })
 
   gsap.to(marsImage, {
-    y: '-60%', // 위로 올라가는 거리
-    scale: 2, // 크기를 1.5배로 키움
-    duration: 2.5, // 애니메이션 기간
+    y: '-60%',
+    scale: 2,
+    duration: 2.5,
     delay: 3,
-    ease: 'power2.out', // 이징 함수
+    ease: 'power2.out',
   })
 
   function clickDisplay() {
@@ -245,29 +212,31 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 })
 
-function nextMove() {
+const nextMove = () => {
   currSlide++
   if (currSlide <= maxSlide) {
-    console.log('Hello')
     const offset = slideWidth * (currSlide - 1)
     slideItems.forEach((i) => {
       i.setAttribute('style', `left: ${-offset}px`)
     })
-  } else {
-    currSlide--
+
+    return
   }
+  currSlide--
 }
 
-function prevMove() {
+const prevMove = () => {
   currSlide--
   if (currSlide > 0) {
     const offset = slideWidth * (currSlide - 1)
     slideItems.forEach((i) => {
       i.setAttribute('style', `left: ${-offset}px`)
     })
-  } else {
-    currSlide++
+
+    return
   }
+
+  currSlide++
 }
 
 const disabled = () => {
@@ -277,6 +246,7 @@ const disabled = () => {
 }
 
 movingTextCenter.addEventListener('click', () => {
+  if (isMove) return
   gsap.fromTo(
     movingTextCenter,
     { x: '30%', y: 0, opacity: 1 },
@@ -291,6 +261,7 @@ movingTextCenter.addEventListener('click', () => {
 })
 
 movingTextRight.addEventListener('click', () => {
+  if (isMove) return
   gsap.fromTo(
     movingTextRight,
     { x: 0, y: 0, opacity: 1 },
@@ -302,6 +273,7 @@ movingTextRight.addEventListener('click', () => {
 })
 
 movingTextLeft.addEventListener('click', () => {
+  if (isMove) return
   gsap.fromTo(
     movingTextLeft,
     { x: 0, y: 0, opacity: 1 },

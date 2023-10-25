@@ -122,7 +122,9 @@
   .section .main_content .main-form input[type=radio] {
     margin: 0 6px 6px 0;
     vertical-align: middle;
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     border: max(2px, 0.1em) solid white;
     border-radius: 50%;
     width: 2em;
@@ -139,7 +141,9 @@
   .section .main_content .main-form input[type=checkbox] {
     margin: 0 12px 8px 0;
     vertical-align: middle;
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     border: max(2px, 0.1em) solid white;
     width: 1em;
     height: 1em;
@@ -308,7 +312,9 @@
   .section .main_content .main-form input[type=radio] {
     margin: 0 12px 8px 0;
     vertical-align: middle;
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     border: max(2px, 0.1em) solid white;
     border-radius: 50%;
     width: 2em;
@@ -325,7 +331,9 @@
   .section .main_content .main-form input[type=checkbox] {
     margin: 0 12px 8px 0;
     vertical-align: middle;
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     border: max(2px, 0.1em) solid white;
     width: 2em;
     height: 2em;
