@@ -1,6 +1,8 @@
 const sections = document.querySelectorAll('.section')
 const marsImg = document.querySelector('#mars')
-const lineBox = document.querySelector('.line_box')
+const lineOne = document.querySelector('.line_one')
+const lineTwo = document.querySelector('.line_two')
+const lineThree = document.querySelector('.line_three')
 
 let currentSection = 0
 let isScrolling = false
@@ -49,7 +51,16 @@ const animateMars = () => {
   })
 }
 
-lineBox.addEventListener('click', () => {
+lineOne.addEventListener('click', () => {
+  console.log('Hello')
+  scrollToSection(currentSection + 1)
+})
+
+lineTwo.addEventListener('click', () => {
+  scrollToSection(currentSection + 1)
+})
+
+lineThree.addEventListener('click', () => {
   scrollToSection(currentSection + 1)
 })
 
