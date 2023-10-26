@@ -42,17 +42,26 @@
   .three {
     .top {
       height: 20%;
-      padding-top: 64px;
+      padding-top: 256px;
       text-align: center;
       h1 {
         color: #ffffff;
         font-size: 48px;
-        margin-bottom: -30px;
       }
       h4 {
         margin-top: 48px;
         color: #ffffff;
         font-size: 24px;
+      }
+    }
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 400px;
+      img {
+        z-index: 100;
+        width: 60px;
+        height: 60px;
       }
     }
     .gallery {
@@ -105,8 +114,6 @@
             color: #fff;
           }
         }
-      }
-      .actions {
       }
     }
   }

@@ -33,18 +33,27 @@
 @media (min-width: 1024px) {
   .three .top {
     height: 20%;
-    padding-top: 64px;
+    padding-top: 256px;
     text-align: center;
   }
   .three .top h1 {
     color: #ffffff;
     font-size: 48px;
-    margin-bottom: -30px;
   }
   .three .top h4 {
     margin-top: 48px;
     color: #ffffff;
     font-size: 24px;
+  }
+  .three .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 400px;
+  }
+  .three .actions img {
+    z-index: 100;
+    width: 60px;
+    height: 60px;
   }
   .three .gallery {
     margin-top: 100px;

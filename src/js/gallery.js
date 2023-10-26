@@ -1,5 +1,3 @@
-gsap.registerPlugin(ScrollTrigger)
-
 let iteration = 0
 
 const spacing = 0.06
@@ -21,28 +19,6 @@ function isMobileDevice() {
   } else {
     return false
   }
-}
-
-const trigger = ScrollTrigger.create({
-  start: 0,
-  onUpdate(self) {
-    if (self.progress === 1 && self.direction > 0 && !self.wrapping) {
-      wrapForward(self)
-    } else {
-      scrub.vars.totalTime = snap(
-        (iteration + self.progress) * seamlessLoop.duration(),
-      )
-      scrub.invalidate().restart()
-      self.wrapping = false
-    }
-  },
-  end: '+=3000',
-})
-
-function wrapForward(trigger) {
-  iteration++
-  trigger.wrapping = true
-  trigger.scroll(trigger.start + 1)
 }
 
 function scrubTo(totalTime) {
