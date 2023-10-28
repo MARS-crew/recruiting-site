@@ -63,19 +63,8 @@
     position: relative;
     width: 100%;
     height: 1000px;
-    overflow: hidden;
   }
   .four .content .scrolling-text {
     text-align: center;
-    transform: translate(-50%, -50%);
-    animation: scrollText 100s linear infinite;
-  }
-  @keyframes scrollText {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-100%);
-    }
   }
 }

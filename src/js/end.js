@@ -42,6 +42,21 @@
 //   scrollToNextSection()
 // })
 
+const content = document.querySelector('.content')
+let scrollPosition = 0
+
+// 스크롤 이벤트 리스너 추가
+document.querySelector('.scroll-box').addEventListener('scroll', function () {
+  const scrollTop = this.scrollTop
+  const scrollHeight = this.scrollHeight - this.clientHeight
+
+  // 스크롤 위치를 퍼센트로 계산
+  const scrollPercentage = (scrollTop / scrollHeight) * 100
+
+  // 서서히 스크롤 이벤트 처리
+  content.style.transform = `translateY(-${scrollPercentage}%)`
+})
+
 const targetElement = document.querySelector('#four_content')
 const scroll = document.querySelector('.scrolling-text')
 

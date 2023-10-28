@@ -8,6 +8,8 @@ const titleText = document.querySelector('.title')
 const marsImage = document.querySelector('#mars2')
 const isMobile = window.innerWidth <= 767
 
+const nodeDiv = document.querySelector('.node')
+
 const targetElementOne = document.querySelector('.move_we')
 const targetElementTwo = document.querySelector('.two-content')
 const targetElementThree = document.querySelector('.move_what')
@@ -16,7 +18,11 @@ let isMove = true
 
 const onComplete = () => {
   gsap.to(targetElementOne, { color: 'white', duration: 1 })
-  isMove = false
+  nodeDiv.style.display = 'block'
+  nodeDiv.style.opacity = '0'
+  setTimeout(function () {
+    nodeDiv.style.opacity = '1'
+  }, 100)
 }
 
 const observerOne = new IntersectionObserver((entries) => {
@@ -26,8 +32,8 @@ const observerOne = new IntersectionObserver((entries) => {
         targetElementOne,
         { x: '500%', y: 0, opacity: 1 },
         {
-          x: '50%',
-          y: '-400%',
+          x: '0',
+          y: '-500%',
           opacity: 1,
           duration: 5,
           ease: 'power2.out',
@@ -56,7 +62,16 @@ const observerTwo = new IntersectionObserver((entries) => {
       gsap.fromTo(
         movingTextRight,
         { x: '400%', y: 40, opacity: 1 },
-        { x: '40%', y: 0, opacity: 1, duration: 5, ease: 'power2.out' },
+        {
+          x: '40%',
+          y: 0,
+          opacity: 1,
+          duration: 5,
+          ease: 'power2.out',
+          onComplete: () => {
+            isMove = false
+          },
+        },
       )
     }
   })
@@ -199,7 +214,6 @@ let slideWidth = slide.clientWidth
 const slideItems = document.querySelectorAll('.slide_item')
 const maxSlide = slideItems.length
 
-// 버튼 클릭할 때 마다 현재 슬라이드가 어디인지 알려주기 위한 변수
 let currSlide = 1
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -273,6 +287,7 @@ movingTextRight.addEventListener('click', () => {
 })
 
 movingTextLeft.addEventListener('click', () => {
+  console.log(isMove)
   if (isMove) return
   gsap.fromTo(
     movingTextLeft,
