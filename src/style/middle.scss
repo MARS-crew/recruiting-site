@@ -2,7 +2,7 @@
 @media (max-width: 767px) {
   @font-face {
     font-family: 'JSDongkang';
-    src:url('../../font/JSDongkang-Bold.ttf')
+    src: url('../../font/JSDongkang-Bold.ttf');
   }
   body {
     height: 100vh;
@@ -12,48 +12,51 @@
 
   .content {
     height: 100%;
-    color:#ffffff;
-  
-    #section0{
+    color: #ffffff;
+
+    #section0 {
       h1 {
         display: none;
       }
-      P{
+      P {
         display: none;
       }
-      .flex{
+      .flex {
         display: flex;
         padding-top: 30%;
         flex-direction: column;
         align-items: flex-start;
-        .intro-box{
+        .intro-box {
           padding-bottom: 8%;
         }
-        .box1{
+        .box1 {
           padding-left: 5%;
         }
-        .box2{
+        .box2 {
           padding-left: 45%;
         }
-        .box3{
+        .box3 {
           padding-left: 5%;
           padding-top: -100px;
         }
-        .box4{
+        .box4 {
           padding-left: 16%;
         }
       }
-      .image{
+      .image {
         display: none;
       }
-      .circle-wrap{
+      .circle-wrap {
         position: absolute;
-        top : 24%;
+        top: 24%;
         left: 19%;
-        .circle{
-          animation: rotate_circle 8s linear infinite;transform-origin: 50% 50%;
+        .circle {
+          animation: rotate_circle 8s linear infinite;
+          transform-origin: 50% 50%;
           @keyframes rotate_circle {
-            100% {transform: rotate(360deg);}
+            100% {
+              transform: rotate(360deg);
+            }
           }
           display: flex;
           justify-content: center;
@@ -63,8 +66,7 @@
           border: 1px solid rgb(226, 234, 236);
           border-radius: 50%;
           border-style: dashed;
-          .insiede-circle{
-
+          .insiede-circle {
             padding: 15%;
             width: 50px;
             height: 50px;
@@ -72,16 +74,16 @@
             border-radius: 50%;
             border-style: dashed;
           }
+        }
       }
-      }
-      .popup{
+      .popup {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         width: 100%;
         height: 100%;
-        .dim-bg{
+        .dim-bg {
           z-index: -15;
 
           width: 100%;
@@ -90,7 +92,7 @@
           opacity: 0.8;
           filter: alpha(opacit=90);
         }
-        .pop-content{
+        .pop-content {
           background-color: rgba(78, 78, 78, 0.253);
           border: 1px solid #6d6d6d;
           width: 50%;
@@ -98,51 +100,50 @@
           position: absolute;
           left: 50%;
           top: 50%;
-          transform: translate(-52%,-50%);
-          p{
+          transform: translate(-52%, -50%);
+          p {
             text-align: center;
             display: block;
             font-size: 1rem;
             font-weight: bold;
           }
-          .close{
+          .close {
             position: absolute;
-            top:0;
+            top: 0;
             right: 10%;
           }
         }
-     
       }
     } //section0 end
-    #section1{
+    #section1 {
       display: grid;
       place-items: center;
-      div{
-        p{
+      div {
+        p {
           font-size: 1rem;
         }
       }
     }
-    #section2{
+    #section2 {
       display: grid;
       place-items: center;
-        p{
-          width: 75%;
-          font-size: 1rem;
-        }
+      p {
+        width: 75%;
+        font-size: 1rem;
+      }
     }
   }
 
   .section {
     position: relative;
     background-color: white;
-    background: url('../../images/defaultBackground.png') no-repeat ;
+    background: url('../../images/defaultBackground.png') no-repeat;
     background-size: cover;
-    color:#ffffff;
+    color: #ffffff;
     height: 100%;
     min-height: 100%;
     font-size: 1.9em;
-    .image{
+    .image {
       width: 30%;
       filter: drop-shadow(0 0 30px rgb(226, 234, 236));
     }
@@ -150,31 +151,31 @@
 }
 
 // PC 버전 스타일
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   @font-face {
     font-family: 'JSDongkang';
-    src:url('../../font/JSDongkang-Bold.ttf')
+    src: url('../../font/JSDongkang-Bold.ttf');
   }
   @font-face {
     font-family: 'JSDongkang-Reg';
-    src:url('../../font/JSDongkang-Regular.ttf')
+    src: url('../../font/JSDongkang-Regular.ttf');
   }
   body {
     font-family: 'JSDongkang-Reg';
     height: 100vh;
     margin: 0;
   }
-  @mixin box-start{
-      justify-self: start;
+  @mixin box-start {
+    justify-self: start;
   }
-  @mixin box-center{
+  @mixin box-center {
     justify-self: center;
-}
+  }
 
   .content {
     height: 100%;
     #section0 {
-      .circle-wrap{
+      .circle-wrap {
         display: none;
       }
       .flex {
@@ -183,73 +184,73 @@
         display: grid;
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(2, 1fr);
-        .intro-box{
+        .intro-box {
           width: 74%;
           height: 320px;
           h2 {
-              strong{
-                font-family: 'JSDongkang';
-                font-size: 2rem;
-              }
+            strong {
+              font-family: 'JSDongkang';
+              font-size: 2rem;
+            }
           }
           p {
             font-size: 1.3rem;
             animation-duration: 2s;
             animation-name: slidein;
-            animation-fill-mode: forward
+            animation-fill-mode: forward;
           }
-        
-            @keyframes slidein{
-              from{
-                margin-left: 300%;
-                width: 300%;
-              }
-              to{
-                margin-left: 0%;
-                width: 100%
-              }
+
+          @keyframes slidein {
+            from {
+              margin-left: 300%;
+              width: 300%;
             }
+            to {
+              margin-left: 0%;
+              width: 100%;
+            }
+          }
         }
-        .box1{
+        .box1 {
           @include box-start;
-          p{
+          p {
             animation-delay: 0.5s;
           }
         }
-        .box2{
+        .box2 {
           @include box-start;
-          p{
+          p {
             animation-delay: 0.8s;
           }
         }
-        .box3{
+        .box3 {
           @include box-center;
-          p{
-            animation-delay: 1.2s
+          p {
+            animation-delay: 1.2s;
           }
         }
-        .box4{
+        .box4 {
           @include box-center;
-          p{
-            animation-delay: 1.5s
+          p {
+            animation-delay: 1.5s;
           }
         }
       }
-      .image{
+      .image {
         position: absolute;
         right: 5%;
-        top : 35%;
+        top: 35%;
       }
     }
     //3 어디서
-    #section1{
+    #section1 {
       height: 100%;
       text-align: center;
     }
-    #section2{
+    #section2 {
       height: 100%;
       text-align: center;
-      p{
+      p {
         width: 70%;
         margin: 0 auto;
       }
@@ -258,9 +259,9 @@
     .section {
       position: relative;
       background-color: white;
-      background: url('../../images/defaultBackground.png') no-repeat ;
+      background: url('../../images/defaultBackground.png') no-repeat;
       background-size: cover;
-      color:#ffffff;
+      color: #ffffff;
       height: 100%;
       min-height: 100%;
       font-size: 2em;
@@ -271,12 +272,11 @@
         font-size: 80px;
         text-align: center;
       }
-      .image{
+      .image {
         width: 11%;
         margin-bottom: 5%;
         filter: drop-shadow(0 0 30px rgb(226, 234, 236));
       }
     }
-
   }
 }

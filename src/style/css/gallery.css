@@ -30,7 +30,7 @@
     border-radius: 10px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .three .top {
     height: 20%;
     padding-top: 256px;
