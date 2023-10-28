@@ -21,6 +21,9 @@
     justify-content: center;
     align-items: center;
   }
+  .line {
+    display: none;
+  }
 }
 @media (min-width: 768px) {
   body {

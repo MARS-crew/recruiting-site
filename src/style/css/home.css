@@ -1,62 +1,49 @@
 @charset "UTF-8";
 /* 모바일 버전 스타일 */
 @media (max-width: 767px) {
-  .one {
-    height: 100vh;
-  }
-  .one .footer_copyright {
-    text-align: center;
-    background-color: #000;
-    color: #fff;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 10px 0;
-    font-size: 0.5rem;
-  }
   .one .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
-    top: 20px;
-    /* 상단 여백 조절 */
-    left: 20px;
-    right: 10px;
+    position: fixed;
+    top: 10;
+    left: 20;
+    right: 10;
   }
-  .one .logo {
-    max-width: 50px;
-    /* 로고의 최대 너비 조정 */
+  .one .header-container .logo img {
+    width: 40;
+    height: 40;
   }
-  .one nav ul {
+  .one .header-container nav ul {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
   }
-  .one nav li {
+  .one .header-container nav li {
     margin-right: 25px;
   }
-  .one nav a {
+  .one .header-container nav a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
     font-size: 16px;
     transition: color 0.3s ease;
   }
-  .one nav a:hover {
+  .one .header-container nav a:hover {
     color: #00f;
   }
   .one .content {
     display: flex;
+    height: 100vh;
     text-align: center;
-    align-items: center;
   }
   .one .content .main-introduction-first-one h3 {
     color: #fff;
     font-size: 15px;
     margin: 0;
     margin-bottom: 30px;
+    padding-top: 48px;
   }
   .one .content .main-introduction-first-one h1 {
     color: #fff;
@@ -76,6 +63,16 @@
   }
   .one .content .image_bottom_box img {
     width: 36px;
+  }
+  .one .footer_copyright {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 0.5rem;
   }
 }
 /* PC 버전 스타일 */
