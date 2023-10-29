@@ -60,7 +60,16 @@ lineOne.addEventListener('click', () => {
 })
 
 lineTwo.addEventListener('click', () => {
-  scrollToSection(currentSection + 1)
+  const lineTwoImage = document.querySelector('.line_two :first-child')
+  const imageSrcArr = lineTwoImage.src.split('/')
+  const imageSrc = imageSrcArr[imageSrcArr.length - 1]
+  if (imageSrc === 'down.svg') {
+    scrollToSection(currentSection + 1)
+  }
+
+  if (imageSrc === 'left.svg') {
+    currentSlide = 1
+  }
 })
 
 lineThree.addEventListener('click', () => {

@@ -18,6 +18,9 @@ const targetElementThree = document.querySelector('.move_what')
 const targetElementMobile = document.querySelector('.mobile')
 const targetElementFour = document.querySelector('.move_where')
 
+const lineBox = document.querySelector('.line_two')
+const lineImage = document.querySelector('.line_two :first-child')
+
 let isMove = true
 
 const mobileFunc = () => {
@@ -117,12 +120,12 @@ const mobileFunc = () => {
     clickDisplay()
   })
 
-  // 우리는 클릭 이벤트
+  // 어디서 클릭 이벤트
   movingTextMiddle.addEventListener('click', () => {
     clickDisplay()
   })
 
-  // 우리는 클릭 이벤트
+  // 무엇을 클릭 이벤트
   movingTextBottom.addEventListener('click', () => {
     clickDisplay()
   })
@@ -290,17 +293,31 @@ const disabled = () => {
 
 movingTextCenter.addEventListener('click', () => {
   if (isMove) return
+  lineImage.src = './images/svg/left.svg'
   nextMove(3)
 })
 
 movingTextRight.addEventListener('click', () => {
   if (isMove) return
+  lineImage.src = './images/svg/left.svg'
   nextMove(4)
 })
 
 movingTextLeft.addEventListener('click', () => {
   if (isMove) return
+  lineImage.src = './images/svg/left.svg'
   nextMove(1)
+})
+
+lineBox.addEventListener('click', () => {
+  const lineTwoImage = document.querySelector('.line_two :first-child')
+  const imageSrcArr = lineTwoImage.src.split('/')
+  const imageSrc = imageSrcArr[imageSrcArr.length - 1]
+
+  if (imageSrc === 'left.svg') {
+    nextMove(1)
+    lineImage.src = './images/svg/down.svg'
+  }
 })
 
 window.addEventListener('resize', () => {
