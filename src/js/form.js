@@ -1,19 +1,32 @@
-document.addEventListener('DOMContentLoaded', function () {
-  // #man을 랜덤한 위치로 이동시키는 함수
-  function animateRandomly() {
-    gsap.to('#man', {
-      x: () => Math.random() * (window.innerWidth - 100),
-      y: () => Math.random() * (window.innerHeight - 100),
-      duration: 7,
-      onComplete: animateRandomly,
-      ease: 'none',
-    })
-  }
+const sectionOne = document.querySelector('.space_one')
+const sectionTwo = document.querySelector('.space_two')
+const sectionThree = document.querySelector('.space_three')
+const sectionFour = document.querySelector('.space_four')
+const sectionFive = document.querySelector('.space_five')
+const sectionSix = document.querySelector('.space_six')
+const sectionSeven = document.querySelector('.space_seven')
 
+const animateRandomly = () => {
+  gsap.to('#man', {
+    x: () => Math.random() * (window.innerWidth - 100),
+    y: () => Math.random() * (window.innerHeight - 100),
+    duration: 7,
+    onComplete: animateRandomly,
+    ease: 'none',
+  })
+}
+
+document.addEventListener('DOMContentLoaded', function () {
   animateRandomly()
-})
+  const textareas = document.querySelectorAll('textarea')
 
-document.addEventListener('DOMContentLoaded', function () {
+  textareas.forEach(function (textarea) {
+    textarea.addEventListener('input', function () {
+      this.style.height = 'auto'
+      this.style.height = this.scrollHeight + 'px'
+    })
+  })
+
   let currentSection = 0
   const sections = document.querySelectorAll('.section')
   const navListItems = document.querySelectorAll('.nav-list li')
@@ -80,6 +93,70 @@ document.addEventListener('DOMContentLoaded', function () {
     } else if (delta < 0) {
       scrollToSection(currentSection - 1)
     }
+
+    switch (currentSection) {
+      case 0:
+        sectionOne.style.animation = 'zoom 10s infinite'
+        sectionTwo.style.animation = ''
+        sectionThree.style.animation = ''
+        sectionFour.style.animation = ''
+        sectionFive.style.animation = ''
+        sectionSix.style.animation = ''
+        sectionSeven.style.animation = ''
+        break
+
+      case 1:
+        sectionOne.style.animation = ''
+        sectionTwo.style.animation = 'zoom 10s infinite'
+        sectionThree.style.animation = ''
+        sectionFour.style.animation = ''
+        sectionFive.style.animation = ''
+        sectionSix.style.animation = ''
+        sectionSeven.style.animation = ''
+        break
+      case 2:
+        sectionOne.style.animation = ''
+        sectionTwo.style.animation = ''
+        sectionThree.style.animation = 'zoom 10s infinite'
+        sectionFour.style.animation = ''
+        sectionFive.style.animation = ''
+        sectionSix.style.animation = ''
+        sectionSeven.style.animation = ''
+        break
+      case 3:
+        sectionOne.style.animation = ''
+        sectionTwo.style.animation = ''
+        sectionThree.style.animation = ''
+        sectionFour.style.animation = 'zoom 10s infinite'
+        sectionFive.style.animation = ''
+        sectionSix.style.animation = ''
+        sectionSeven.style.animation = ''
+      case 4:
+        sectionOne.style.animation = ''
+        sectionTwo.style.animation = ''
+        sectionThree.style.animation = ''
+        sectionFour.style.animation = ''
+        sectionFive.style.animation = 'zoom 10s infinite'
+        sectionSix.style.animation = ''
+        sectionSeven.style.animation = ''
+      case 5:
+        sectionOne.style.animation = ''
+        sectionTwo.style.animation = ''
+        sectionThree.style.animation = ''
+        sectionFour.style.animation = ''
+        sectionFive.style.animation = ''
+        sectionSix.style.animation = 'zoom 10s infinite'
+        sectionSeven.style.animation = ''
+      case 6:
+        sectionOne.style.animation = ''
+        sectionTwo.style.animation = ''
+        sectionThree.style.animation = ''
+        sectionFour.style.animation = ''
+        sectionFive.style.animation = ''
+        sectionSix.style.animation = ''
+        sectionSeven.style.animation = 'zoom 10s infinite'
+        break
+    }
   }
 
   window.addEventListener('wheel', handleScroll, { passive: false })
@@ -114,29 +191,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     scrollToSection(index)
   }
-
-  const manImage = document.querySelector('#man')
-  function showManImage() {
-    if (manImage) {
-      manImage.style.display = 'block'
-    }
-  }
-
-  function hideManImage() {
-    if (manImage) {
-      manImage.style.display = 'none'
-    }
-  }
 })
 
-document.addEventListener('DOMContentLoaded', function () {
-  const DEFAULT_HEIGHT = 1 // textarea 기본 height
-  const textareas = document.querySelectorAll('textarea')
-
-  textareas.forEach(function (textarea) {
-    textarea.addEventListener('input', function () {
-      this.style.height = 'auto'
-      this.style.height = this.scrollHeight + 'px'
-    })
-  })
-})
+window.onload = () => {
+  sectionOne.style.animation = 'zoom 10s infinite'
+}
