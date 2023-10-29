@@ -52,7 +52,6 @@ const animateMars = () => {
 }
 
 lineOne.addEventListener('click', () => {
-  console.log('Hello')
   scrollToSection(currentSection + 1)
 })
 
@@ -85,3 +84,9 @@ document.addEventListener('DOMContentLoaded', function () {
   animateRandomly()
   animateMars()
 })
+
+window.onload = () => {
+  setTimeout(() => {
+    window.scrollTo(0, 0)
+  }, 30)
+}
