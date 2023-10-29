@@ -77,34 +77,6 @@
 }
 /* PC 버전 스타일 */
 @media (min-width: 768px) {
-  .one .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 20;
-    left: 30;
-    right: 30;
-  }
-  .one .header-container nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  .one .header-container nav li {
-    margin-right: 60px;
-  }
-  .one .header-container nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: 16px;
-    transition: color 0.3s ease;
-  }
-  .one .header-container nav a:hover {
-    color: #00f;
-  }
   .one .content {
     display: flex;
     height: 100vh;
