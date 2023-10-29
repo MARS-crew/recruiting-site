@@ -1,6 +1,10 @@
 // 모바일 버전 스타일
 @media (max-width: 767px) {
   .two {
+    .slide {
+      display: none;
+    }
+
     .back-button {
       display: none;
     }
@@ -10,7 +14,6 @@
     }
 
     .content {
-      height: 25%;
       .title {
         padding-top: 90px;
         text-align: center;
@@ -75,7 +78,7 @@
       }
     }
 
-    #mars {
+    #mobile_mars {
       position: absolute;
       top: 200%;
       left: 50%;
@@ -89,6 +92,9 @@
 // PC 버전 스타일
 @media (min-width: 768px) {
   .two {
+    .mobile {
+      display: none;
+    }
     .slide {
       display: flex;
       flex-wrap: nowrap;
@@ -159,10 +165,55 @@
       }
     }
 
+    .slide_two {
+      h1 {
+        font-size: 64px;
+        color: #a2a2a2;
+      }
+      .node_two {
+        display: none;
+        transition: opacity 1s;
+        .image {
+          position: absolute;
+          top: 25%;
+          left: 40%;
+        }
+        .info {
+          top: 60%;
+          left: 33%;
+          position: absolute;
+          .info_content {
+            display: flex;
+            justify-content: center;
+            .title_h2 {
+              color: white;
+              font-size: 50px;
+            }
+            .body_p {
+              margin-top: -24px;
+              color: white;
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+
     .slide_three {
       h1 {
         font-size: 64px;
         color: #a2a2a2;
+      }
+      .three {
+        .three_content {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 800px;
+          h2 {
+            color: white;
+          }
+        }
       }
     }
 

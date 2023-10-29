@@ -6,101 +6,21 @@ const movingTextMiddle = document.querySelector('.moving-text-middle')
 const movingTextBottom = document.querySelector('.moving-text-bottom')
 const titleText = document.querySelector('.title')
 const marsImage = document.querySelector('#mars2')
+const mobileMarsImage = document.querySelector('#mobile_mars')
 const isMobile = window.innerWidth <= 767
 
 const nodeDiv = document.querySelector('.node')
+const nodeDivFour = document.querySelector('.node_two')
 
 const targetElementOne = document.querySelector('.move_we')
 const targetElementTwo = document.querySelector('.two-content')
 const targetElementThree = document.querySelector('.move_what')
+const targetElementMobile = document.querySelector('.mobile')
+const targetElementFour = document.querySelector('.move_where')
 
 let isMove = true
 
-const onComplete = () => {
-  gsap.to(targetElementOne, { color: 'white', duration: 1 })
-  nodeDiv.style.display = 'block'
-  nodeDiv.style.opacity = '0'
-  setTimeout(function () {
-    nodeDiv.style.opacity = '1'
-  }, 100)
-}
-
-const observerOne = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      gsap.fromTo(
-        targetElementOne,
-        { x: '500%', y: 0, opacity: 1 },
-        {
-          x: '0',
-          y: '-500%',
-          opacity: 1,
-          duration: 5,
-          ease: 'power2.out',
-          onComplete,
-        },
-      )
-    }
-  })
-})
-
-const observerTwo = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      gsap.fromTo(
-        movingTextLeft,
-        { x: '-500%', y: 0, opacity: 1 },
-        { x: '-20%', y: 0, opacity: 1, duration: 5, ease: 'power2.out' },
-      )
-
-      gsap.fromTo(
-        movingTextCenter,
-        { x: '30%', y: 300, opacity: 1 },
-        { x: '30%', y: 0, opacity: 1, duration: 5, ease: 'power2.out' },
-      )
-
-      gsap.fromTo(
-        movingTextRight,
-        { x: '400%', y: 40, opacity: 1 },
-        {
-          x: '40%',
-          y: 0,
-          opacity: 1,
-          duration: 5,
-          ease: 'power2.out',
-          onComplete: () => {
-            isMove = false
-          },
-        },
-      )
-    }
-  })
-})
-
-const observerThree = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      gsap.fromTo(
-        targetElementThree,
-        { x: '-500%', y: 0, opacity: 1 },
-        {
-          x: '50%',
-          y: '-400%',
-          opacity: 1,
-          duration: 5,
-          ease: 'power2.out',
-          onComplete: changeColor,
-        },
-      )
-    }
-  })
-})
-
-observerOne.observe(targetElementOne)
-observerTwo.observe(targetElementTwo)
-observerThree.observe(targetElementThree)
-
-if (isMobile) {
+const mobileFunc = () => {
   //1번째 애니메이션 '우리는'
   gsap.to(movingTextTop, {
     x: '130%', // x축으로 이동할 거리
@@ -176,7 +96,7 @@ if (isMobile) {
     delay: 2.5,
   })
 
-  gsap.to(marsImage, {
+  gsap.to(mobileMarsImage, {
     y: '-60%',
     scale: 2,
     duration: 2.5,
@@ -208,6 +128,125 @@ if (isMobile) {
   })
 }
 
+const observerOne = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      gsap.fromTo(
+        targetElementOne,
+        { x: '500%', y: 0, opacity: 1 },
+        {
+          x: '0',
+          y: '-500%',
+          opacity: 1,
+          duration: 5,
+          ease: 'power2.out',
+          onComplete: () => {
+            gsap.to(targetElementOne, { color: 'white', duration: 1 })
+            nodeDiv.style.display = 'block'
+            nodeDiv.style.opacity = '0'
+            setTimeout(function () {
+              nodeDiv.style.opacity = '1'
+            }, 100)
+          },
+        },
+      )
+    }
+  })
+})
+
+const observerTwo = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      gsap.fromTo(
+        movingTextLeft,
+        { x: '-500%', y: 0, opacity: 1 },
+        { x: '-20%', y: 0, opacity: 1, duration: 5, ease: 'power2.out' },
+      )
+
+      gsap.fromTo(
+        movingTextCenter,
+        { x: '30%', y: 300, opacity: 1 },
+        { x: '30%', y: 0, opacity: 1, duration: 5, ease: 'power2.out' },
+      )
+
+      gsap.fromTo(
+        movingTextRight,
+        { x: '400%', y: 40, opacity: 1 },
+        {
+          x: '40%',
+          y: 0,
+          opacity: 1,
+          duration: 5,
+          ease: 'power2.out',
+          onComplete: () => {
+            isMove = false
+          },
+        },
+      )
+    }
+  })
+})
+
+const observerThree = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      gsap.fromTo(
+        targetElementThree,
+        { x: '200%', y: 0, opacity: 1 },
+        {
+          x: '0',
+          y: '-100%',
+          opacity: 1,
+          duration: 5,
+          ease: 'power2.out',
+          onComplete: () => {
+            gsap.to(targetElementThree, { color: 'white', duration: 1 })
+          },
+        },
+      )
+    }
+  })
+})
+
+const observerFour = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      gsap.fromTo(
+        targetElementFour,
+        { x: '500%', y: 0, opacity: 1 },
+        {
+          x: '0',
+          y: '-500%',
+          opacity: 1,
+          duration: 5,
+          ease: 'power2.out',
+          onComplete: () => {
+            gsap.to(targetElementFour, { color: 'white', duration: 1 })
+            nodeDivFour.style.display = 'block'
+            nodeDivFour.style.opacity = '0'
+            setTimeout(function () {
+              nodeDivFour.style.opacity = '1'
+            }, 100)
+          },
+        },
+      )
+    }
+  })
+})
+const observerMobile = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      mobileFunc()
+    }
+  })
+})
+
+observerOne.observe(targetElementOne)
+observerTwo.observe(targetElementTwo)
+observerThree.observe(targetElementThree)
+observerFour.observe(targetElementFour)
+observerMobile.observe(targetElementMobile)
+
 const slide = document.querySelector('.slide')
 let slideWidth = slide.clientWidth
 
@@ -216,18 +255,8 @@ const maxSlide = slideItems.length
 
 let currSlide = 1
 
-document.addEventListener('DOMContentLoaded', () => {
-  currSlide = 2
-
-  const offset = slideWidth * (currSlide - 1)
-
-  slideItems.forEach((i) => {
-    i.setAttribute('style', `left: ${-offset}px`)
-  })
-})
-
-const nextMove = () => {
-  currSlide++
+const nextMove = (slide) => {
+  currSlide = slide
   if (currSlide <= maxSlide) {
     const offset = slideWidth * (currSlide - 1)
     slideItems.forEach((i) => {
@@ -261,42 +290,17 @@ const disabled = () => {
 
 movingTextCenter.addEventListener('click', () => {
   if (isMove) return
-  gsap.fromTo(
-    movingTextCenter,
-    { x: '30%', y: 0, opacity: 1 },
-    {
-      x: '30%',
-      y: '-300%',
-      duration: 3,
-      ease: 'power2.out',
-      onComplete: disabled,
-    },
-  )
+  nextMove(3)
 })
 
 movingTextRight.addEventListener('click', () => {
   if (isMove) return
-  gsap.fromTo(
-    movingTextRight,
-    { x: 0, y: 0, opacity: 1 },
-    { x: '180%', y: 0, opacity: 1, duration: 1, ease: 'power2.out' },
-  )
-  setTimeout(() => {
-    nextMove()
-  }, 500)
+  nextMove(4)
 })
 
 movingTextLeft.addEventListener('click', () => {
-  console.log(isMove)
   if (isMove) return
-  gsap.fromTo(
-    movingTextLeft,
-    { x: 0, y: 0, opacity: 1 },
-    { x: '-330%', y: 0, opacity: 1, duration: 1, ease: 'power2.out' },
-  )
-  setTimeout(() => {
-    prevMove()
-  }, 500)
+  nextMove(1)
 })
 
 window.addEventListener('resize', () => {
