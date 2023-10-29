@@ -18,6 +18,130 @@
     background-color: #000000;
     color: #ffffff;
   }
+  body #header {
+    flex-direction: column;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    top: 15%;
+  }
+  body #header .nav_dot img {
+    width: 20px;
+    height: 20px;
+  }
+  body .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 20;
+    left: 30;
+    right: 30;
+    z-index: 10;
+  }
+  body .header-container .logo img {
+    width: 35;
+    height: 35;
+  }
+  body .header-container .form button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+  }
+  body .header-container .form button h2 {
+    color: white;
+    font-size: 12;
+  }
+  @keyframes zoom {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  body .space_one {
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 100vh;
+    top: 0%;
+  }
+  body .space_one img {
+    width: 100%;
+    height: 100%;
+  }
+  body .space_two {
+    position: absolute;
+    z-index: -3;
+    width: 100%;
+    height: 100vh;
+    top: 100%;
+  }
+  body .space_two img {
+    width: 100%;
+    height: 100%;
+  }
+  body .space_three {
+    position: absolute;
+    z-index: -4;
+    width: 100%;
+    height: 100vh;
+    top: 200%;
+  }
+  body .space_three img {
+    width: 100%;
+    height: 100%;
+  }
+  body .space_four {
+    position: absolute;
+    z-index: -5;
+    width: 100%;
+    height: 100vh;
+    top: 300%;
+  }
+  body .space_four img {
+    width: 100%;
+    height: 100%;
+  }
+  body .space_five {
+    position: absolute;
+    z-index: -5;
+    width: 100%;
+    height: 100vh;
+    top: 400%;
+  }
+  body .space_five img {
+    width: 100%;
+    height: 100%;
+  }
+  body .space_six {
+    position: absolute;
+    z-index: -5;
+    width: 100%;
+    height: 100vh;
+    top: 500%;
+  }
+  body .space_six img {
+    width: 100%;
+    height: 100%;
+  }
+  body .space_seven {
+    position: absolute;
+    z-index: -5;
+    width: 100%;
+    height: 100vh;
+    top: 600%;
+  }
+  body .space_seven img {
+    width: 100%;
+    height: 100%;
+  }
   #section0,
   #section1,
   #section2,
@@ -57,29 +181,10 @@
     font-size: 15px;
     font-weight: 700;
   }
-  #header {
-    flex-direction: column;
-    display: flex;
-    position: fixed;
-    width: 100%;
-    align-items: center;
-    margin-top: 20px;
-  }
-  #header #logo {
-    width: 20%;
-    max-width: 200px;
-    height: 50%;
-    display: block;
-  }
-  #header .nav_dot img {
-    width: 20px;
-    height: 20px;
-  }
   .navigation {
     display: none;
   }
   .section {
-    background: url("../../images/defaultBackground.png") no-repeat;
     height: 100%;
     min-height: 100%;
     align-items: center;
