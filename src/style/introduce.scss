@@ -204,15 +204,25 @@
         font-size: 64px;
         color: #a2a2a2;
       }
-      .three {
-        .three_content {
+
+      .node_three {
+        display: none;
+        transition: opacity 1s;
+        .info {
+          top: 40%;
+          left: 30%;
+          position: absolute;
           display: flex;
+          width: 40%;
           justify-content: center;
-          align-items: center;
-          width: 800px;
           h2 {
             color: white;
           }
+        }
+        .image {
+          position: absolute;
+          top: 60%;
+          left: 40%;
         }
       }
     }

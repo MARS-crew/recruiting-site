@@ -11,6 +11,7 @@ const isMobile = window.innerWidth <= 767
 
 const nodeDiv = document.querySelector('.node')
 const nodeDivFour = document.querySelector('.node_two')
+const nodeDivFive = document.querySelector('.node_three')
 
 const targetElementOne = document.querySelector('.move_we')
 const targetElementTwo = document.querySelector('.two-content')
@@ -160,6 +161,14 @@ const observerOne = new IntersectionObserver((entries) => {
 const observerTwo = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
+      if (!isMove) {
+        isMove = true
+      }
+      nodeDiv.style.display = 'none'
+      nodeDiv.style.opacity = '0'
+      nodeDivFour.style.display = 'none'
+      nodeDivFour.style.opacity = '0'
+
       gsap.fromTo(
         movingTextLeft,
         { x: '-500%', y: 0, opacity: 1 },
@@ -195,15 +204,20 @@ const observerThree = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       gsap.fromTo(
         targetElementThree,
-        { x: '200%', y: 0, opacity: 1 },
+        { x: '100%', y: 0, opacity: 1 },
         {
           x: '0',
-          y: '-100%',
+          y: '-500%',
           opacity: 1,
           duration: 5,
           ease: 'power2.out',
           onComplete: () => {
             gsap.to(targetElementThree, { color: 'white', duration: 1 })
+            nodeDivFive.style.display = 'block'
+            nodeDivFive.style.opacity = '0'
+            setTimeout(function () {
+              nodeDivFive.style.opacity = '1'
+            }, 100)
           },
         },
       )
@@ -306,7 +320,7 @@ movingTextRight.addEventListener('click', () => {
 movingTextLeft.addEventListener('click', () => {
   if (isMove) return
   lineImage.src = './images/svg/left.svg'
-  nextMove(1)
+  nextMove(2)
 })
 
 lineBox.addEventListener('click', () => {
