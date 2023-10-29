@@ -11,8 +11,6 @@
     "dev": "gulp",
     "format": "prettier --write \"src/**/*.{js}\"",
     "lint": "eslint \"src/**/*.{ts,js}\" --fix",
-    "docker": "docker build --no-cache --rm -f Dockerfile -t pinomaker/mars-recruiting:latest .",
-    "docker-push": "docker push pinomaker/mars-recruiting:latest",
     "deploy": "gh-pages -d src"
   },
   "devDependencies": {
