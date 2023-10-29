@@ -3,6 +3,10 @@ const marsImg = document.querySelector('#mars')
 const lineOne = document.querySelector('.line_one')
 const lineTwo = document.querySelector('.line_two')
 const lineThree = document.querySelector('.line_three')
+const sectionOne = document.querySelector('.space_one')
+const sectionTwo = document.querySelector('.space_two')
+const sectionThree = document.querySelector('.space_three')
+const sectionFour = document.querySelector('.space_four')
 
 let currentSection = 0
 let isScrolling = false
@@ -74,6 +78,34 @@ window.addEventListener('wheel', (e) => {
     scrollToSection(currentSection - 1)
   }
 
+  switch (currentSection) {
+    case 0:
+      sectionOne.style.animation = 'zoom 10s infinite'
+      sectionTwo.style.animation = ''
+      sectionThree.style.animation = ''
+      sectionFour.style.animation = ''
+      break
+
+    case 1:
+      sectionOne.style.animation = ''
+      sectionTwo.style.animation = 'zoom 10s infinite'
+      sectionThree.style.animation = ''
+      sectionFour.style.animation = ''
+      break
+    case 2:
+      sectionOne.style.animation = ''
+      sectionTwo.style.animation = ''
+      sectionThree.style.animation = 'zoom 10s infinite'
+      sectionFour.style.animation = ''
+      break
+    case 3:
+      sectionOne.style.animation = ''
+      sectionTwo.style.animation = ''
+      sectionThree.style.animation = ''
+      sectionFour.style.animation = 'zoom 10s infinite'
+      break
+  }
+
   isScrolling = true
   setTimeout(() => {
     isScrolling = false
@@ -88,5 +120,6 @@ document.addEventListener('DOMContentLoaded', function () {
 window.onload = () => {
   setTimeout(() => {
     window.scrollTo(0, 0)
+    sectionOne.style.animation = 'zoom 10s infinite'
   }, 30)
 }
