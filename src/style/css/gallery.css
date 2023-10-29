@@ -58,18 +58,18 @@
   .three .gallery {
     margin-top: 100px;
     height: 80%;
+    width: 100%;
     overflow: hidden;
   }
   .three .gallery .cards {
-    padding-left: 108px;
+    padding-left: 26%;
   }
   .three .gallery .cards li {
     list-style: none;
-    height: 500px;
-    width: 400px;
+    height: 400px;
+    width: 15%;
     background-color: #fff;
     position: absolute;
-    opacity: 0.9;
     border-radius: 30px;
   }
   .three .gallery .cards li img {
@@ -86,24 +86,19 @@
   .three .gallery .cards li h3 {
     position: absolute;
     top: -80;
-    left: 35%;
+    padding-left: 26%;
     color: #fff;
   }
-  .three .gallery .cards li .marker_box {
-    width: 50%;
-    margin-top: 90%;
-    background-color: #d4a874;
-    height: 50px;
+  .three .gallery .cards li .text {
+    width: 100%;
+    margin-top: 35.5vh;
     display: flex;
-    border-radius: 0px 10px 10px 0px;
-    padding-left: 24px;
-  }
-  .three .gallery .cards li .marker_box h4 {
+    align-items: center;
     justify-content: center;
-    color: #fff;
+    background-color: blue;
+    border-radius: 0px 0px 30px 30px;
   }
-  .three .gallery .cards li h2 {
-    padding-left: 24px;
+  .three .gallery .cards li .text h2 {
     color: #fff;
   }
 }

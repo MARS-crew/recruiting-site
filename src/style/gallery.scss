@@ -67,16 +67,17 @@
     .gallery {
       margin-top: 100px;
       height: 80%;
+
+      width: 100%;
       overflow: hidden;
       .cards {
-        padding-left: 108px;
+        padding-left: 26%;
         li {
           list-style: none;
-          height: 500px;
-          width: 400px;
+          height: 400px;
+          width: 15%;
           background-color: #fff;
           position: absolute;
-          opacity: 0.9;
           border-radius: 30px;
           img {
             border-radius: 30px;
@@ -91,27 +92,20 @@
           h3 {
             position: absolute;
             top: -80;
-            left: 35%;
+            padding-left: 26%;
             color: #fff;
           }
-          .marker_box {
-            width: 50%;
-            margin-top: 90%;
-            background-color: #d4a874;
-            height: 50px;
+          .text {
+            width: 100%;
+            margin-top: 35.5vh;
             display: flex;
-            border-radius: 0px 10px 10px 0px;
-            padding-left: 24px;
-            h4 {
-              justify-content: center;
+            align-items: center;
+            justify-content: center;
+            background-color: blue;
+            border-radius: 0px 0px 30px 30px;
+            h2 {
               color: #fff;
             }
-          }
-
-          h2 {
-            padding-left: 24px;
-
-            color: #fff;
           }
         }
       }
