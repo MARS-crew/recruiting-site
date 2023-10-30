@@ -1,3 +1,23 @@
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js'
+import {
+  getFirestore,
+  doc,
+  setDoc,
+} from 'https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js'
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyC_EpczWIqfPuPI3NEkZCZXSDbwpxO8Hu4',
+  authDomain: 'recruiting-site-7dd38.firebaseapp.com',
+  projectId: 'recruiting-site-7dd38',
+  storageBucket: 'recruiting-site-7dd38.appspot.com',
+  messagingSenderId: '131998017853',
+  appId: '1:131998017853:web:dc5a5a95d5075147f9bd54',
+  measurementId: 'G-SLCJEG0272',
+}
+
+const app = initializeApp(firebaseConfig)
+const db = getFirestore(app)
+
 const sectionOne = document.querySelector('.space_one')
 const sectionTwo = document.querySelector('.space_two')
 const sectionThree = document.querySelector('.space_three')
@@ -196,3 +216,80 @@ document.addEventListener('DOMContentLoaded', function () {
 window.onload = () => {
   sectionOne.style.animation = 'zoom 10s infinite'
 }
+
+/**
+ * @typedef {Object} User
+ * @property {string} name
+ * @property {string} number
+ * @property {string} generation
+ * @property {string[]} type
+ * @property {string} introduce
+ * @property {string} reason
+ * @property {string} comment
+ */
+
+/**
+ *
+ * @param {User} param0
+ * @returns
+ */
+const save = async ({
+  name,
+  number,
+  generation,
+  type,
+  introduce,
+  reason,
+  comment,
+}) => {
+  if (name === '') {
+    return
+  }
+
+  if (number === '') {
+    return
+  }
+
+  if (type.length < 1) {
+    return
+  }
+
+  if (introduce === '') {
+    return
+  }
+
+  if (reason === '') {
+    return
+  }
+
+  if (comment === '') {
+    return
+  }
+  try {
+    const res = await setDoc(doc(db, 'user', name), {
+      name,
+      number,
+      generation,
+      type,
+      introduce,
+      reason,
+      comment,
+    })
+
+    console.log('RES : ', res)
+  } catch (error) {
+    console.log('ERROR : ', error)
+  }
+}
+
+document.querySelector('.sub').addEventListener('click', () => {
+  save({
+    name: '김인후',
+    number: '01063057848',
+    type: ['1'],
+    generation: '5기',
+    introduce: 'Hello',
+    reason: 'hello',
+    comment: '123123',
+  })
+})
