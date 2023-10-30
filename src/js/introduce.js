@@ -22,6 +22,7 @@ const targetElementFour = document.querySelector('.move_where')
 const lineBox = document.querySelector('.line_two')
 const lineImage = document.querySelector('.line_two :first-child')
 
+let isMoveSlider = true
 let isMove = true
 
 const mobileFunc = () => {
@@ -148,6 +149,7 @@ const observerOne = new IntersectionObserver((entries) => {
             gsap.to(targetElementOne, { color: 'white', duration: 1 })
             nodeDiv.style.display = 'block'
             nodeDiv.style.opacity = '0'
+            isMoveSlider = false
             setTimeout(function () {
               nodeDiv.style.opacity = '1'
             }, 100)
@@ -217,6 +219,7 @@ const observerThree = new IntersectionObserver((entries) => {
             gsap.to(targetElementThree, { color: 'white', duration: 1 })
             nodeDivFive.style.display = 'block'
             nodeDivFive.style.opacity = '0'
+            isMoveSlider = false
             setTimeout(function () {
               nodeDivFive.style.opacity = '1'
             }, 100)
@@ -243,6 +246,7 @@ const observerFour = new IntersectionObserver((entries) => {
             gsap.to(targetElementFour, { color: 'white', duration: 1 })
             nodeDivFour.style.display = 'block'
             nodeDivFour.style.opacity = '0'
+            isMoveSlider = false
             setTimeout(function () {
               nodeDivFour.style.opacity = '1'
             }, 100)
@@ -326,10 +330,12 @@ movingTextLeft.addEventListener('click', () => {
 })
 
 lineBox.addEventListener('click', () => {
+  if (isMoveSlider) return
+
   const lineTwoImage = document.querySelector('.line_two :first-child')
   const imageSrcArr = lineTwoImage.src.split('/')
   const imageSrc = imageSrcArr[imageSrcArr.length - 1]
-
+  isMoveSlider = true
   if (imageSrc === 'left.svg') {
     nodeDiv.style.display = 'none'
     nodeDiv.style.opacity = '0'
