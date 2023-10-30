@@ -197,15 +197,45 @@
           </div>
           <div class="main-form">
             <textarea rows="1" id="link"></textarea>
-            <input type="button" value="제출" />
+            <input type="button" value="제출" class="sub" />
           </div>
         </div>
         <div></div>
       </div>
     </div>
   </div>
-  <script src="../js/form.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+  <script src="../js/form.js"></script>
+  <script type="module">
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+    import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
+
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyC_EpczWIqfPuPI3NEkZCZXSDbwpxO8Hu4",
+      authDomain: "recruiting-site-7dd38.firebaseapp.com",
+      projectId: "recruiting-site-7dd38",
+      storageBucket: "recruiting-site-7dd38.appspot.com",
+      messagingSenderId: "131998017853",
+      appId: "1:131998017853:web:dc5a5a95d5075147f9bd54",
+      measurementId: "G-SLCJEG0272"
+    };
+
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getFirestore(app)
+
+
+    const save = async ({ name, number, generation, type, introduce, reason, comment }) => {
+      await setDoc(doc(db, "user", name), {
+        name, number, generation, type, introduce, reason, comment
+      });
+    }
+
+  </script>
 </body>
 
 </html>
