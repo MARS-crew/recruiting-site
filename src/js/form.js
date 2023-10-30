@@ -18,6 +18,22 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 const db = getFirestore(app)
 
+const abc = document.getElementById('g_member')
+const sideRadio = document.getElementsByClassName('.input_generation_side')
+let generation = ''
+
+abc.addEventListener('click', () => {
+  if (memberRadio.checked) {
+    generation = '5기'
+  }
+})
+
+// sideRadio.addEventListener('change', function () {
+//   if (sideRadio.checked) {
+//     generation = '깍두기'
+//   }
+// })
+
 const sectionOne = document.querySelector('.space_one')
 const sectionTwo = document.querySelector('.space_two')
 const sectionThree = document.querySelector('.space_three')
@@ -217,6 +233,11 @@ window.onload = () => {
   sectionOne.style.animation = 'zoom 10s infinite'
 }
 
+document.querySelector('.input_generation').addEventListener('change', (e) => {
+  console.log(e.target.value)
+  generation = e.target.value
+})
+
 /**
  * @typedef {Object} User
  * @property {string} name
@@ -283,13 +304,29 @@ const save = async ({
 }
 
 document.querySelector('.sub').addEventListener('click', () => {
-  save({
-    name: '김인후',
-    number: '01063057848',
-    type: ['1'],
-    generation: '5기',
-    introduce: 'Hello',
-    reason: 'hello',
-    comment: '123123',
-  })
+  const name = document.querySelector('.input_name').value
+  const number = document.querySelector('.input_number').value
+  // const type = document.querySelector('.input_type').value
+
+  const introduce = document.querySelector('.input_introduce').value
+  const reason = document.querySelector('.input_reason').value
+  const comment = document.querySelector('.input_comment').value
+  const person = { name, number, type, generation, introduce, reason, comment }
+  // console.log(person)
+
+  // save({
+  //   name: '김인후',
+  //   number: '01063057848',
+  //   type: ['1'],
+  //   generation: '5기',
+  //   introduce: 'Hello',
+  //   reason: 'hello',
+  //   comment: '123123',
+  // })
 })
+
+window.onload = () => {
+  setTimeout(() => {
+    window.scrollTo(0, 0)
+  }, 30)
+}
