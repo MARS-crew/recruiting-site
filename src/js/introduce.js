@@ -142,7 +142,7 @@ const observerOne = new IntersectionObserver((entries) => {
           x: '0',
           y: '-500%',
           opacity: 1,
-          duration: 5,
+          duration: 3,
           ease: 'power2.out',
           onComplete: () => {
             gsap.to(targetElementOne, { color: 'white', duration: 1 })
@@ -166,6 +166,8 @@ const observerTwo = new IntersectionObserver((entries) => {
       }
       nodeDiv.style.display = 'none'
       nodeDiv.style.opacity = '0'
+      nodeDivFive.style.display = 'none'
+      nodeDivFive.style.opacity = '0'
       nodeDivFour.style.display = 'none'
       nodeDivFour.style.opacity = '0'
 
@@ -188,7 +190,7 @@ const observerTwo = new IntersectionObserver((entries) => {
           x: '40%',
           y: 0,
           opacity: 1,
-          duration: 5,
+          duration: 3,
           ease: 'power2.out',
           onComplete: () => {
             isMove = false
@@ -209,7 +211,7 @@ const observerThree = new IntersectionObserver((entries) => {
           x: '0',
           y: '-500%',
           opacity: 1,
-          duration: 5,
+          duration: 3,
           ease: 'power2.out',
           onComplete: () => {
             gsap.to(targetElementThree, { color: 'white', duration: 1 })
@@ -235,7 +237,7 @@ const observerFour = new IntersectionObserver((entries) => {
           x: '0',
           y: '-500%',
           opacity: 1,
-          duration: 5,
+          duration: 3,
           ease: 'power2.out',
           onComplete: () => {
             gsap.to(targetElementFour, { color: 'white', duration: 1 })
@@ -329,6 +331,12 @@ lineBox.addEventListener('click', () => {
   const imageSrc = imageSrcArr[imageSrcArr.length - 1]
 
   if (imageSrc === 'left.svg') {
+    nodeDiv.style.display = 'none'
+    nodeDiv.style.opacity = '0'
+    nodeDivFive.style.display = 'none'
+    nodeDivFive.style.opacity = '0'
+    nodeDivFour.style.display = 'none'
+    nodeDivFour.style.opacity = '0'
     nextMove(1)
     lineImage.src = './images/svg/down.svg'
   }

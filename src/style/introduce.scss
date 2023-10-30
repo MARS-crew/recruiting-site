@@ -124,44 +124,44 @@
       .node {
         display: none;
         transition: opacity 1s;
-      }
 
-      .professor {
-        position: absolute;
-        top: 15%;
-        left: 10%;
-        width: 25%;
-      }
+        .professor {
+          position: absolute;
+          top: 20%;
+          left: 10%;
+          width: 25%;
+        }
 
-      .member {
-        position: absolute;
-        top: 15%;
-        left: 50%;
-        width: 25%;
-      }
+        .member {
+          position: absolute;
+          top: 20%;
+          left: 50%;
+          width: 25%;
+        }
 
-      .master {
-        position: absolute;
-        top: 50%;
-        left: 20%;
-        width: 25%;
-      }
+        .master {
+          position: absolute;
+          top: 50%;
+          left: 20%;
+          width: 25%;
+        }
 
-      .side {
-        position: absolute;
-        top: 50%;
-        left: 60%;
-        width: 30%;
-      }
+        .side {
+          position: absolute;
+          top: 50%;
+          left: 60%;
+          width: 30%;
+        }
 
-      .title {
-        font-size: 50px;
-        color: white;
-      }
+        .title {
+          font-size: 50px;
+          color: white;
+        }
 
-      .body {
-        font-size: 18px;
-        color: white;
+        .body {
+          font-size: 18px;
+          color: white;
+        }
       }
     }
 

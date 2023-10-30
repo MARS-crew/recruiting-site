@@ -110,35 +110,35 @@
     display: none;
     transition: opacity 1s;
   }
-  .two .slide_one .professor {
+  .two .slide_one .node .professor {
     position: absolute;
-    top: 15%;
+    top: 20%;
     left: 10%;
     width: 25%;
   }
-  .two .slide_one .member {
+  .two .slide_one .node .member {
     position: absolute;
-    top: 15%;
+    top: 20%;
     left: 50%;
     width: 25%;
   }
-  .two .slide_one .master {
+  .two .slide_one .node .master {
     position: absolute;
     top: 50%;
     left: 20%;
     width: 25%;
   }
-  .two .slide_one .side {
+  .two .slide_one .node .side {
     position: absolute;
     top: 50%;
     left: 60%;
     width: 30%;
   }
-  .two .slide_one .title {
+  .two .slide_one .node .title {
     font-size: 50px;
     color: white;
   }
-  .two .slide_one .body {
+  .two .slide_one .node .body {
     font-size: 18px;
     color: white;
   }
