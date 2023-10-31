@@ -18,7 +18,7 @@
         padding-top: 90px;
         text-align: center;
         color: #ffffff;
-        font-size: 40px;
+        font-size: 36px;
       }
     }
 
@@ -35,6 +35,7 @@
       top: 150%;
       transform: translate(-50%, -30%);
       .small-circle {
+        position: absolute;
         width: 200px;
         height: 200px;
         border-radius: 50%;
@@ -53,7 +54,7 @@
       transform: translate(-50%, -50%);
       justify-content: center;
       .moving-text-top {
-        font-size: 35px;
+        font-size: 24px;
         color: #fff;
         transform: translate(-20%, 0%);
         &:hover {
@@ -61,7 +62,7 @@
         }
       }
       .moving-text-middle {
-        font-size: 35px;
+        font-size: 24px;
         color: #fff;
         transform: translate(140%, 120%);
         &:hover {
@@ -69,7 +70,7 @@
         }
       }
       .moving-text-bottom {
-        font-size: 35px;
+        font-size: 24px;
         color: #fff;
         transform: translate(-55%, 240%);
         &:hover {

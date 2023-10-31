@@ -55,18 +55,18 @@ const mobileFunc = () => {
     opacity: 0,
     delay: 2,
     onComplete: () => {
-      document.querySelector('.big-circle').style.display = 'none'
+      document.querySelector('.big-circle').style.opacity = 'none'
     },
   })
 
   // small-circle를 2초 후에 사라지도록 애니메이션 설정
-  gsap.to('.small-circle', {
-    opacity: 0,
-    delay: 2,
-    onComplete: () => {
-      document.querySelector('.small-circle').style.display = 'none'
-    },
-  })
+  // gsap.to('.small-circle', {
+  //   opacity: 0,
+  //   delay: 2,
+  //   onComplete: () => {
+  //     document.querySelector('.small-circle').style.display = 'none'
+  //   },
+  // })
 
   //2번째 애니메이션 '우리가'
   gsap.to(movingTextTop, {
@@ -103,7 +103,7 @@ const mobileFunc = () => {
 
   gsap.to(mobileMarsImage, {
     y: '-60%',
-    scale: 2,
+    scale: 1,
     duration: 2.5,
     delay: 3,
     ease: 'power2.out',

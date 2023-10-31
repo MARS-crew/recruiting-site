@@ -12,7 +12,7 @@
     padding-top: 90px;
     text-align: center;
     color: #ffffff;
-    font-size: 40px;
+    font-size: 36px;
   }
   .two .big-circle {
     width: 300px;
@@ -28,6 +28,7 @@
     transform: translate(-50%, -30%);
   }
   .two .big-circle .small-circle {
+    position: absolute;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -45,7 +46,7 @@
     justify-content: center;
   }
   .two .animation-container-M .moving-text-top {
-    font-size: 35px;
+    font-size: 24px;
     color: #fff;
     transform: translate(-20%, 0%);
   }
@@ -53,7 +54,7 @@
     color: rgb(108, 108, 216);
   }
   .two .animation-container-M .moving-text-middle {
-    font-size: 35px;
+    font-size: 24px;
     color: #fff;
     transform: translate(140%, 120%);
   }
@@ -61,7 +62,7 @@
     color: rgb(240, 90, 90);
   }
   .two .animation-container-M .moving-text-bottom {
-    font-size: 35px;
+    font-size: 24px;
     color: #fff;
     transform: translate(-55%, 240%);
   }
