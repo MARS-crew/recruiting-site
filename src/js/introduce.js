@@ -325,7 +325,7 @@ const hideComponent = () => {
     duration: 1,
   })
   gsap.to(targetElementThree, {
-    x: '500%',
+    x: '-100%',
     y: '500%',
     color: '#a2a2a2',
     duration: 1,
