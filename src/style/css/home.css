@@ -35,8 +35,10 @@
   }
   .one .content {
     display: flex;
-    height: 100vh;
     text-align: center;
+  }
+  .one .content .main-introduction-first-one {
+    padding-top: 20%;
   }
   .one .content .main-introduction-first-one h3 {
     color: #fff;
@@ -53,7 +55,6 @@
   }
   .one .content .image_box img {
     width: 180px;
-    margin-bottom: 100px;
   }
   .one .content .image_bottom_box {
     color: #fff;
@@ -66,7 +67,6 @@
   }
   .one .footer_copyright {
     text-align: center;
-    background-color: #000;
     color: #fff;
     position: absolute;
     bottom: 0;
