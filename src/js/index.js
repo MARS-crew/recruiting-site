@@ -56,6 +56,10 @@ const animateMars = () => {
 }
 
 lineOne.addEventListener('click', () => {
+  sectionOne.style.animation = ''
+  sectionTwo.style.animation = 'zoom 10s infinite'
+  sectionThree.style.animation = ''
+  sectionFour.style.animation = ''
   scrollToSection(currentSection + 1)
 })
 
@@ -64,6 +68,10 @@ lineTwo.addEventListener('click', () => {
   const imageSrcArr = lineTwoImage.src.split('/')
   const imageSrc = imageSrcArr[imageSrcArr.length - 1]
   if (imageSrc === 'down.svg') {
+    sectionOne.style.animation = ''
+    sectionTwo.style.animation = ''
+    sectionThree.style.animation = 'zoom 10s infinite'
+    sectionFour.style.animation = ''
     scrollToSection(currentSection + 1)
   }
 
@@ -73,6 +81,10 @@ lineTwo.addEventListener('click', () => {
 })
 
 lineThree.addEventListener('click', () => {
+  sectionOne.style.animation = ''
+  sectionTwo.style.animation = ''
+  sectionThree.style.animation = ''
+  sectionFour.style.animation = 'zoom 10s infinite'
   scrollToSection(currentSection + 1)
 })
 
