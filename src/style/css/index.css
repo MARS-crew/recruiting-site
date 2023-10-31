@@ -14,6 +14,9 @@
     background-color: #000000;
     font-family: "JSDongkang";
   }
+  body .pc {
+    display: none;
+  }
   body .header-container {
     display: flex;
     align-items: center;
@@ -48,47 +51,47 @@
       transform: scale(1);
     }
   }
-  body .space_one {
+  body .mobile .space_one {
     position: absolute;
     z-index: -2;
     width: 100%;
     height: 100vh;
     top: 0%;
   }
-  body .space_one img {
+  body .mobile .space_one img {
     width: 100%;
     height: 100%;
   }
-  body .space_two {
+  body .mobile .space_two {
     position: absolute;
     z-index: -3;
     width: 100%;
     height: 100vh;
     top: 100%;
   }
-  body .space_two img {
+  body .mobile .space_two img {
     width: 100%;
     height: 100%;
   }
-  body .space_three {
+  body .mobile .space_three {
     position: absolute;
     z-index: -4;
     width: 100%;
     height: 100vh;
     top: 200%;
   }
-  body .space_three img {
+  body .mobile .space_three img {
     width: 100%;
     height: 100%;
   }
-  body .space_four {
+  body .mobile .space_four {
     position: absolute;
     z-index: -5;
     width: 100%;
     height: 100vh;
     top: 300%;
   }
-  body .space_four img {
+  body .mobile .space_four img {
     width: 100%;
     height: 100%;
   }
@@ -110,6 +113,9 @@
     overflow: hidden;
     background-color: #000000;
     font-family: "JSDongkang";
+  }
+  .mobile {
+    display: none;
   }
   .header-container {
     display: flex;
@@ -141,47 +147,47 @@
       transform: scale(1);
     }
   }
-  .space_one {
+  .pc .space_one {
     position: absolute;
     z-index: -2;
     width: 100%;
     height: 100vh;
     top: 0%;
   }
-  .space_one img {
+  .pc .space_one img {
     width: 100%;
     height: 100%;
   }
-  .space_two {
+  .pc .space_two {
     position: absolute;
     z-index: -3;
     width: 100%;
     height: 100vh;
     top: 100%;
   }
-  .space_two img {
+  .pc .space_two img {
     width: 100%;
     height: 100%;
   }
-  .space_three {
+  .pc .space_three {
     position: absolute;
     z-index: -4;
     width: 100%;
     height: 100vh;
     top: 200%;
   }
-  .space_three img {
+  .pc .space_three img {
     width: 100%;
     height: 100%;
   }
-  .space_four {
+  .pc .space_four {
     position: absolute;
     z-index: -5;
     width: 100%;
     height: 100vh;
     top: 300%;
   }
-  .space_four img {
+  .pc .space_four img {
     width: 100%;
     height: 100%;
   }
