@@ -311,20 +311,50 @@ const disabled = () => {
   movingTextLeft.style.display = 'none'
 }
 
+const hideComponent = () => {
+  nodeDiv.style.display = 'none'
+  nodeDiv.style.opacity = '0'
+  nodeDivFive.style.display = 'none'
+  nodeDivFive.style.opacity = '0'
+  nodeDivFour.style.display = 'none'
+  nodeDivFour.style.opacity = '0'
+  gsap.to(targetElementOne, {
+    x: '500%',
+    y: '500%',
+    color: '#a2a2a2',
+    duration: 1,
+  })
+  gsap.to(targetElementThree, {
+    x: '500%',
+    y: '500%',
+    color: '#a2a2a2',
+    duration: 1,
+  })
+  gsap.to(targetElementFour, {
+    x: '500%',
+    y: '500%',
+    color: '#a2a2a2',
+    duration: 1,
+  })
+}
+
 movingTextCenter.addEventListener('click', () => {
   if (isMove) return
+  hideComponent()
   lineImage.src = './images/svg/left.svg'
   nextMove(3)
 })
 
 movingTextRight.addEventListener('click', () => {
   if (isMove) return
+  hideComponent()
   lineImage.src = './images/svg/left.svg'
   nextMove(4)
 })
 
 movingTextLeft.addEventListener('click', () => {
   if (isMove) return
+  hideComponent()
   lineImage.src = './images/svg/left.svg'
   nextMove(2)
 })
@@ -337,12 +367,7 @@ lineBox.addEventListener('click', () => {
   const imageSrc = imageSrcArr[imageSrcArr.length - 1]
   isMoveSlider = true
   if (imageSrc === 'left.svg') {
-    nodeDiv.style.display = 'none'
-    nodeDiv.style.opacity = '0'
-    nodeDivFive.style.display = 'none'
-    nodeDivFive.style.opacity = '0'
-    nodeDivFour.style.display = 'none'
-    nodeDivFour.style.opacity = '0'
+    hideComponent()
     nextMove(1)
     lineImage.src = './images/svg/down.svg'
   }
