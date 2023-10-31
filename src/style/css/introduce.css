@@ -1,4 +1,7 @@
 @media (max-width: 767px) {
+  .two {
+    overflow: hidden;
+  }
   .two .slide {
     display: none;
   }
@@ -71,11 +74,11 @@
   }
   .two #mobile_mars {
     position: absolute;
-    top: 200%;
+    top: 190%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
   }
 }
 @media (min-width: 768px) {
