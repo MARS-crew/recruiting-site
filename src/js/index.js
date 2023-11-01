@@ -7,6 +7,10 @@ const sectionOne = document.querySelector('.space_one')
 const sectionTwo = document.querySelector('.space_two')
 const sectionThree = document.querySelector('.space_three')
 const sectionFour = document.querySelector('.space_four')
+const sectionOneMobile = document.querySelector('.space_one_m')
+const sectionTwoMobile = document.querySelector('.space_two_m')
+const sectionThreeMobile = document.querySelector('.space_three_m')
+const sectionFourMobile = document.querySelector('.space_four_m')
 
 let currentSection = 0
 let isScrolling = false
@@ -142,5 +146,6 @@ window.onload = () => {
   setTimeout(() => {
     window.scrollTo(0, 0)
     sectionOne.style.animation = 'zoom 10s infinite'
+    sectionOneMobile.style.animation = 'zoom 10s infinite'
   }, 30)
 }
