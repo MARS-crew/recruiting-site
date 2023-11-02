@@ -11,7 +11,10 @@
     "dev": "gulp",
     "format": "prettier --write \"src/**/*.{js}\"",
     "lint": "eslint \"src/**/*.{ts,js}\" --fix",
-    "deploy": "gh-pages -d src"
+    "deploy": "gh-pages -d src",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@babel/core": "^7.22.11",
@@ -29,7 +32,8 @@
     "node-sass": "^9.0.0",
     "postcss": "^8.4.30",
     "prettier": "^3.0.3",
-    "sass": "^1.66.1"
+    "sass": "^1.66.1",
+    "vite": "^4.5.0"
   },
   "dependencies": {}
 }
