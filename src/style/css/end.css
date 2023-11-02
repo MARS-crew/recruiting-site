@@ -1,29 +1,51 @@
 @charset "UTF-8";
+@keyframes scrollText {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
 @media (max-width: 767px) {
-  .content {
+  .four {
+    overflow: hidden;
+    /*css로 자동 스크롤 코드*/
+  }
+  .four .content {
+    padding-top: 10%;
     height: 100%;
     text-align: center;
   }
-  p {
+  .four p {
     color: #fff;
     font-size: 0.8rem;
     margin: 10px 0;
   }
-  h2 {
+  .four h2 {
     color: #fff;
     font-size: 1rem;
     margin: 20px 0;
   }
-  h1 {
+  .four h1 {
     color: #fff;
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 30px 0;
   }
-  .social-icons img {
+  .four .social-icons img {
     width: 20px;
     height: 20px;
     margin-right: 10px;
     margin-bottom: 20px;
+  }
+  .four .scrolling-text-container {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+  }
+  .four .scrolling-text {
+    text-align: center;
+    animation: scrollText 30s linear infinite;
   }
 }
 @media (min-width: 768px) {
@@ -34,7 +56,6 @@
     height: 100%;
     text-align: center;
     /*css로 자동 스크롤 코드*/
-    /* 스크롤링 텍스트 애니메이션을 활성화 */
   }
   .four .content p {
     color: #fff;
@@ -65,13 +86,5 @@
   .four .content .scrolling-text {
     text-align: center;
     animation: scrollText 30s linear infinite;
-  }
-  @keyframes scrollText {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-100%);
-    }
   }
 }
