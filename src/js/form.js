@@ -210,6 +210,70 @@ document.addEventListener('DOMContentLoaded', function () {
       (item) => item.getAttribute('data-section') === sectionId,
     )
 
+    switch (index) {
+      case 0:
+        sectionOne.style.animation = 'zoom 10s infinite'
+        sectionTwo.style.animation = ''
+        sectionThree.style.animation = ''
+        sectionFour.style.animation = ''
+        sectionFive.style.animation = ''
+        sectionSix.style.animation = ''
+        sectionSeven.style.animation = ''
+        break
+
+      case 1:
+        sectionOne.style.animation = ''
+        sectionTwo.style.animation = 'zoom 10s infinite'
+        sectionThree.style.animation = ''
+        sectionFour.style.animation = ''
+        sectionFive.style.animation = ''
+        sectionSix.style.animation = ''
+        sectionSeven.style.animation = ''
+        break
+      case 2:
+        sectionOne.style.animation = ''
+        sectionTwo.style.animation = ''
+        sectionThree.style.animation = 'zoom 10s infinite'
+        sectionFour.style.animation = ''
+        sectionFive.style.animation = ''
+        sectionSix.style.animation = ''
+        sectionSeven.style.animation = ''
+        break
+      case 3:
+        sectionOne.style.animation = ''
+        sectionTwo.style.animation = ''
+        sectionThree.style.animation = ''
+        sectionFour.style.animation = 'zoom 10s infinite'
+        sectionFive.style.animation = ''
+        sectionSix.style.animation = ''
+        sectionSeven.style.animation = ''
+      case 4:
+        sectionOne.style.animation = ''
+        sectionTwo.style.animation = ''
+        sectionThree.style.animation = ''
+        sectionFour.style.animation = ''
+        sectionFive.style.animation = 'zoom 10s infinite'
+        sectionSix.style.animation = ''
+        sectionSeven.style.animation = ''
+      case 5:
+        sectionOne.style.animation = ''
+        sectionTwo.style.animation = ''
+        sectionThree.style.animation = ''
+        sectionFour.style.animation = ''
+        sectionFive.style.animation = ''
+        sectionSix.style.animation = 'zoom 10s infinite'
+        sectionSeven.style.animation = ''
+      case 6:
+        sectionOne.style.animation = ''
+        sectionTwo.style.animation = ''
+        sectionThree.style.animation = ''
+        sectionFour.style.animation = ''
+        sectionFive.style.animation = ''
+        sectionSix.style.animation = ''
+        sectionSeven.style.animation = 'zoom 10s infinite'
+        break
+    }
+
     scrollToSection(index)
   }
 })
@@ -327,5 +391,6 @@ document.querySelector('.sub').addEventListener('click', () => {
 window.onload = () => {
   setTimeout(() => {
     window.scrollTo(0, 0)
+    sectionOne.style.animation = 'zoom 10s infinite'
   }, 30)
 }
