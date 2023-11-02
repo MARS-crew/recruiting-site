@@ -63,7 +63,7 @@
         <li data-section="section3">지원 분야</li>
         <li data-section="section4">자기소개</li>
         <li data-section="section5">지원 동기</li>
-        <li data-section="section6">하고 싶은 말</li>
+        <li data-section="section6">링크</li>
       </ul>
     </div>
 
@@ -131,10 +131,11 @@
           <div class="main-form">
             <div class="from-radio">
               <label>
-                <input type="radio" name="classes" value="fivegi" class="input_generation_member" id="g_member" />5기
+                <input checked type="radio" name="classes" value="MEMBER" class="input_generation_member"
+                  id="g_member" />5기
               </label>
               <label>
-                <input type="radio" name="classes" value="kkagdugi" class="input_generation_side" id="g_side" />깍두기
+                <input type="radio" name="classes" value="SIDE" class="input_generation_side" id="g_side" />깍두기
               </label>
             </div>
             <input type="button" value="확인" />
@@ -150,11 +151,12 @@
           <div class="main-title">4. 지원 분야를 선택해주세요.</div>
           <div class="main-form">
             <div class="form-checkbox">
-              <label><input input_type type="checkbox" id="projectPlan" />기획</label>
-              <label><input input_type type="checkbox" id="design" />디자인</label>
-              <label><input input_type type="checkbox" id="publishing" />퍼블리싱</label>
-              <label><input input_type type="checkbox" id="bakEnd" />백엔드</label>
-              <label><input input_type type="checkbox" id="frontEnd" />프론트엔드</label>
+              <label><input type="checkbox" id="PM" />기획</label>
+              <label><input type="checkbox" id="DESIGN" />디자인</label>
+              <label><input type="checkbox" id="PUBLISHING" />퍼블리싱</label>
+              <label><input type="checkbox" id="BACKEND" />백엔드</label>
+              <label><input type="checkbox" id="FRONTEND" />프론트엔드</label>
+              <label><input type="checkbox" id="APP" />앱</label>
             </div>
             <input type="button" value="확인" />
           </div>
@@ -181,7 +183,7 @@
         <div id="main_content" class="main_content">
           <div class="main-title">6. 지원 동기를 적어주세요.</div>
           <div class="main-form">
-            <textarea input_reason rows="1" id="apply"></textarea>
+            <textarea class='input_reason' rows="1" id="apply"></textarea>
             <input type="button" value="확인" />
           </div>
         </div>
@@ -196,7 +198,7 @@
             7. 자기를 소개할 수 있는 링크를 입력해주세요.
           </div>
           <div class="main-form">
-            <textarea input_comment rows="1" id="link"></textarea>
+            <textarea class='input_comment' rows="1" id="link"></textarea>
             <input type="button" value="제출" class="sub" />
           </div>
         </div>

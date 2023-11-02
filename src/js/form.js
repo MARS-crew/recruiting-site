@@ -18,22 +18,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 const db = getFirestore(app)
 
-const abc = document.getElementById('g_member')
-const sideRadio = document.getElementsByClassName('.input_generation_side')
-let generation = ''
-
-abc.addEventListener('click', () => {
-  if (memberRadio.checked) {
-    generation = '5기'
-  }
-})
-
-// sideRadio.addEventListener('change', function () {
-//   if (sideRadio.checked) {
-//     generation = '깍두기'
-//   }
-// })
-
 const sectionOne = document.querySelector('.space_one')
 const sectionTwo = document.querySelector('.space_two')
 const sectionThree = document.querySelector('.space_three')
@@ -52,6 +36,8 @@ const animateRandomly = () => {
   })
 }
 
+let currentSection = 0
+
 document.addEventListener('DOMContentLoaded', function () {
   animateRandomly()
   const textareas = document.querySelectorAll('textarea')
@@ -63,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   })
 
-  let currentSection = 0
   const sections = document.querySelectorAll('.section')
   const navListItems = document.querySelectorAll('.nav-list li')
   const dotListItems = document.querySelectorAll('.nav_dot li')
@@ -233,11 +218,6 @@ window.onload = () => {
   sectionOne.style.animation = 'zoom 10s infinite'
 }
 
-document.querySelector('.input_generation').addEventListener('change', (e) => {
-  console.log(e.target.value)
-  generation = e.target.value
-})
-
 /**
  * @typedef {Object} User
  * @property {string} name
@@ -264,30 +244,37 @@ const save = async ({
   comment,
 }) => {
   if (name === '') {
+    alert('이름을 입력해주세요!')
+    currentSection = -1
     return
   }
 
   if (number === '') {
+    alert('전화번호를 입력해주세요!')
+    currentSection = 0
     return
   }
 
-  if (type.length < 1) {
+  if (generation < 1) {
+    alert('지원 분야를 1개 이상 선택해주세요!')
+    currentSection = 2
     return
   }
 
   if (introduce === '') {
+    alert('자기 소개를 적어주세요')
+    currentSection = 2
     return
   }
 
   if (reason === '') {
+    alert('지원 동기를 적어주세요')
+    currentSection = 3
     return
   }
 
-  if (comment === '') {
-    return
-  }
   try {
-    const res = await setDoc(doc(db, 'user', name), {
+    await setDoc(doc(db, 'user', name), {
       name,
       number,
       generation,
@@ -297,32 +284,44 @@ const save = async ({
       comment,
     })
 
-    console.log('RES : ', res)
+    alert('마스외전 5기 모집 지원에 성공했습니다!')
+    window.location.href = '../index.html'
   } catch (error) {
     console.log('ERROR : ', error)
+    alert('오류가 발생하였습니다. 관리자에게 문의해주세요.')
   }
 }
 
 document.querySelector('.sub').addEventListener('click', () => {
   const name = document.querySelector('.input_name').value
   const number = document.querySelector('.input_number').value
-  // const type = document.querySelector('.input_type').value
+  const type = document.querySelector('.input_generation_member').checked
+    ? 'MEMBER'
+    : 'SIDE'
+
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]')
+  const generation = []
+
+  checkboxes.forEach((item) => {
+    if (item.checked) {
+      generation.push(item.id)
+    }
+  })
 
   const introduce = document.querySelector('.input_introduce').value
   const reason = document.querySelector('.input_reason').value
   const comment = document.querySelector('.input_comment').value
-  const person = { name, number, type, generation, introduce, reason, comment }
-  // console.log(person)
+  const person = {
+    name,
+    number,
+    type,
+    generation,
+    introduce,
+    reason,
+    comment,
+  }
 
-  // save({
-  //   name: '김인후',
-  //   number: '01063057848',
-  //   type: ['1'],
-  //   generation: '5기',
-  //   introduce: 'Hello',
-  //   reason: 'hello',
-  //   comment: '123123',
-  // })
+  save(person)
 })
 
 window.onload = () => {
