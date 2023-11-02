@@ -116,7 +116,6 @@
     left: 20%;
     border-left: 2px dotted white;
     position: absolute;
-    z-index: -1;
   }
   .line .line_box {
     width: 30px;
@@ -126,7 +125,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 85vh;
+    margin-top: 90vh;
     margin-left: -15px;
   }
   .line .line_box button {
