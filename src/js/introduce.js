@@ -16,7 +16,7 @@ const nodeDivFive = document.querySelector('.node_three')
 const targetElementOne = document.querySelector('.move_we')
 const targetElementTwo = document.querySelector('.two-content')
 const targetElementThree = document.querySelector('.move_what')
-const targetElementMobile = document.querySelector('.two_mobile_title')
+const targetElementMobile = document.querySelector('.animation-container-M')
 const targetElementFour = document.querySelector('.move_where')
 
 const lineBox = document.querySelector('.line_two')
@@ -260,7 +260,9 @@ const observerFour = new IntersectionObserver((entries) => {
 const observerMobile = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      mobileFunc()
+      setTimeout(() => {
+        mobileFunc()
+      }, 1000)
     }
   })
 })
