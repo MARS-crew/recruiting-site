@@ -90,7 +90,9 @@
     overflow: hidden;
     position: relative;
     width: 100%;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
   }
   .two .slide .slide_item {
     display: flex;
