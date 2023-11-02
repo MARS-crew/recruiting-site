@@ -12,6 +12,8 @@ const sectionTwoMobile = document.querySelector('.space_two_m')
 const sectionThreeMobile = document.querySelector('.space_three_m')
 const sectionFourMobile = document.querySelector('.space_four_m')
 
+const isMobile = window.innerWidth <= 767
+
 let currentSection = 0
 let isScrolling = false
 
@@ -25,7 +27,9 @@ const scrollToSection = (index) => {
     currentSection = index
 
     if (currentSection !== 0) {
-      marsImg.style.opacity = 0
+      if (!isMobile) {
+        marsImg.style.opacity = 0
+      }
 
       return
     }
