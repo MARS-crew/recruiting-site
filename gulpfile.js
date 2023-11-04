@@ -51,4 +51,13 @@ const build = gulp.parallel(
   moveJs,
 )
 
-exports.default = build
+function watch() {
+  // 파일 변경을 감지하고 해당 파일이 변경되면 build 작업 실행
+  gulp.watch('src/**/*.html', bundleHTML)
+  gulp.watch('src/images/**', moveFile)
+  gulp.watch('src/font/**', moveFont)
+  gulp.watch('src/style/**/*.scss', styles)
+  gulp.watch('src/js/**/*.js', gulp.parallel(bundleJS, moveJs))
+}
+
+exports.default = gulp.series(build, watch)

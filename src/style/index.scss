@@ -14,7 +14,7 @@
     padding: 0;
     overflow: hidden;
     background-color: #000000;
-    font-family: 'JSDongkang';
+    font-family: 'JSDongkang-Reg';
     .pc {
       display: none;
     }
@@ -132,6 +132,10 @@
     left: 20%;
     border-left: 2px dotted white;
     position: absolute;
+  }
+  .move_box {
+    position: absolute;
+    left: 20%;
     .line_box {
       width: 30px;
       height: 30px;
@@ -295,7 +299,6 @@
       opacity: 1;
       width: 60px;
       height: 60px;
-      // background-color: blue;
       border-radius: 25px;
       display: flex;
       justify-content: center;
