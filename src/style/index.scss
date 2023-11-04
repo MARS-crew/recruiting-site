@@ -280,9 +280,19 @@
     width: 1px;
     height: 400vh;
     left: 20%;
-    border-left: 2px dotted white;
+    border-left: 2px dashed white;
+    opacity: 0.3;
     position: absolute;
     .line_box {
+      display: none;
+    }
+  }
+
+  .move_box {
+    position: absolute;
+    left: 20%;
+    .line_box {
+      opacity: 1;
       width: 60px;
       height: 60px;
       background-color: blue;

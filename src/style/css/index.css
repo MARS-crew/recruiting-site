@@ -247,10 +247,19 @@
     width: 1px;
     height: 400vh;
     left: 20%;
-    border-left: 2px dotted white;
+    border-left: 2px dashed white;
+    opacity: 0.3;
     position: absolute;
   }
   .line .line_box {
+    display: none;
+  }
+  .move_box {
+    position: absolute;
+    left: 20%;
+  }
+  .move_box .line_box {
+    opacity: 1;
     width: 60px;
     height: 60px;
     background-color: blue;
@@ -261,7 +270,7 @@
     margin-top: 90vh;
     margin-left: -30px;
   }
-  .line .line_box button {
+  .move_box .line_box button {
     z-index: 30;
     border: none;
     background: none;
@@ -271,7 +280,7 @@
     height: 100%;
     cursor: pointer;
   }
-  .line .line_box button img {
+  .move_box .line_box button img {
     width: 100%;
     height: 100%;
   }
