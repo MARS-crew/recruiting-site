@@ -1,0 +1,120 @@
+@charset "UTF-8";
+/* 모바일 버전 스타일 */
+@media (max-width: 767px) {
+  .one .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 10;
+    left: 20;
+    right: 10;
+  }
+  .one .header-container .logo img {
+    width: 40;
+    height: 40;
+  }
+  .one .header-container nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  .one .header-container nav li {
+    margin-right: 25px;
+  }
+  .one .header-container nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  .one .header-container nav a:hover {
+    color: #00f;
+  }
+  .one .content {
+    display: flex;
+    text-align: center;
+  }
+  .one .content .main-introduction-first-one {
+    padding-top: 20%;
+  }
+  .one .content .main-introduction-first-one h3 {
+    color: #fff;
+    font-size: 15px;
+    margin: 0;
+    margin-bottom: 30px;
+    padding-top: 48px;
+  }
+  .one .content .main-introduction-first-one h1 {
+    color: #fff;
+    font-size: 25px;
+    margin: 0;
+    margin-bottom: 100px;
+  }
+  .one .content .image_box img {
+    width: 180px;
+  }
+  .one .content .image_bottom_box {
+    color: #fff;
+  }
+  .one .content .image_bottom_box h6 {
+    font-size: 12px;
+  }
+  .one .content .image_bottom_box img {
+    width: 36px;
+  }
+  .one .footer_copyright {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 0.5rem;
+  }
+}
+/* PC 버전 스타일 */
+@media (min-width: 768px) {
+  .one .content {
+    display: flex;
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+  }
+  .one .content .main-introduction-first-one {
+    margin-bottom: 200px;
+  }
+  .one .content .main-introduction-first-one h3 {
+    color: #fff;
+    font-size: 32px;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  .one .content .main-introduction-first-one h1 {
+    color: #fff;
+    font-size: 64px;
+    margin: 0;
+  }
+  .one .content .image_box img {
+    position: absolute;
+    z-index: -1;
+    margin-left: -1800px;
+    margin-top: -200px;
+    width: 2800px;
+    transition: opacity 2s;
+  }
+  .one .content .image_bottom_box {
+    display: none;
+  }
+  .one .footer_copyright {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+}
