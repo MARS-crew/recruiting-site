@@ -1,39 +1,54 @@
-'use strict'
-
 const gulp = require('gulp')
-const watch = require('gulp-watch')
-const cached = require('gulp-cached')
-
 const sass = require('gulp-sass')(require('sass'))
-const postcss = require('gulp-postcss')
-const autoprefixer = require('autoprefixer')
+const browserify = require('browserify')
+const source = require('vinyl-source-stream')
 
-const SCSS_SOURCE = 'src/style/**/*.scss'
-const SCSS_COMPILED_DEST = 'src/style/css'
-
-gulp.task('sass:watch', function () {
-  watch(SCSS_SOURCE, gulp.series(['sass', 'postcss']))
-})
-
-function compileSCSS() {
-  return gulp
-    .src(SCSS_SOURCE)
-    .pipe(cached('cached-css'))
-    .pipe(sass.sync().on('error', sass.logError))
-    .pipe(gulp.dest(SCSS_COMPILED_DEST))
-  // .pipe(browserSync.stream());
+function bundleHTML() {
+  return gulp.src('src/**/*.html').pipe(gulp.dest('dist'))
 }
-gulp.task('sass', compileSCSS)
 
-function transformCSS() {
-  const plugins = [autoprefixer({})]
-  return gulp
-    .src(SCSS_COMPILED_DEST + '/**/*.css')
-    .pipe(cached('cached-postcss')) // only compile changed files
-    .pipe(postcss(plugins, {}))
-    .pipe(gulp.dest(SCSS_COMPILED_DEST))
-  // .pipe(browserSync.stream())
+function moveFile() {
+  return gulp.src('src/images/**').pipe(gulp.dest('dist/images'))
 }
-gulp.task('postcss', transformCSS)
-gulp.task('compile-style', gulp.series(['sass', 'postcss']))
-gulp.task('default', gulp.series(['compile-style', 'sass:watch']))
+
+function moveFont() {
+  return gulp.src('src/font/**').pipe(gulp.dest('dist/font'))
+}
+
+function styles() {
+  return gulp
+    .src('src/style/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('dist/style/css'))
+}
+
+function bundleJS() {
+  return browserify({
+    entries: [
+      'src/js/index.js',
+      'src/js/end.js',
+      'src/js/introduce.js',
+      'src/js/gallery.js',
+    ],
+    debug: true,
+  })
+    .transform('babelify', { presets: ['@babel/preset-env'] })
+    .bundle()
+    .pipe(source('app.bundle.js'))
+    .pipe(gulp.dest('dist/js'))
+}
+
+function moveJs() {
+  return gulp.src('src/js/form.js').pipe(gulp.dest('dist/js'))
+}
+
+const build = gulp.parallel(
+  bundleHTML,
+  moveFile,
+  styles,
+  bundleJS,
+  moveFont,
+  moveJs,
+)
+
+exports.default = build
