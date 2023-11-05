@@ -3,6 +3,7 @@ const targetElement = document.querySelector('.start_point')
 const scroll = document.querySelector('.scrolling-text')
 const end = document.querySelector('.stop_point')
 const lineLastImage = document.querySelector('.line_four :first-child')
+let animationPaused
 
 window.document.addEventListener('DOMContentLoaded', () => {
   scroll.style.animationPlayState = 'paused'

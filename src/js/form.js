@@ -394,3 +394,13 @@ window.onload = () => {
     sectionOne.style.animation = 'zoom 10s infinite'
   }, 30)
 }
+
+document.documentElement.addEventListener(
+  'touchstart',
+  (event) => {
+    if (event.touches.length > 1) {
+      event.preventDefault()
+    }
+  },
+  false,
+)
