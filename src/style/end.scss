@@ -82,13 +82,28 @@
         margin: 30px 0;
       }
 
-      .social-icons img {
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
-        margin-bottom: 50px;
-      }
+      .social-icons {
+        padding-top: 36px;
+        .insta {
+          width: 28px;
+          height: 28px;
+          margin-right: 10px;
+          margin-bottom: 50px;
+        }
 
+        .youtube {
+          width: 30px;
+          height: 30px;
+          margin-right: 10px;
+          margin-bottom: 50px;
+        }
+        .github {
+          width: 33px;
+          height: 33px;
+          margin-right: 10px;
+          margin-bottom: 50px;
+        }
+      }
       /*css로 자동 스크롤 코드*/
       .scrolling-text-container {
         position: relative;

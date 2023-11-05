@@ -72,9 +72,24 @@
     font-size: 4rem;
     margin: 30px 0;
   }
-  .four .content .social-icons img {
+  .four .content .social-icons {
+    padding-top: 36px;
+  }
+  .four .content .social-icons .insta {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+  }
+  .four .content .social-icons .youtube {
     width: 30px;
     height: 30px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+  }
+  .four .content .social-icons .github {
+    width: 33px;
+    height: 33px;
     margin-right: 10px;
     margin-bottom: 50px;
   }
