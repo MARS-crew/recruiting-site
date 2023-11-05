@@ -70,7 +70,7 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              background-color: blue;
+              background-color: #789ea4;
               border-radius: 0px 0px 30px 30px;
               h2 {
                 font-size: 0.9rem;
@@ -143,14 +143,15 @@
           }
           .text {
             width: 100%;
-            margin-top: 35.5vh;
+            margin-top: 37vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: blue;
+            background-color: #789ea4;
             border-radius: 0px 0px 30px 30px;
             h2 {
               color: #fff;
+              font-size: 18px;
             }
           }
         }
