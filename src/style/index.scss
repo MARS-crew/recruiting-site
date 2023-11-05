@@ -131,6 +131,7 @@
     height: 400vh;
     left: 20%;
     border-left: 2px dotted white;
+    opacity: 0.3;
     position: absolute;
   }
   .move_box {
@@ -139,7 +140,6 @@
     .line_box {
       width: 30px;
       height: 30px;
-      background-color: blue;
       border-radius: 25px;
       display: flex;
       justify-content: center;
