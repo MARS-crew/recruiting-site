@@ -362,6 +362,18 @@ movingTextLeft.addEventListener('click', () => {
   nextMove(2)
 })
 
+/**
+ * 화성 애니메이션
+ */
+const animateMobileMars = () => {
+  gsap.to('#mobile_mars', {
+    rotation: 360,
+    duration: 180,
+    repeat: -1,
+    ease: 'linear',
+  })
+}
+
 lineBox.addEventListener('click', () => {
   if (isMoveSlider) return
 
@@ -378,4 +390,8 @@ lineBox.addEventListener('click', () => {
 
 window.addEventListener('resize', () => {
   slideWidth = slide.clientWidth
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  animateMobileMars()
 })
