@@ -9,13 +9,16 @@
 }
 @media (max-width: 767px) {
   .four {
-    overflow: hidden;
     /*css로 자동 스크롤 코드*/
   }
+  .four .four_header {
+    height: 5%;
+  }
   .four .content {
-    padding-top: 10%;
-    height: 100%;
+    padding-top: 5%;
+    height: 95%;
     text-align: center;
+    overflow: hidden;
   }
   .four p {
     color: #fff;
