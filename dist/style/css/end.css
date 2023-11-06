@@ -8,47 +8,38 @@
   }
 }
 @media (max-width: 767px) {
-  .four {
-    /*css로 자동 스크롤 코드*/
-  }
-  .four .four_header {
-    height: 5%;
-  }
   .four .content {
-    padding-top: 5%;
-    height: 95%;
     text-align: center;
-    overflow: hidden;
   }
-  .four p {
+  .four .content .scrolling-text-container {
+    overflow: hidden;
+    width: 100%;
+    height: 80vh;
+  }
+  .four .content .scrolling-text-container .scrolling-text {
+    text-align: center;
+    animation: scrollText 30s linear infinite;
+  }
+  .four .content .scrolling-text-container .scrolling-text p {
     color: #fff;
     font-size: 0.8rem;
     margin: 10px 0;
   }
-  .four h2 {
+  .four .content .scrolling-text-container .scrolling-text h2 {
     color: #fff;
     font-size: 1rem;
     margin: 20px 0;
   }
-  .four h1 {
+  .four .content .scrolling-text-container .scrolling-text h1 {
     color: #fff;
     font-size: 2rem;
     margin: 30px 0;
   }
-  .four .social-icons img {
+  .four .content .scrolling-text-container .scrolling-text .social-icons img {
     width: 20px;
     height: 20px;
     margin-right: 10px;
     margin-bottom: 20px;
-  }
-  .four .scrolling-text-container {
-    position: relative;
-    width: 100%;
-    height: 1000px;
-  }
-  .four .scrolling-text {
-    text-align: center;
-    animation: scrollText 30s linear infinite;
   }
 }
 @media (min-width: 768px) {
