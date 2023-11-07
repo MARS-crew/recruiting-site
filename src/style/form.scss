@@ -32,6 +32,16 @@
         height: 20px;
       }
     }
+
+    #moveMan-mobile {
+      pointer-events: none;
+      position: fixed;
+      z-index: 3;
+    }
+    #moveMan-pc {
+      display: none;
+    }
+
     .header-container {
       .logo {
         img {
@@ -644,14 +654,16 @@
   .main_dump {
     flex: 1;
   }
-}
 
-#moveMan {
-  pointer-events: none;
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  z-index: 1;
+  #moveMan-pc {
+    pointer-events: none;
+    position: fixed;
+    z-index: 1;
+  }
+
+  #moveMan-mobile {
+    display: none;
+  }
 }
 
 textarea {

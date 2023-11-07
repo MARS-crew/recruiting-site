@@ -30,6 +30,14 @@
     width: 20px;
     height: 20px;
   }
+  body #moveMan-mobile {
+    pointer-events: none;
+    position: fixed;
+    z-index: 3;
+  }
+  body #moveMan-pc {
+    display: none;
+  }
   body .header-container {
     display: flex;
     align-items: center;
@@ -580,15 +588,15 @@
   .main_dump {
     flex: 1;
   }
+  #moveMan-pc {
+    pointer-events: none;
+    position: fixed;
+    z-index: 1;
+  }
+  #moveMan-mobile {
+    display: none;
+  }
 }
-#moveMan {
-  pointer-events: none;
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  z-index: 1;
-}
-
 textarea {
   overflow-y: hidden;
   resize: none;
