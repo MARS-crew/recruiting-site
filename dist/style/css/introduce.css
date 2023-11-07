@@ -5,18 +5,27 @@
   .two .slide {
     display: none;
   }
-  .two .two_mobile .back-button {
-    display: none;
+  .two .two_mobile .slide {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
   }
-  .two .two_mobile .animation-container-PC {
-    display: none;
+  .two .two_mobile .slide .slide_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    flex-shrink: 0;
+    transition: left 0.5s;
   }
-  .two .two_mobile .content .title {
-    text-align: center;
+  .two .two_mobile .slide .one .content .title {
     color: #ffffff;
-    margin-top: -240px;
+    margin-top: -120px;
   }
-  .two .two_mobile .big-circle {
+  .two .two_mobile .slide .one .big-circle {
     width: 280px;
     height: 280px;
     border-radius: 50%;
@@ -24,12 +33,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    left: 50%;
-    top: 150%;
-    transform: translate(-50%, -30%);
   }
-  .two .two_mobile .big-circle .small-circle {
+  .two .two_mobile .slide .one .big-circle .small-circle {
     position: absolute;
     width: 200px;
     height: 200px;
@@ -37,47 +42,48 @@
     border: 0.3px dashed #fff;
     margin: auto;
   }
-  .two .two_mobile .animation-container-M {
+  .two .two_mobile .slide .one .animation-container-M {
     height: 20%;
-    width: 95%;
     display: flex;
     position: absolute;
-    left: 50%;
-    top: 150%;
-    transform: translate(-50%, -50%);
     justify-content: center;
   }
-  .two .two_mobile .animation-container-M .moving-text-top {
+  .two .two_mobile .slide .one .animation-container-M .moving-text-top {
     font-size: 24px;
     color: #fff;
-    transform: translate(-20%, 0%);
   }
-  .two .two_mobile .animation-container-M .moving-text-top:hover {
+  .two .two_mobile .slide .one .animation-container-M .moving-text-top:hover {
     color: rgb(108, 108, 216);
   }
-  .two .two_mobile .animation-container-M .moving-text-middle {
+  .two .two_mobile .slide .one .animation-container-M .moving-text-middle {
     font-size: 24px;
     color: #fff;
     transform: translate(140%, 120%);
   }
-  .two .two_mobile .animation-container-M .moving-text-middle:hover {
+  .two .two_mobile .slide .one .animation-container-M .moving-text-middle:hover {
     color: rgb(240, 90, 90);
   }
-  .two .two_mobile .animation-container-M .moving-text-bottom {
+  .two .two_mobile .slide .one .animation-container-M .moving-text-bottom {
     font-size: 24px;
     color: #fff;
     transform: translate(-55%, 240%);
   }
-  .two .two_mobile .animation-container-M .moving-text-bottom:hover {
+  .two .two_mobile .slide .one .animation-container-M .moving-text-bottom:hover {
     color: rgb(255, 184, 69);
   }
-  .two .two_mobile #mobile_mars {
+  .two .two_mobile .slide .one #mobile_mars {
     position: absolute;
-    top: 190%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100px;
     height: 100px;
+  }
+  .two .two_mobile .back-button {
+    display: none;
+  }
+  .two .two_mobile .animation-container-PC {
+    display: none;
   }
 }
 @media (min-width: 768px) {

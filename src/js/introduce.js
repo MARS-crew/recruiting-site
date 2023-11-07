@@ -28,40 +28,40 @@ let isMove = true
 const mobileFunc = () => {
   //1번째 애니메이션 '우리는'
   gsap.to(movingTextTop, {
-    x: '130%', // x축으로 이동할 거리
-    y: '-50%', // y축으로 이동할 거리
-    duration: 2, // 애니메이션 기간 (초)
-    ease: 'power1.inOut', // 이징 함수
+    x: '150%',
+    y: '-20%',
+    duration: 2,
+    ease: 'power1.inOut',
   })
 
-  //1번째 애니메이션 '어디서'
+  // //1번째 애니메이션 '어디서'
   gsap.to(movingTextMiddle, {
-    x: '35%', // x축으로 이동할 거리
-    y: '185%', // y축으로 이동할 거리
+    x: '50%',
+    y: '185%',
     bezier: {
-      type: 'soft', // 곡선 타입 선택 (soft, rough, etc.)
+      type: 'soft',
       values: [
-        { x: '-20%', y: '0%' }, // 시작 지점
-        { x: '100%', y: '-25%' }, // 중간 지점
-        { x: '130%', y: '-50%' }, // 끝 지점
+        { x: '-20%', y: '0%' },
+        { x: '100%', y: '-25%' },
+        { x: '150%', y: '-50%' },
       ],
     },
-    duration: 2, // 애니메이션 기간 (초)
-    ease: 'power1.inOut', // 이징 함수
+    duration: 2,
+    ease: 'power1.inOut',
   })
 
-  // big-circle를 2초 후에 사라지도록 애니메이션 설정
-  gsap.to('.big-circle', {
-    opacity: 0,
-    delay: 2,
-    onComplete: () => {
-      document.querySelector('.big-circle').style.opacity = 'none'
-    },
-  })
+  // gsap.to('.big-circle', {
+  //   opacity: 0,
+  //   scale: 0.1,
+  //   delay: 2,
+  //   onComplete: () => {
+  //     document.querySelector('.big-circle').style.opacity = 'none'
+  //   },
+  // })
 
-  // small-circle를 2초 후에 사라지도록 애니메이션 설정
   // gsap.to('.small-circle', {
   //   opacity: 0,
+  //   scale: 0.1,
   //   delay: 2,
   //   onComplete: () => {
   //     document.querySelector('.small-circle').style.display = 'none'
@@ -70,7 +70,7 @@ const mobileFunc = () => {
 
   //2번째 애니메이션 '우리가'
   gsap.to(movingTextTop, {
-    x: '125%',
+    x: '150%',
     y: '-40%',
     duration: 2,
     ease: 'power1.inOut',
@@ -78,7 +78,7 @@ const mobileFunc = () => {
   })
 
   gsap.to(movingTextMiddle, {
-    x: '25%',
+    x: '50%',
     y: '30%',
     duration: 2,
     ease: 'power1.inOut',
@@ -86,7 +86,7 @@ const mobileFunc = () => {
   })
 
   gsap.to(movingTextBottom, {
-    x: '-60%',
+    x: '-50%',
     y: '100%',
     bezier: {
       type: 'soft',
@@ -102,34 +102,11 @@ const mobileFunc = () => {
   })
 
   gsap.to(mobileMarsImage, {
-    y: '-60%',
+    y: '-50%',
     scale: 1,
     duration: 2.5,
     delay: 3,
     ease: 'power2.out',
-  })
-
-  function clickDisplay() {
-    titleText.style.display = 'none'
-    movingTextTop.style.display = 'none'
-    movingTextMiddle.style.display = 'none'
-    movingTextBottom.style.display = 'none'
-    marsImage.style.display = 'none'
-  }
-
-  // 우리는 클릭 이벤트
-  movingTextTop.addEventListener('click', () => {
-    clickDisplay()
-  })
-
-  // 어디서 클릭 이벤트
-  movingTextMiddle.addEventListener('click', () => {
-    clickDisplay()
-  })
-
-  // 무엇을 클릭 이벤트
-  movingTextBottom.addEventListener('click', () => {
-    clickDisplay()
   })
 }
 
@@ -394,4 +371,21 @@ window.addEventListener('resize', () => {
 
 document.addEventListener('DOMContentLoaded', function () {
   animateMobileMars()
+})
+
+// 우리는 클릭 이벤트
+movingTextTop.addEventListener('click', () => {
+  hideComponent()
+  lineImage.src = './images/svg/left.svg'
+  nextMove(2)
+})
+
+// 어디서 클릭 이벤트
+movingTextMiddle.addEventListener('click', () => {
+  clickDisplay()
+})
+
+// 무엇을 클릭 이벤트
+movingTextBottom.addEventListener('click', () => {
+  clickDisplay()
 })
