@@ -26,6 +26,20 @@ let isMoveSlider = true
 let isMove = true
 
 const mobileFunc = () => {
+  gsap.to('.big-circle', {
+    rotation: 360,
+    duration: 180,
+    repeat: -1,
+    ease: 'linear',
+  })
+
+  gsap.to('.small-circle', {
+    rotation: 360,
+    duration: 100,
+    repeat: -1,
+    ease: 'linear',
+  })
+
   //1번째 애니메이션 '우리는'
   gsap.to(movingTextTop, {
     x: '150%',
@@ -49,24 +63,6 @@ const mobileFunc = () => {
     duration: 2,
     ease: 'power1.inOut',
   })
-
-  // gsap.to('.big-circle', {
-  //   opacity: 0,
-  //   scale: 0.1,
-  //   delay: 2,
-  //   onComplete: () => {
-  //     document.querySelector('.big-circle').style.opacity = 'none'
-  //   },
-  // })
-
-  // gsap.to('.small-circle', {
-  //   opacity: 0,
-  //   scale: 0.1,
-  //   delay: 2,
-  //   onComplete: () => {
-  //     document.querySelector('.small-circle').style.display = 'none'
-  //   },
-  // })
 
   //2번째 애니메이션 '우리가'
   gsap.to(movingTextTop, {
