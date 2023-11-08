@@ -22,20 +22,20 @@ let isScrolling = false
  * @param {number} index
  */
 const scrollToSection = (index) => {
-  if (index >= 0 && index < sections.length) {
-    sections[index].scrollIntoView({ behavior: 'smooth' })
-    currentSection = index
+  console.log('INDEX : ', index)
 
-    if (currentSection !== 0) {
-      if (isPc) {
-        marsImg.style.opacity = 0
-      }
+  sections[index].scrollIntoView({ behavior: 'smooth' })
+  currentSection = index
 
-      return
+  if (currentSection !== 0) {
+    if (isPc) {
+      marsImg.style.opacity = 0
     }
 
-    marsImg.style.opacity = 1
+    return
   }
+
+  marsImg.style.opacity = 1
 }
 
 /**
@@ -68,7 +68,7 @@ lineOne.addEventListener('click', () => {
   sectionTwo.style.animation = 'zoom 10s infinite'
   sectionThree.style.animation = ''
   sectionFour.style.animation = ''
-  scrollToSection(currentSection + 1)
+  scrollToSection(1)
 })
 
 lineTwo.addEventListener('click', () => {
@@ -80,7 +80,7 @@ lineTwo.addEventListener('click', () => {
     sectionTwo.style.animation = ''
     sectionThree.style.animation = 'zoom 10s infinite'
     sectionFour.style.animation = ''
-    scrollToSection(currentSection + 1)
+    scrollToSection(2)
   }
 })
 
@@ -89,7 +89,7 @@ lineThree.addEventListener('click', () => {
   sectionTwo.style.animation = ''
   sectionThree.style.animation = ''
   sectionFour.style.animation = 'zoom 10s infinite'
-  scrollToSection(currentSection + 1)
+  scrollToSection(3)
 })
 
 window.addEventListener('wheel', (e) => {
