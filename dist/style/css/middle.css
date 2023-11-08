@@ -1,54 +1,44 @@
 @media (max-width: 767px) {
-  @font-face {
-    font-family: "JSDongkang";
-    src: url("../../font/JSDongkang-Bold.ttf");
+  .two_mobile {
+    width: 100%;
   }
-  body {
-    height: 100vh;
-    margin: 0;
-    font-family: "JSDongkang";
-  }
-  .content {
-    height: 100%;
-    color: #ffffff;
-  }
-  .content #section0 h1 {
+  .two_mobile #section0 h1 {
     display: none;
   }
-  .content #section0 P {
+  .two_mobile #section0 P {
     display: none;
   }
-  .content #section0 .flex {
+  .two_mobile #section0 .flex {
     display: flex;
     padding-top: 30%;
     flex-direction: column;
     align-items: flex-start;
   }
-  .content #section0 .flex .intro-box {
+  .two_mobile #section0 .flex .intro-box {
     padding-bottom: 8%;
   }
-  .content #section0 .flex .box1 {
+  .two_mobile #section0 .flex .box1 {
     padding-left: 5%;
   }
-  .content #section0 .flex .box2 {
+  .two_mobile #section0 .flex .box2 {
     padding-left: 45%;
   }
-  .content #section0 .flex .box3 {
+  .two_mobile #section0 .flex .box3 {
     padding-left: 5%;
     padding-top: -100px;
   }
-  .content #section0 .flex .box4 {
+  .two_mobile #section0 .flex .box4 {
     padding-left: 16%;
   }
-  .content #section0 .image {
+  .two_mobile #section0 .image {
     display: none;
   }
-  .content #section0 .circle-wrap {
+  .two_mobile #section0 .circle-wrap {
     position: absolute;
     top: 24%;
     left: 19%;
   }
-  .content #section0 .circle-wrap .circle {
+  .two_mobile #section0 .circle-wrap .circle {
     animation: rotate_circle 8s linear infinite;
     transform-origin: 50% 50%;
     display: flex;
@@ -65,7 +55,7 @@
       transform: rotate(360deg);
     }
   }
-  .content #section0 .circle-wrap .circle .insiede-circle {
+  .two_mobile #section0 .circle-wrap .circle .insiede-circle {
     padding: 15%;
     width: 50px;
     height: 50px;
@@ -73,7 +63,7 @@
     border-radius: 50%;
     border-style: dashed;
   }
-  .content #section0 .popup {
+  .two_mobile #section0 .popup {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -81,15 +71,15 @@
     width: 100%;
     height: 100%;
   }
-  .content #section0 .popup .dim-bg {
+  .two_mobile #section0 .popup .dim-bg {
     z-index: -15;
     width: 100%;
     height: 100%;
-    background: #000;
-    opacity: 0.8;
+    opacity: 0.5;
+    background-color: black;
     filter: alpha(opacit=90);
   }
-  .content #section0 .popup .pop-content {
+  .two_mobile #section0 .popup .pop-content {
     background-color: rgba(78, 78, 78, 0.253);
     border: 1px solid #6d6d6d;
     width: 50%;
@@ -99,159 +89,42 @@
     top: 50%;
     transform: translate(-52%, -50%);
   }
-  .content #section0 .popup .pop-content p {
+  .two_mobile #section0 .popup .pop-content p {
     text-align: center;
     display: block;
     font-size: 1rem;
     font-weight: bold;
   }
-  .content #section0 .popup .pop-content .close {
+  .two_mobile #section0 .popup .pop-content .close {
     position: absolute;
     top: 0;
     right: 10%;
   }
-  .content #section1 {
+  .two_mobile #section1 {
     display: grid;
     place-items: center;
   }
-  .content #section1 div p {
+  .two_mobile #section1 div p {
     font-size: 1rem;
   }
-  .content #section2 {
+  .two_mobile #section2 {
     display: grid;
     place-items: center;
   }
-  .content #section2 p {
+  .two_mobile #section2 p {
     width: 75%;
     font-size: 1rem;
   }
-  .section {
+  .two_mobile .section-middle {
     position: relative;
-    background-color: white;
-    background: url("../../images/defaultBackground.png") no-repeat;
     background-size: cover;
     color: #ffffff;
     height: 100%;
     min-height: 100%;
     font-size: 1.9em;
   }
-  .section .image {
+  .two_mobile .section-middle .image {
     width: 30%;
-    filter: drop-shadow(0 0 30px rgb(226, 234, 236));
-  }
-}
-@media (min-width: 768px) {
-  @font-face {
-    font-family: "JSDongkang";
-    src: url("../../font/JSDongkang-Bold.ttf");
-  }
-  @font-face {
-    font-family: "JSDongkang-Reg";
-    src: url("../../font/JSDongkang-Regular.ttf");
-  }
-  body {
-    font-family: "JSDongkang-Reg";
-    height: 100vh;
-    margin: 0;
-  }
-  .content {
-    height: 100%;
-  }
-  .content #section0 .circle-wrap {
-    display: none;
-  }
-  .content #section0 .flex {
-    width: 70%;
-    margin-left: 13%;
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .content #section0 .flex .intro-box {
-    width: 74%;
-    height: 320px;
-  }
-  .content #section0 .flex .intro-box h2 strong {
-    font-family: "JSDongkang";
-    font-size: 2rem;
-  }
-  .content #section0 .flex .intro-box p {
-    font-size: 1.3rem;
-    animation-duration: 2s;
-    animation-name: slidein;
-    animation-fill-mode: forward;
-  }
-  @keyframes slidein {
-    from {
-      margin-left: 300%;
-      width: 300%;
-    }
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  }
-  .content #section0 .flex .box1 {
-    justify-self: start;
-  }
-  .content #section0 .flex .box1 p {
-    animation-delay: 0.5s;
-  }
-  .content #section0 .flex .box2 {
-    justify-self: start;
-  }
-  .content #section0 .flex .box2 p {
-    animation-delay: 0.8s;
-  }
-  .content #section0 .flex .box3 {
-    justify-self: center;
-  }
-  .content #section0 .flex .box3 p {
-    animation-delay: 1.2s;
-  }
-  .content #section0 .flex .box4 {
-    justify-self: center;
-  }
-  .content #section0 .flex .box4 p {
-    animation-delay: 1.5s;
-  }
-  .content #section0 .image {
-    position: absolute;
-    right: 5%;
-    top: 35%;
-  }
-  .content #section1 {
-    height: 100%;
-    text-align: center;
-  }
-  .content #section2 {
-    height: 100%;
-    text-align: center;
-  }
-  .content #section2 p {
-    width: 70%;
-    margin: 0 auto;
-  }
-  .content .section {
-    position: relative;
-    background-color: white;
-    background: url("../../images/defaultBackground.png") no-repeat;
-    background-size: cover;
-    color: #ffffff;
-    height: 100%;
-    min-height: 100%;
-    font-size: 2em;
-  }
-  .content .section h1 {
-    padding-top: 5%;
-    padding-bottom: 6%;
-    margin: 0;
-    font-size: 80px;
-    text-align: center;
-  }
-  .content .section .image {
-    width: 11%;
-    margin-bottom: 5%;
     filter: drop-shadow(0 0 30px rgb(226, 234, 236));
   }
 }
