@@ -82,10 +82,6 @@ lineTwo.addEventListener('click', () => {
     sectionFour.style.animation = ''
     scrollToSection(currentSection + 1)
   }
-
-  if (imageSrc === 'left.svg') {
-    currentSlide = 1
-  }
 })
 
 lineThree.addEventListener('click', () => {

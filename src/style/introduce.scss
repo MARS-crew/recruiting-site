@@ -7,11 +7,11 @@
     }
 
     .two_mobile {
-      .slide {
+      .slide_m {
         display: flex;
         overflow: hidden;
         width: 100%;
-        .slide_item {
+        .slide_item_m {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -32,6 +32,7 @@
           }
 
           .big-circle {
+            z-index: -2;
             width: 280px;
             height: 280px;
             border-radius: 50%;
@@ -41,6 +42,7 @@
             align-items: center;
 
             .small-circle {
+              z-index: -2;
               position: absolute;
               width: 200px;
               height: 200px;
@@ -52,13 +54,14 @@
 
           .animation-container-M {
             height: 20%;
+            z-index: 10;
             display: flex;
             position: absolute;
             justify-content: center;
             .moving-text-top {
               font-size: 24px;
               color: #fff;
-              // transform: translate(-20%, 0%);
+              transform: translate(-20%, 0%);
               &:hover {
                 color: rgb(108, 108, 216);
               }

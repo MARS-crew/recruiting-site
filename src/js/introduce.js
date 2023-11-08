@@ -24,87 +24,7 @@ const lineImage = document.querySelector('.line_two :first-child')
 
 let isMoveSlider = true
 let isMove = true
-
-const mobileFunc = () => {
-  gsap.to('.big-circle', {
-    rotation: 360,
-    duration: 180,
-    repeat: -1,
-    ease: 'linear',
-  })
-
-  gsap.to('.small-circle', {
-    rotation: 360,
-    duration: 100,
-    repeat: -1,
-    ease: 'linear',
-  })
-
-  //1번째 애니메이션 '우리는'
-  gsap.to(movingTextTop, {
-    x: '150%',
-    y: '-20%',
-    duration: 2,
-    ease: 'power1.inOut',
-  })
-
-  // //1번째 애니메이션 '어디서'
-  gsap.to(movingTextMiddle, {
-    x: '50%',
-    y: '185%',
-    bezier: {
-      type: 'soft',
-      values: [
-        { x: '-20%', y: '0%' },
-        { x: '100%', y: '-25%' },
-        { x: '150%', y: '-50%' },
-      ],
-    },
-    duration: 2,
-    ease: 'power1.inOut',
-  })
-
-  //2번째 애니메이션 '우리가'
-  gsap.to(movingTextTop, {
-    x: '150%',
-    y: '-40%',
-    duration: 2,
-    ease: 'power1.inOut',
-    delay: 2.5,
-  })
-
-  gsap.to(movingTextMiddle, {
-    x: '50%',
-    y: '30%',
-    duration: 2,
-    ease: 'power1.inOut',
-    delay: 2.5,
-  })
-
-  gsap.to(movingTextBottom, {
-    x: '-50%',
-    y: '100%',
-    bezier: {
-      type: 'soft',
-      values: [
-        { x: '-20%', y: '0%' },
-        { x: '100%', y: '-25%' },
-        { x: '130%', y: '-50%' },
-      ],
-    },
-    duration: 2,
-    ease: 'power1.inOut',
-    delay: 2.5,
-  })
-
-  gsap.to(mobileMarsImage, {
-    y: '-50%',
-    scale: 1,
-    duration: 2.5,
-    delay: 3,
-    ease: 'power2.out',
-  })
-}
+let isMobileMove = true
 
 const observerOne = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -233,8 +153,92 @@ const observerFour = new IntersectionObserver((entries) => {
 const observerMobile = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
+      console.log(isMobileMove)
+      if (!isMobileMove) return
       setTimeout(() => {
-        mobileFunc()
+        gsap.to('.big-circle', {
+          rotation: 360,
+          duration: 180,
+          repeat: -1,
+          ease: 'linear',
+        })
+
+        gsap.to('.small-circle', {
+          rotation: 360,
+          duration: 100,
+          repeat: -1,
+          ease: 'linear',
+        })
+
+        //1번째 애니메이션 '우리는'
+        gsap.to(movingTextTop, {
+          x: '150%',
+          y: '-20%',
+          duration: 2,
+          ease: 'power1.inOut',
+        })
+
+        // //1번째 애니메이션 '어디서'
+        gsap.to(movingTextMiddle, {
+          x: '50%',
+          y: '185%',
+          bezier: {
+            type: 'soft',
+            values: [
+              { x: '-20%', y: '0%' },
+              { x: '100%', y: '-25%' },
+              { x: '150%', y: '-50%' },
+            ],
+          },
+          duration: 2,
+          ease: 'power1.inOut',
+        })
+
+        //2번째 애니메이션 '우리가'
+        gsap.to(movingTextTop, {
+          x: '150%',
+          y: '-40%',
+          duration: 2,
+          ease: 'power1.inOut',
+          delay: 2.5,
+        })
+
+        gsap.to(movingTextMiddle, {
+          x: '50%',
+          y: '30%',
+          duration: 2,
+          ease: 'power1.inOut',
+          delay: 2.5,
+        })
+
+        gsap.to(movingTextBottom, {
+          x: '-50%',
+          y: '100%',
+          bezier: {
+            type: 'soft',
+            values: [
+              { x: '-20%', y: '0%' },
+              { x: '100%', y: '-25%' },
+              { x: '130%', y: '-50%' },
+            ],
+          },
+          duration: 2,
+          ease: 'power1.inOut',
+          delay: 2.5,
+          onComplete: () => {
+            setTimeout(() => {
+              isMobileMove = false
+            }, 1000)
+          },
+        })
+
+        gsap.to(mobileMarsImage, {
+          y: '-50%',
+          scale: 1,
+          duration: 2.5,
+          delay: 3,
+          ease: 'power2.out',
+        })
       }, 1000)
     }
   })
@@ -348,11 +352,17 @@ const animateMobileMars = () => {
 }
 
 lineBox.addEventListener('click', () => {
-  if (isMoveSlider) return
-
   const lineTwoImage = document.querySelector('.line_two :first-child')
   const imageSrcArr = lineTwoImage.src.split('/')
   const imageSrc = imageSrcArr[imageSrcArr.length - 1]
+  if (isMobile) {
+    if (imageSrc === 'left.svg') {
+      nextMoveMobile(1)
+      lineImage.src = './images/svg/down.svg'
+    }
+  }
+  if (isMoveSlider) return
+
   isMoveSlider = true
   if (imageSrc === 'left.svg') {
     hideComponent()
@@ -365,23 +375,60 @@ window.addEventListener('resize', () => {
   slideWidth = slide.clientWidth
 })
 
+// ** Mobile
+const slideMobile = document.querySelector('.slide_m')
+let slideWidthMobile = slideMobile.clientWidth
+
+const slideItemsMobile = document.querySelectorAll('.slide_item_m')
+const maxSlideMobile = slideItemsMobile.length
+
+let currSlideMobile = 1
+
+const nextMoveMobile = (slide) => {
+  currSlideMobile = slide
+  if (currSlideMobile <= maxSlideMobile) {
+    const offset = slideWidthMobile * (currSlideMobile - 1)
+    slideItemsMobile.forEach((i) => {
+      i.setAttribute('style', `left: ${-offset}px`)
+    })
+
+    return
+  }
+  currSlideMobile--
+}
+
+const prevMoveMobile = () => {
+  currSlideMobile--
+  if (currSlideMobile > 0) {
+    const offset = slideWidthMobile * (currSlideMobile - 1)
+    slideItemsMobile.forEach((i) => {
+      i.setAttribute('style', `left: ${-offset}px`)
+    })
+
+    return
+  }
+
+  currSlideMobile++
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   animateMobileMars()
 })
 
 // 우리는 클릭 이벤트
 movingTextTop.addEventListener('click', () => {
-  hideComponent()
   lineImage.src = './images/svg/left.svg'
-  nextMove(2)
+  nextMoveMobile(2)
 })
 
 // 어디서 클릭 이벤트
 movingTextMiddle.addEventListener('click', () => {
-  clickDisplay()
+  lineImage.src = './images/svg/left.svg'
+  nextMoveMobile(3)
 })
 
 // 무엇을 클릭 이벤트
 movingTextBottom.addEventListener('click', () => {
-  clickDisplay()
+  lineImage.src = './images/svg/left.svg'
+  nextMoveMobile(4)
 })
