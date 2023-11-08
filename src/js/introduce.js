@@ -153,7 +153,6 @@ const observerFour = new IntersectionObserver((entries) => {
 const observerMobile = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      console.log(isMobileMove)
       if (!isMobileMove) return
       setTimeout(() => {
         gsap.to('.big-circle', {

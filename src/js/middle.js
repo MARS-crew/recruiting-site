@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function scrollToSection(index) {
     if (index < 0 || index >= sections.length) return
-    console.log(sections[index])
 
     const section = sections[index]
     if (section) {
