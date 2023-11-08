@@ -73,8 +73,12 @@
   }
   .two_mobile #section0 .popup .dim-bg {
     z-index: -15;
-    width: 100%;
+    width: 150%;
     height: 100%;
+    overflow-x: hidden;
+    position: absolute;
+    left: -50;
+    top: 0;
     opacity: 0.5;
     background-color: black;
     filter: alpha(opacit=90);
@@ -82,7 +86,7 @@
   .two_mobile #section0 .popup .pop-content {
     background-color: rgba(78, 78, 78, 0.253);
     border: 1px solid #6d6d6d;
-    width: 50%;
+    width: 80%;
     padding: 10%;
     position: absolute;
     left: 50%;
@@ -90,7 +94,6 @@
     transform: translate(-52%, -50%);
   }
   .two_mobile #section0 .popup .pop-content p {
-    text-align: center;
     display: block;
     font-size: 1rem;
     font-weight: bold;
