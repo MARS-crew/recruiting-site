@@ -45,7 +45,7 @@
     font-size: 15px;
     margin: 0;
     margin-bottom: 30px;
-    padding-top: 48px;
+    padding-top: px;
   }
   .one .content .main-introduction-first-one h1 {
     color: #fff;
@@ -54,7 +54,8 @@
     margin-bottom: 100px;
   }
   .one .content .image_box img {
-    width: 180px;
+    z-index: 0;
+    width: 380px;
   }
   .one .content .image_bottom_box {
     color: #fff;

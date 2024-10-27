@@ -53,7 +53,7 @@
           font-size: 15px;
           margin: 0;
           margin-bottom: 30px;
-          padding-top: 48px;
+          padding-top: px;
         }
         h1 {
           color: #fff;
@@ -65,7 +65,8 @@
 
       .image_box {
         img {
-          width: 180px;
+          z-index: 0;
+          width: 380px;
         }
       }
 
