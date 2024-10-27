@@ -3,6 +3,9 @@ const marsImg = document.querySelector('#mars')
 const lineOne = document.querySelector('.line_one')
 const lineTwo = document.querySelector('.line_two')
 const lineThree = document.querySelector('.line_three')
+const lineTopOne = document.querySelector('.line_top_one')
+const lineTopTwo = document.querySelector('.line_top_two')
+const lineTopThree = document.querySelector('.line_top_three')
 const sectionOne = document.querySelector('.space_one')
 const sectionTwo = document.querySelector('.space_two')
 const sectionThree = document.querySelector('.space_three')
@@ -113,80 +116,96 @@ lineThree.addEventListener('click', () => {
   scrollToSection(3)
 })
 
-window.addEventListener('wheel', (e) => {
-  if (isScrolling) return
-
-  if (e.deltaY > 0) {
-    scrollToSection(currentSection + 1)
-  }
-
-  if (e.deltaY < 0) {
-    scrollToSection(currentSection - 1)
-  }
-
-  if (isPc) {
-    switch (currentSection) {
-      case 0:
-        sectionOne.style.animation = 'zoom 10s infinite'
-        sectionTwo.style.animation = ''
-        sectionThree.style.animation = ''
-        sectionFour.style.animation = ''
-        break
-
-      case 1:
-        sectionOne.style.animation = ''
-        sectionTwo.style.animation = 'zoom 10s infinite'
-        sectionThree.style.animation = ''
-        sectionFour.style.animation = ''
-        break
-      case 2:
-        sectionOne.style.animation = ''
-        sectionTwo.style.animation = ''
-        sectionThree.style.animation = 'zoom 10s infinite'
-        sectionFour.style.animation = ''
-        break
-      case 3:
-        sectionOne.style.animation = ''
-        sectionTwo.style.animation = ''
-        sectionThree.style.animation = ''
-        sectionFour.style.animation = 'zoom 10s infinite'
-        break
-    }
-  } else {
-    switch (currentSection) {
-      case 0:
-        sectionOneMobile.style.animation = 'zoom 10s infinite'
-        sectionTwoMobile.style.animation = ''
-        sectionThreeMobile.style.animation = ''
-        sectionFourMobile.style.animation = ''
-        break
-
-      case 1:
-        sectionOneMobile.style.animation = ''
-        sectionTwoMobile.style.animation = 'zoom 10s infinite'
-        sectionThreeMobile.style.animation = ''
-        sectionFourMobile.style.animation = ''
-        break
-      case 2:
-        sectionOneMobile.style.animation = ''
-        sectionTwoMobile.style.animation = ''
-        sectionThreeMobile.style.animation = 'zoom 10s infinite'
-        sectionFourMobile.style.animation = ''
-        break
-      case 3:
-        sectionOneMobile.style.animation = ''
-        sectionTwoMobile.style.animation = ''
-        sectionThreeMobile.style.animation = ''
-        sectionFourMobile.style.animation = 'zoom 10s infinite'
-        break
-    }
-  }
-
-  isScrolling = true
-  setTimeout(() => {
-    isScrolling = false
-  }, 1000)
+lineTopOne.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  })
 })
+
+lineTopTwo.addEventListener('click', () => {
+  scrollToSection(1) // 두 번째 섹션으로 이동
+})
+
+lineTopThree.addEventListener('click', () => {
+  scrollToSection(2) // 세 번째 섹션으로 이동
+})
+
+// window.addEventListener('wheel', (e) => {
+//   if (isScrolling) return
+
+//   if (e.deltaY > 0) {
+//     scrollToSection(currentSection + 1)
+//   }
+
+//   if (e.deltaY < 0) {
+//     scrollToSection(currentSection - 1)
+//   }
+
+//   if (isPc) {
+//     switch (currentSection) {
+//       case 0:
+//         sectionOne.style.animation = 'zoom 10s infinite'
+//         sectionTwo.style.animation = ''
+//         sectionThree.style.animation = ''
+//         sectionFour.style.animation = ''
+//         break
+
+//       case 1:
+//         sectionOne.style.animation = ''
+//         sectionTwo.style.animation = 'zoom 10s infinite'
+//         sectionThree.style.animation = ''
+//         sectionFour.style.animation = ''
+//         break
+//       case 2:
+//         sectionOne.style.animation = ''
+//         sectionTwo.style.animation = ''
+//         sectionThree.style.animation = 'zoom 10s infinite'
+//         sectionFour.style.animation = ''
+//         break
+//       case 3:
+//         sectionOne.style.animation = ''
+//         sectionTwo.style.animation = ''
+//         sectionThree.style.animation = ''
+//         sectionFour.style.animation = 'zoom 10s infinite'
+//         break
+//     }
+//   } else {
+//     switch (currentSection) {
+//       case 0:
+//         sectionOneMobile.style.animation = 'zoom 10s infinite'
+//         sectionTwoMobile.style.animation = ''
+//         sectionThreeMobile.style.animation = ''
+//         sectionFourMobile.style.animation = ''
+//         break
+
+//       case 1:
+//         sectionOneMobile.style.animation = ''
+//         sectionTwoMobile.style.animation = 'zoom 10s infinite'
+//         sectionThreeMobile.style.animation = ''
+//         sectionFourMobile.style.animation = ''
+//         break
+//       case 2:
+//         sectionOneMobile.style.animation = ''
+//         sectionTwoMobile.style.animation = ''
+//         sectionThreeMobile.style.animation = 'zoom 10s infinite'
+//         sectionFourMobile.style.animation = ''
+//         break
+//       case 3:
+//         sectionOneMobile.style.animation = ''
+//         sectionTwoMobile.style.animation = ''
+//         sectionThreeMobile.style.animation = ''
+//         sectionFourMobile.style.animation = 'zoom 10s infinite'
+//         break
+//     }
+//   }
+
+//   isScrolling = true
+//   setTimeout(() => {
+//     isScrolling = false
+//   }, 1000)
+// })
 
 document.addEventListener('DOMContentLoaded', function () {
   animateRandomly()

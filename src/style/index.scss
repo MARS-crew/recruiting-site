@@ -11,7 +11,7 @@
 @media (max-width: 767px) {
   html,
   body {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     position: relative;
     
@@ -51,6 +51,7 @@
         }
       }
       .form {
+        
         button {
           border: none;
           background: none;
@@ -158,7 +159,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 90vh;
+      margin-top: 95vh;
       margin-left: -15px;
       button {
         z-index: 30;
@@ -176,13 +177,14 @@
       }
     }
     .line_top_box{
+      position: absolute;
       width: 30px;
         height: 30px;
         border-radius: 25px;
         display: absolute;
         justify-content: center;
         align-items: center;
-        margin-top: 30vh;
+        margin-top: 10vh;
         margin-left: -15px;
       
         button {
