@@ -169,47 +169,6 @@ const observerMobile = new IntersectionObserver((entries) => {
           ease: 'linear',
         })
 
-        //1번째 애니메이션 '우리는'
-        gsap.to(movingTextTop, {
-          x: '150%',
-          y: '-20%',
-          duration: 2,
-          ease: 'power1.inOut',
-        })
-
-        // //1번째 애니메이션 '어디서'
-        gsap.to(movingTextMiddle, {
-          x: '50%',
-          y: '185%',
-          bezier: {
-            type: 'soft',
-            values: [
-              { x: '-20%', y: '0%' },
-              { x: '100%', y: '-25%' },
-              { x: '150%', y: '-50%' },
-            ],
-          },
-          duration: 2,
-          ease: 'power1.inOut',
-        })
-
-        //2번째 애니메이션 '우리가'
-        gsap.to(movingTextTop, {
-          x: '150%',
-          y: '-40%',
-          duration: 2,
-          ease: 'power1.inOut',
-          delay: 2.5,
-        })
-
-        gsap.to(movingTextMiddle, {
-          x: '50%',
-          y: '30%',
-          duration: 2,
-          ease: 'power1.inOut',
-          delay: 2.5,
-        })
-
         gsap.to(movingTextBottom, {
           x: '-50%',
           y: '100%',
@@ -229,14 +188,6 @@ const observerMobile = new IntersectionObserver((entries) => {
               isMobileMove = false
             }, 1000)
           },
-        })
-
-        gsap.to(mobileMarsImage, {
-          y: '-50%',
-          scale: 1,
-          duration: 2.5,
-          delay: 3,
-          ease: 'power2.out',
         })
       }, 1000)
     }
@@ -321,21 +272,18 @@ movingTextCenter.addEventListener('click', () => {
   if (isMove) return
   hideComponent()
   lineImage.src = './images/svg/left.svg'
-  nextMove(3)
 })
 
 movingTextRight.addEventListener('click', () => {
   if (isMove) return
   hideComponent()
   lineImage.src = './images/svg/left.svg'
-  nextMove(4)
 })
 
 movingTextLeft.addEventListener('click', () => {
   if (isMove) return
   hideComponent()
   lineImage.src = './images/svg/left.svg'
-  nextMove(2)
 })
 
 /**

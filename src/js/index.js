@@ -6,6 +6,9 @@ const lineThree = document.querySelector('.line_three')
 const sectionOne = document.querySelector('.space_one')
 const sectionTwo = document.querySelector('.space_two')
 const sectionThree = document.querySelector('.space_three')
+const lineTopOne = document.querySelector('.line_top_one')
+const lineTopTwo = document.querySelector('.line_top_two')
+const lineTopThree = document.querySelector('.line_top_three')
 const sectionFour = document.querySelector('.space_four')
 const sectionOneMobile = document.querySelector('.space_one_m_img')
 const sectionTwoMobile = document.querySelector('.space_two_m_img')
@@ -111,6 +114,17 @@ lineThree.addEventListener('click', () => {
   }
 
   scrollToSection(3)
+})
+lineTopOne.addEventListener('click', () => {
+  scrollToSection(0)
+})
+
+lineTopTwo.addEventListener('click', () => {
+  scrollToSection(1)
+})
+
+lineTopThree.addEventListener('click', () => {
+  scrollToSection(2)
 })
 
 window.addEventListener('wheel', (e) => {
